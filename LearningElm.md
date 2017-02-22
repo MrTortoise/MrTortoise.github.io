@@ -19,3 +19,4 @@ https://dennisreimann.de/articles/elm-atom-editor.html
 ##Tutorials
 1. http://elm-lang.org/docs - didnt fins massivley helpful
 2. https://www.elm-tutorial.org - makign good progress with this one.
+3. https://www.gitbook.com/book/evancz/an-introduction-to-elm/details - not looked at this one yet
