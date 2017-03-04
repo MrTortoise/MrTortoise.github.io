@@ -1,3 +1,4 @@
+#4/3/17
 #So what is going on?
 
 Have spent a week or so playing with elm. I don't know haskell and tbh have been kind of watching iZmnbie and getting into it whilst doing this. But still I am just not feeling it. Seems to be a crap ton of code to accomplish anything.
