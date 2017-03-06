@@ -3,7 +3,7 @@ layout: page
 title: About
 permalink: /about/
 ---
-#Hi
+# Hi
 
 I am a coding, guitaring, go playing parent with way too many interests to fit into the available time.
 Whilst not sitting in a cave rolling my face on a keyboard am probably found being a taxi driver / circus master for kids.
