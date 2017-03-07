@@ -12,7 +12,7 @@ text editable documents.
 I was looking for something like graphviz but found this [graphvizo]. Looks great
 if it works in github!
 
-The stuff below is copied directly from here: [github-graphviz]
+The stuff below is copied directly from here: [github-graphvizo]
 The exmaple is also one of the ones that can be found at the previous link also.
 
 
