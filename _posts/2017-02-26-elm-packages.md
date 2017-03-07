@@ -5,7 +5,7 @@ date:   2017-02-26 21:27:48 +0000
 categories: elm getting-started
 ---
 
-Have installed various things throught the tutorial. As of yet haven't seen any scaffolding projects to preassemble this stuff. So until that point, this should save some time.
+Have installed various things through the tutorial. As of yet haven't seen any scaffolding projects to preassemble this stuff. So until that point, this should save some time.
 
 1. Yarn - https://yarnpkg.com/en/
 2. `elm package install elm-lang/html`

@@ -5,7 +5,7 @@ date: 2017-03-07 19:39:48 +0000
 categories: github markdown graphviz
 ---
 
-Just playing around seeing what kind of diagramming i can get working without
+Just playing around seeing what kind of diagramming I can get working without
 having to resort to something that will force me to have images rather than
 text editable documents.
 

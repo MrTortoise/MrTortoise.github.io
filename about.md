@@ -12,4 +12,4 @@ I'm a .net guy who likes to play with anything but. Dabble with games engines, a
 
 ## Why am I doing this?
 
-Not really sure. I think so that when i look at my repos in 6 months and wonder 'what the hell was I thinking' I can realise that i probalby wasn't and really was off on some crazy tangent. But hey, if the journey is fun everyones a winner.
+Not really sure. I think so that when i look at my repos in 6 months and wonder 'what the hell was I thinking' I can realise that I probably wasn't and really was off on some crazy tangent. But hey, if the journey is fun everyone’s a winner.

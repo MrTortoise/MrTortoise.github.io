@@ -8,11 +8,11 @@ categories: elixir code-challenge
 The background is that I was attempting to to the [99 prolog problems][99-prolog-problems]. All was going well until i hit the permutation / combination problem at question 26. [elixir repo][elixir-repo]
 
 
-So its 3C2, really easy to do imperitivley or by passing a reference to a list about during recursion in an imperative langauge.
+So its 3C2, really easy to do imperatively or by passing a reference to a list about during recursion in an imperative language.
 
 Odd never been stumped like this before.
 
-After some thought it turns out i hadn't realised i was creating a tree.
+After some thought it turns out I hadn't realised I was creating a tree.
 
 Anyway the point: its like i need to turn the tree inside out.
 
