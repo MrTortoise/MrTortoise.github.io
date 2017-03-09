@@ -18,8 +18,10 @@ Kind of has all the toys I want to play with.
 Anyway I found another resource that I will definable dig into.
  - [koans-elixir]
 
-Hopefully this is done well as i think this is a great idea for learning at
-least the syntax of a langauge.
+Hopefully this is done well as I think this is a great idea for learning at
+least the syntax of a lang.
+
+Update - spent 40 mins on the first 80. Well worth it.
 
 
 
