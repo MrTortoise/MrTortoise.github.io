@@ -30,11 +30,11 @@ I figured out how to start with a root, navigate to all the leaves and add the p
 
 I wrote a the function behind this test:
 
-`permute([1,2,3]) == [[1, [2, [3]], [3, [2]]], [2, [1, [3]], [3, [1]]], [3, [1, [2]], [2, [1]]]]`
+` permute([1,2,3]) == [[1, [2, [3]], [3, [2]]], [2, [1, [3]], [3, [1]]], [3, [1, [2]], [2, [1]]]]`
 
 I realised that this was basically a tree structure and then wrote something to expand the tree by starting from simple examples.
 
-```
+```elixir
 test "asserts expand 1 item" do
   assert FindPermutationsInList.expandTree([1]) == [[1]]
 end
@@ -57,7 +57,7 @@ The hope was that this would let me iterate to something without having to solve
 However the examples above do not make it easy to get to the point where you can expand the output of the permute function above. Moreover that final test is not a valid example of what i am trying to solve - in fact it screwed me up badly as i then created another test in which not every node was a new sub list which threw me off even further. Lack of focus on delivering the solution to the problem. Big mistake.  I then ended up writing a function to return the next item that is also a sublist and not just another node.
 
 The code that makes the above tests pass looks like this
-```
+```elixir
 def expandTree(list), do: expandTree([],[],list)
 
 defp expandTree(acc, parents, []), do: acc ++ [parents]
