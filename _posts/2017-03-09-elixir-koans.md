@@ -22,6 +22,8 @@ Hopefully this is done well as I think this is a great idea for learning at
 least the syntax of a lang.
 
 Update - spent 40 mins on the first 80. Well worth it.
+Update 2 - well worth the time. Learnt a ton about various ways different
+language elements combine, very enlightening.
 
 
 
