@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Elixir: How To Write An App You Can Deploy"
-date: 2017-03-09 21:27:48 +0000
+date: 2017-03-19 21:27:48 +0000
 categories: elixir getting-started
 ---
 
