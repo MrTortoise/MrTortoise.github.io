@@ -5,7 +5,6 @@ date: 2017-03-19 21:27:48 +0000
 categories: elixir getting-started
 ---
 
-
 ## Disclaimer
 I have no idea how to actually deploy anything yet. This is all taken from
 [Getting Started](http://elixir-lang.org/getting-started), read that to make sense of this.
