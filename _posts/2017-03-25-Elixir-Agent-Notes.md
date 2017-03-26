@@ -4,7 +4,8 @@ title:  "Elixir: Notes on Agent"
 date:   2017-03-25 20:00:48 +0000
 categories: elixir getting-started
 ---
-
+## The repo backing this code is [here](https://github.com/MrTortoise/elixir-app-minimal).
+It is literally a result of me working through the docs, nothing original.
 
 ## [Agent](http://elixir-lang.org/getting-started/mix-otp/agent.html)
 

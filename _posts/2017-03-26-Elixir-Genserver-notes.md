@@ -4,6 +4,8 @@ title:  "Elixir: Notes on GenServer"
 date:   2017-03-26 20:00:48 +0000
 categories: elixir getting-started gen-server
 ---
+## The reps backing this code is [here](https://github.com/MrTortoise/elixir-app-minimal).
+It is literally a result of me working through the docs, nothing original.
 
 ## [GenServer](http://elixir-lang.org/getting-started/mix-otp/genserver.html)
 The [Full Gen ServerDocumentaiton is here](https://hexdocs.pm/elixir/GenServer.html)
