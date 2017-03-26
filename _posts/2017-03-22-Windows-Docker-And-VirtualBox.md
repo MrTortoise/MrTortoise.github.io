@@ -34,10 +34,14 @@ sudo add-apt-repository \
    stable"
 sudo apt-get update
 sudo apt-get install docker-ce
+sudo usermod -aG docker {userName}  - enables running docker without sudo
 `now run the hello world example`
 sudo docker run hello-world
 
 ```
 
-Don't know why I didn't just do that months ago.
+
+Don't know why I didn't just do that months ago - aside from the fact its clearly
+a terrible idea for anything but a playground.
+
 Wonder when I will get around to some [kubernetes](https://kubernetes.io/)
