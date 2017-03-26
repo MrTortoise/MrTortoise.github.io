@@ -40,4 +40,4 @@ sudo docker run hello-world
 ```
 
 Don't know why I didn't just do that months ago.
-Wonder when i will get around to some [kubernetes](https://kubernetes.io/)
+Wonder when I will get around to some [kubernetes](https://kubernetes.io/)
