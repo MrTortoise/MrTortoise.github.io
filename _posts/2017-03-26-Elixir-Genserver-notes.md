@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Elixir: GenServer"
+title:  "Elixir: Notes on GenServer"
 date:   2017-03-26 20:00:48 +0000
 categories: elixir getting-started gen-server
 ---
