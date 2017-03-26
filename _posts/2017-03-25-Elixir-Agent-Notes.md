@@ -24,7 +24,7 @@ It is a wrapper around state.
 
 2. ` Agent.get(bucket, &Map.get(&1, key))` The map function gets executed in the process of the Agent. So the &1 actually refers to the bucket and hence why you have to capture it with the `&` operator. So this is important:
 
- ```Elixir
+ ``` Elixir
  def delete(bucket, key) do
    Process.sleep(1000) # puts client to sleep
    Agent.get_and_update(bucket, fn dict ->
