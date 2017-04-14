@@ -16,28 +16,28 @@ the Java version.
 
 Want to describe the main uses I have gotten value from when using Akka.net.
 
--  Orchestration - There are several takes on this.
+1. Orchestration - There are several takes on this.
     1. Scaling horizontally - akka is really nice for adding more machines to a cluster,
     setting up roles on them letting the cluster start using the extra capacity.
     2. Controlling a set of resources - due to its message based nature it naturally lends   itself to writing protocols for controlling collections of things (Eg build agents or test   machines)
     3. Marshalling messages between aggregate roots / bounded contexts.
 
--  Concurrency
-  1. Actors can only communicate via messages. Their state is isolated - and if you use immutable patterns then no references ot anything in the state of one actor will be in another. The cognitive overhead and number of gotchas is really really low.
-  2. Message passing is really fast, hundreds of million per second locally - obviously remoting has different characteristics.
-  3. It is tell based out of the box.
+2. Concurrency
+    1. Actors can only communicate via messages. Their state   is isolated - and if you use immutable patterns then no   references ot anything in the state of one actor will be   in another. The cognitive overhead and number of gotchas   is really really low.
+    2. Message passing is really fast, hundreds of million per   second locally - obviously remoting has different   characteristics.
+    3. It is tell based out of the box.
 
-- Event and Command sourcing
-  1. The actor model is pretty much built for this.
+3. Event and Command sourcing
+    1. The actor model is pretty much built for this.
 
-- CQRS
-  1. It is tell based which in my view makes it a really good match for the command side.
+4. CQRS
+    1. It is tell based which in my view makes it a really   good match for the command side.
 
-- Deployment
-  1. The configuration of the arrangement of actors - in terms of degree of parallelism
-  and the means of routing / distribution is determined by configuration file rather
-  than hard coded or some devops / cloud host specific wizardry. Load balancing vs
-  broadcast is simply a choice of router. The actor code in a single step by step process looks the same when they fan out or are distributed by hash over a cluster. Its all config.
+5. Deployment
+    1. The configuration of the arrangement of actors - in   terms of degree of parallelism
+    and the means of routing / distribution is determined by   configuration file rather
+    than hard coded or some devops / cloud host specific   wizardry. Load balancing vs
+    broadcast is simply a choice of router. The actor code in   a single step by step process looks the same when they fan   out or are distributed by hash over a cluster. Its all   config.
 
 ## What is the tradeoff?
 
