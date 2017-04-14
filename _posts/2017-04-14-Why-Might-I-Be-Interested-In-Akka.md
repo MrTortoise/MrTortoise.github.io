@@ -16,24 +16,24 @@ the Java version.
 
 Want to describe the main uses I have gotten value from when using Akka.net.
 
-1. Orchestration - There are several takes on this.
+-  Orchestration - There are several takes on this.
     1. Scaling horizontally - akka is really nice for adding more machines to a cluster,
     setting up roles on them letting the cluster start using the extra capacity.
     2. Controlling a set of resources - due to its message based nature it naturally lends   itself to writing protocols for controlling collections of things (Eg build agents or test   machines)
     3. Marshalling messages between aggregate roots / bounded contexts.
 
-2. Concurrency
+-  Concurrency
   1. Actors can only communicate via messages. Their state is isolated - and if you use immutable patterns then no references ot anything in the state of one actor will be in another. The cognitive overhead and number of gotchas is really really low.
   2. Message passing is really fast, hundreds of million per second locally - obviously remoting has different characteristics.
   3. It is tell based out of the box.
 
-3. Event and Command sourcing
+- Event and Command sourcing
   1. The actor model is pretty much built for this.
 
-4. CQRS
+- CQRS
   1. It is tell based which in my view makes it a really good match for the command side.
 
-5. Deployment
+- Deployment
   1. The configuration of the arrangement of actors - in terms of degree of parallelism
   and the means of routing / distribution is determined by configuration file rather
   than hard coded or some devops / cloud host specific wizardry. Load balancing vs
