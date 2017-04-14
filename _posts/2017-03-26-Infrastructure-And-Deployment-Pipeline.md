@@ -13,6 +13,7 @@ categories: docker deployment kubernetes
 4. Need to be able continually evaluate and change live deployment configuration.
 5. Needs to have a controlled monthly cost.
 6. Need good logging for evidence based deployment decisions.
+7. When all goes wrong need to be able to revert to earlier version ASAP.
 
 ## Pie In Sky Goals
 
@@ -20,11 +21,12 @@ categories: docker deployment kubernetes
   - If whole process starts to take more than 10 minutes then it seriously effects iteration speed.
   - When something breaks the ideal is to have a pipeline that allows fixing it and deploying rather
   rather than spend time scrambling to recover and then fixing it.
-2. Blue - Green deployments
+2. Blue - Green deployments.
 2. Cost is a real issue, building up in a way that greatly limits cost initially, expands organically.
   - This will mean being v clear about redundancy vs resiliency.
   - Focus on discovering requirements on one machine, diminishing returns with load.
 3. Dev and QA environments basically being the same as live.
+4. Clarity surrounding resources available for redundancy and simply redundant resources.
 
 
 ## Initial thoughts:

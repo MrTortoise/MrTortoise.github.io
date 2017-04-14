@@ -38,3 +38,9 @@ $ mix new kv --module KV
 4. ...
 5. wip
 6. profit
+
+
+## How to deploy?
+1. exrm - generates a package including erlang. It appears like you stick it somewhere and start / stop the service.
+2. edeliver - based on deliver - a bash tool. Get it [here](https://github.com/boldpoker/edeliver)
+3. [Good youtube talk](https://www.youtube.com/watch?v=H686MDn4Lo8)
