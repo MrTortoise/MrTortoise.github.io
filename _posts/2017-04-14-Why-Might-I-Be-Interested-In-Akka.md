@@ -9,7 +9,7 @@ categories: akka.net
 
 akka.net is not released for ,net core. I also believe that remoting on mono is not there.
 So if you are using this, right now you are in windows, and you are probably not deploying
-into docker. So that's a bit sad, but .net core is coming in 1.5 which is apparently going to happen this year. The focus right now seems to be on geting closer to the features in
+into docker. So that's a bit sad, but .net core is coming in 1.5 which is apparently going to happen this year. The focus right now seems to be on getting closer to the features in
 the Java version.
 
 ## What is the point?
@@ -26,6 +26,9 @@ Want to describe the main uses I have gotten value from when using Akka.net.
     1. Actors can only communicate via messages. Their state   is isolated - and if you use immutable patterns then no   references ot anything in the state of one actor will be   in another. The cognitive overhead and number of gotchas   is really really low.
     2. Message passing is really fast, hundreds of million per   second locally - obviously remoting has different   characteristics.
     3. It is tell based out of the box.
+
+3. Microservices
+    1. Because of the hierarchy and ease of clustering you can have multiple aggregate roots in single system. If you want to deploy them seperatley onto different services you can - by config. But why do you want to do that? You have all the old options but also new ones - far more efficient resource utilisation by not requiring as much reservation.
 
 3. Event and Command sourcing
     1. The actor model is pretty much built for this.
