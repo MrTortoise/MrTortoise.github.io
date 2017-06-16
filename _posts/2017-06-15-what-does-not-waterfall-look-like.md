@@ -15,7 +15,16 @@ Usual reasons:
  - It's something everyone says is crap so everyone parrots it.
  - It is not agileRant
 
-All this ignores that waterfall must be good in some situations - the world is a continuous spectrum. At the one end we place Waterfall and at he oter we place Agile.
+All this ignores that waterfall must be good in some situations - the world is a continuous spectrum. At the one end we place Waterfall and at the other we place Agile.
+
+## The TLDR;
+Waterfall is ok. It has the ability to loop back on itself, that was part of its origional intent. What breaks waterfall is the nature of the business. It commits very heavily into one option, puts ridiculous time constrants on work due to contract negotiation and as a result puts itself on a single track to either success or failure with no recourse. As a result anyone practising waterfall never loops back to a previous stage. The business itseld makes waterfall fail.
+
+So there is a problem. What people then do is 'Agile' - actually they really mean 'somethign different to waterfall' (nobody really understands waterfall these days either - the only time i have met it is in construction), they realise that planning takes time (and it should), so they cut it out to start producing code faster. However they don't figure out the root cause of why the previous appraoch failed and fix that - the route cause is that the business has a bad relationship with the customer, there is no integrity so contract negotiations are harsh and the result very tight time scales and forcing commitment to one working path with no ability to iterate ideas. Iteration becomes moving forward in small increments rather than iterating ideas and you end up with Waterfail.
+
+Waterfail is waterfall with out the planning, without the rigour up front and as a result it descends into hordes of QA and post code testing.
+
+Car factory is it waterfall.
 
 ##So lets build some strawmen
 
@@ -32,6 +41,7 @@ These all essentially fall under the category of excuses such as 'The customer c
   - Anyway ... the point. If you go slow, the world will change. I will come back to speed in another strawman.
 
 2. Upon delivery the customer realises that the execution was bad.
+ - Because the customer gets very little ongoing feedback and very little ongoing UX testing and refinement
 3. Upon delivery the customer realises that the solution was bad.
 4. Upon delivery the customer realises that extra features are needed.
 5. Upon delivery it is discovered nobody wants to use the solution.
