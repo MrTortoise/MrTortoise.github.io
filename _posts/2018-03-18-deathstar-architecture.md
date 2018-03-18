@@ -4,17 +4,23 @@ title:  "Deathstar Architecture: Don't be the empire, be the guys that go around
 date:   2018-03-18 11:40:48 +0000
 categories: architecture lean design patterns ddd
 ---
-# What is Deathstar Architecture and why should I care?
+# What is Death Star Architecture and why you should care
 
 ![Deathstar](/images/deathstar/deathstar.jpg)
 
-The goal of architecture is to enable deferring decisions by encapsulating and adapting away from them - this enables large simple solutions to complex problems. However, being feeling the pressure to know when to make decisions is hard.
+A deathstar has a core. Around the core there is stuff. A DDD crafted death star would fall apart like a higher dimensional chocolate orange. The Death star on the other hand might have segments - but if it does they are all heavily cross linked to aid its structural integrity. A well designed estate at enterprise scale has no such cohesion baked into it. Its survival and adaptability depends upon this and is achieved through domain events. It has isolation, a well defined structure to each part and a well defined value delivered by each part. The death star doesn't - it does on the other hand blow up moons. Most death start architecture on the other hand just blows up.
 
-Mainly because unlike with refactoring code (connaissance and groups that practise together help build shared consensus)refactoring large scale architecturally is still very much touchy feely about the when. Or maybe thats just my ignorance (link me up!).
+![Boom](/images/deathstar/boom.jpg)
+
+> The job of an architect is to build a structure that allows decisions to be delayed as long as possible - Robert Martin
+
+The goal of architecture is to enable deferring decisions by encapsulating and adapting away from them - this enables large simple solutions to complex problems. However, feeling the pressure to know when to make decisions is hard.
+
+Ulike with refactoring code (connaissance and groups that practise together help build shared consensus) refactoring large scale architecturally is still very much touchy feely about the when. Or maybe thats just my ignorance (link me up!).
 
 Devops and 'measure the key things' are helping here. But still, it won't help with the deathstar - the death star happens earlier and gets you before you get the data to pressure change.
 
-## How to build one
+## How to build a Death Star
 
 Odds are you have an almost functional ones and have some rebels in your business frustrating you already.
 
@@ -22,7 +28,7 @@ Odds are you have an almost functional ones and have some rebels in your busines
 1. Take the cheaper faster option.
 1. Goto 1.
 
-That is *reality*. You don't do this you are probably dead or already an established corporate entity in which case i am merley recounting the first 5-10 years of your life
+That is *reality*. If you don't do this you are probably dead or already an established corporate entity in which case i am merley recounting the first 5-10 years of your life
 
 {% include youtubePlayer.html id="0oBx7Jg4m-o" %}
 
@@ -55,23 +61,18 @@ Rather than develop more stuff to add value to a proposition you start to look f
 Now the follow is true:
 
 1. **Because nobody can change anything without breaking something you decide you have a quality problem** - the existing stuff works and so survivor bias makes everyone point to the new work as being the problem and Hero Complex means the gatekeepers are essential.
-1. **Gate keepers become the Heros** and this becomes a cultural target.
+1. **Gate keepers become the Heros** and this becomes a cultural target. People subconsciously copy people that seem to have more social status.
 1. To fix 'sloppy development' development slows down, some heavy handed 'agile' implementation focus on **[Process, Documentation and Planning](http://agilemanifesto.org/)**. (too subtle?)
-
 1. Lots of small problem solving per department ie **local optomisations rather then whole company** result in fragility.
-1. The estate is not a mess of braided knots with value streams spread accross multiple solutions. This entire approach complects the whole system.
+1. The estate is now a mess of **braided knots with value streams spread accross multiple solutions**. This entire approach complects the whole system. This is the nature of a death star.
+1. **Just because dev stalled doesn't mean the business did!** it is literally impossible to meet the current businesses needs as development is now several months behind.
+1. Confidence in development drops, other **departments solve their own problems**. Nobody stops to think that this is crazy - its so normal.
 
 {% include youtubePlayer.html id="rI8tNMsozo0" %}
 
+# So Death Stars are bad .. Now what
 
-You get Jira, you get Scrum (if you are lucky), you get Confluence / sharepoint you introduce gates and checkpoints to block value being released because the business percieves the work of developers as being risky. Well it is, because the system was designed to be
-
-soem heavy handed issue tracking, delays, wait times and then you still need QA delaying releases in order to build confidence. Like that will help?
-
-The criminal part is that because the business never slowed down it is literally impossible to meet the current businesses needs as development is now several months behind and now key parts will get oursourced - because now the business percieves development as being the bad guys. This is reasonable - dev is the bad guy here.
-
-![ManualQA](/images/deathstar/qa.jpg)
-
+I have a particular variety that is getting on my wick right now. So will unpick it a bit.
 ## What one looks like
 
 There are many ways to get to a death star - the one I am going to talk about here is a sql deathstar. This is because I think a lot of companies have already learnt a lot from DDD and seperation of contexts and thinking about aggregates. If this has not happened then you dont have a death star, you have a [big ball of mud](https://en.wikipedia.org/wiki/Big_ball_of_mud). It is a deathstar of sorts but the value of refactoring architecture away is far more obvious and the organisational problems its causes even more so. If in this situation don't build a deathstar.
