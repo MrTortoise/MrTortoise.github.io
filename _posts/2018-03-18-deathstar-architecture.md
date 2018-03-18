@@ -20,13 +20,11 @@ First, it is a pattern I see everywhere (i have built some, worked on some and e
 
 {% include youtubePlayer.html id=0oBx7Jg4m-o %}
 
-spacer
-
-![Reality](https://www.youtube.com/watch?v=0oBx7Jg4m-o)
-
 The result of taking this appraoch is that you will end up with one big database at the core of your business. All these different processes hanging off it, dipping in and modifying state for other unconnected processes to do more work with.
 
 The cost of this pattern is you have 1-2 emporers that know the system, evil sith lord(s) that act as hippos and lots of underlings that will shoot themselves in the foot - or get asphixiated through use of the force - when they get frustrated and then try and fail to modify the system. Its a classic co-dependance on gatekeeper releationships that is caused by ever and probably non-linear increasing complexity of the single system.
+
+![Keymaster](/images/deathstar/keymaster.jpg)
 
 The problem is that the pace of busineses development and vaue add drops off a cliff. Rather than develop more stuff to add value to a proposition you start to look for clients to sell the existing stuff to. This is where the real death star gets built. The technical debt incurred to get something out for one client gets duplicated as clients go up. Because the business profits who can say its wrong?
 
