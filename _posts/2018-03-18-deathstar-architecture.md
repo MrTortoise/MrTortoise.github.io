@@ -18,7 +18,7 @@ Devops and 'measure the key things' are helping here. But still, it won't help w
 ## How to build one
 First, it is a pattern I see everywhere (i have built some, worked on some and even fixed one) - odds are you have an almost functional ones and have some rebels in your business frustrating you already. It is a very natural pattern that comes from a very natural and successful tendancy - taking the cheaper faster option. Unfortunatley the realities of running a company are that you often have to make this choice or the very real alternative is your company will die because you start on a shoestring then you over promise to win business and then pull a rabbit out of a hat to deliver. That is *reality*.
 
-{% include youtubePlayer.html id=0oBx7Jg4m-o %}
+{% include youtubePlayer.html id="0oBx7Jg4m-o" %}
 
 The result of taking this appraoch is that you will end up with one big database at the core of your business. All these different processes hanging off it, dipping in and modifying state for other unconnected processes to do more work with.
 
@@ -31,6 +31,8 @@ The problem is that the pace of busineses development and vaue add drops off a c
 Now because nobody can change anything without breaking something you decide you have a quality problem - the existing stuff works and so survivor bias makes everyone point to the new work as being the problem and Hero Complex means the gatekeepers are essential. The solution to this is to slow down, implement scrum, soem heavy handed issue tracking, delays, wait times and then you still need QA delaying releases in order to build confidence. Like that will help?
 
 The criminal part is that because the business never slowed down it is literally impossible to meet the current businesses needs as development is now several months behind and now key parts will get oursourced - because now the business percieves development as being the bad guys. This is reasonable - dev is the bad guy here.
+
+![ManualQA](/images/deathstar/qa.jpg)
 
 ## What one looks like
 
