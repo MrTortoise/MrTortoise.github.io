@@ -18,7 +18,9 @@ Devops and 'measure the key things' are helping here. But still, it won't help w
 ## How to build one
 First, it is a pattern I see everywhere (i have built some, worked on some and even fixed one) - odds are you have an almost functional ones and have some rebels in your business frustrating you already. It is a very natural pattern that comes from a very natural and successful tendancy - taking the cheaper faster option. Unfortunatley the realities of running a company are that you often have to make this choice or the very real alternative is your company will die because you start on a shoestring then you over promise to win business and then pull a rabbit out of a hat to deliver. That is *reality*.
 
-{% include youtubePlayer.html id=0oBx7Jg4m-o %}
+{% include youtubePlayer.html id=page.0oBx7Jg4m-o %}
+
+spacer
 
 ![Reality](https://www.youtube.com/watch?v=0oBx7Jg4m-o)
 
