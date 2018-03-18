@@ -4,7 +4,6 @@ title:  "Deathstar Architecture: Don't be the empire, be the guys that go around
 date:   2018-03-18 11:40:48 +0000
 categories: architecture lean design patterns ddd
 ---
-
 # What is Deathstar Architecture and why should I care?
 
 ![Deathstar](/images/deathstar/deathstar.jpg)
@@ -16,19 +15,58 @@ Mainly because unlike with refactoring code (connaissance and groups that practi
 Devops and 'measure the key things' are helping here. But still, it won't help with the deathstar - the death star happens earlier and gets you before you get the data to pressure change.
 
 ## How to build one
-First, it is a pattern I see everywhere (i have built some, worked on some and even fixed one) - odds are you have an almost functional ones and have some rebels in your business frustrating you already. It is a very natural pattern that comes from a very natural and successful tendancy - taking the cheaper faster option. Unfortunatley the realities of running a company are that you often have to make this choice or the very real alternative is your company will die because you start on a shoestring then you over promise to win business and then pull a rabbit out of a hat to deliver. That is *reality*.
+
+Odds are you have an almost functional ones and have some rebels in your business frustrating you already.
+
+1. Take the cheaper faster option.
+1. Take the cheaper faster option.
+1. Goto 1.
+
+That is *reality*. You don't do this you are probably dead or already an established corporate entity in which case i am merley recounting the first 5-10 years of your life
 
 {% include youtubePlayer.html id="0oBx7Jg4m-o" %}
 
-The result of taking this appraoch is that you will end up with one big database at the core of your business. All these different processes hanging off it, dipping in and modifying state for other unconnected processes to do more work with.
+## The result
 
-The cost of this pattern is you have 1-2 emporers that know the system, evil sith lord(s) that act as hippos and lots of underlings that will shoot themselves in the foot - or get asphixiated through use of the force - when they get frustrated and then try and fail to modify the system. Its a classic co-dependance on gatekeeper releationships that is caused by ever and probably non-linear increasing complexity of the single system.
+### One **BIG** database at the core of your business
+
+All these different processes hanging off it, dipping in and modifying state for other unconnected processes to do more work with.
+
+## The Cost
+
+- 1-2 emporers that know the system
+- Evil sith lord(s) that act as hippos
+- lots of underlings that will shoot themselves in the foot - or get asphixiated through use of the force - when they get frustrated and then try and fail to modify the system.
+
+ Its a classic co-dependance on gatekeeper releationships that is caused by ever and probably non-linear increasing complexity of the single system.
 
 ![Keymaster](/images/deathstar/keymaster.jpg)
 
-The problem is that the pace of busineses development and vaue add drops off a cliff. Rather than develop more stuff to add value to a proposition you start to look for clients to sell the existing stuff to. This is where the real death star gets built. The technical debt incurred to get something out for one client gets duplicated as clients go up. Because the business profits who can say its wrong?
+- **Pace of busineses development and vaue add drops off a cliff.**
+Rather than develop more stuff to add value to a proposition you start to look for clients to sell the existing stuff to. This is where the real death star gets built.
 
-Now because nobody can change anything without breaking something you decide you have a quality problem - the existing stuff works and so survivor bias makes everyone point to the new work as being the problem and Hero Complex means the gatekeepers are essential. The solution to this is to slow down, implement scrum, soem heavy handed issue tracking, delays, wait times and then you still need QA delaying releases in order to build confidence. Like that will help?
+- **Technical debt bought to ship gets duplicated** as more clients come on oard. Finally the return on work to ship pays, but now the budgets are all about marketing and scaling out rather than consolidation. Also at this point things are small and so
+
+- **Easier to integrate into database rather than model problems** because you can fix problems simply by updating a record here and there. It feels efficient and powerful - **This is the problem**
+
+![MarginalDecisions](/images/deathstar/marginal-decisions.jpg)
+
+## Congratulations you own a DEATH STAR
+Now the follow is true:
+
+1. **Because nobody can change anything without breaking something you decide you have a quality problem** - the existing stuff works and so survivor bias makes everyone point to the new work as being the problem and Hero Complex means the gatekeepers are essential.
+1. **Gate keepers become the Heros** and this becomes a cultural target.
+1. To fix 'sloppy development' development slows down, some heavy handed 'agile' implementation focus on **[Process, Documentation and Planning](http://agilemanifesto.org/)**. (too subtle?)
+
+1. Lots of small problem solving per department ie **local optomisations rather then whole company** result in fragility.
+1. The estate is not a mess of braided knots with value streams spread accross multiple solutions. This entire approach complects the whole system.
+
+{% include youtubePlayer.html id="rI8tNMsozo0" %}
+
+
+You get Jira, you get Scrum (if you are lucky), you get Confluence / sharepoint you introduce gates and checkpoints to block value being released because the business percieves the work of developers as being risky. Well it is, because the system was designed to be
+
+soem heavy handed issue tracking, delays, wait times and then you still need QA delaying releases in order to build confidence. Like that will help?
 
 The criminal part is that because the business never slowed down it is literally impossible to meet the current businesses needs as development is now several months behind and now key parts will get oursourced - because now the business percieves development as being the bad guys. This is reasonable - dev is the bad guy here.
 
