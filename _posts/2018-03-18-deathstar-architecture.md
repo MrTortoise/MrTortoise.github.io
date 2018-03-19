@@ -46,10 +46,9 @@ All these different processes hanging off it, dipping in and modifying state for
 
  Its a classic co-dependance on gatekeeper relationships that is caused by ever and probably non-linear increasing complexity of the single system.
 
-![Keymaster](/images/deathstar/keymaster.jpg)
+![KeyMaster](/images/deathstar/keymaster.jpg)
 
-- **Pace of business development and value add drops off a cliff.**
-Rather than develop more stuff to add value to a proposition you start to look for clients to sell the existing stuff to. This is where the real death star gets built.
+- **Pace of business development and value add drops off a cliff.** Rather than develop more stuff to add value to a proposition you start to look for clients to sell the existing stuff to. This is where the real death star gets built.
 
 - **Technical debt bought to ship gets duplicated** as more clients come on board. Finally the return on work to ship pays, but now the budgets are all about marketing and scaling out rather than consolidation. Also at this point things are small and so
 
@@ -58,6 +57,7 @@ Rather than develop more stuff to add value to a proposition you start to look f
 ![MarginalDecisions](/images/deathstar/marginal-decisions.jpg)
 
 ## Congratulations you own a DEATH STAR
+
 It looks a bit like this:
 
 ![YourVeryOwnDeathStar](/images/deathstar/sql-deathstar-1.png)
@@ -88,7 +88,7 @@ Now the follow is true:
 Getting rid of feature branches induces some serious cognitive dissonance. Maybe for another time ...
 {% include youtubePlayer.html id="h4DM-Wa0aDQ" %}
 
-# So Death Stars are bad .. Now what
+## So Death Stars are bad .. Now what
 
 If you dont know anything about [Domain Driven Design](https://www.amazon.co.uk/Domain-Driven-Design-Distilled-Vaughn-Vernon/dp/0134434420/ref=tmm_pap_swatch_0?_encoding=UTF8&qid=&sr=) then that is probably a good place to start.
 
@@ -100,37 +100,27 @@ If you dont know anything about [Domain Driven Design](https://www.amazon.co.uk/
 
 ## But why is this different?
 
-1. You can blow up all your enemies at once
-1. These contexts use completely isolated datastores.
-1. Your DBA's probably are grateful but a little bored now
 1. Most importantly the [Single Responsibility Principle](https://8thlight.com/blog/uncle-bob/2014/05/08/SingleReponsibilityPrinciple.html)
+1. These contexts use completely isolated datastores.
+1. You can blow up all your enemies at once
+1. Your DBA's probably are grateful but a little bored now
 
 When code, modules, services, databases or whatever deployment units are being discussed are broken down with these kinds of considerations and the above approach then due to the isolation and singularity of purpose (that will be mapped end to end onto what the company actually does) you end up in a position more like this.
 
-## What one looks like
+## So Death Star bad, what does good look like and how to get there?
 
-There are many ways to get to a death star - the one under focus here is a SQL Death Star. (I like to think) A lot of companies embrace DDD and separation of contexts and thinking about aggregates. If this has not happened then you dont have a death star, you have a [big ball of mud](https://en.wikipedia.org/wiki/Big_ball_of_mud). It is a deathstar of sorts but the value of refactoring architecture away is far more obvious and the organizational problems its causes even more so.
+![KindOfStillADeathStar](/images/deathstar/not-a-deathstar.png)
 
-## The enterprise Death Star
+But what wait:
 
-![Enterprise Death Star](/images/deathstar/deathstar-database-enterprise.png)
+1. How did [CQRS](https://cqrs.files.wordpress.com/2010/11/cqrs_documents.pdf) get in there?
+2. Now an event store is just going to create another deathstar.
 
-Take an enterprise level break down of departments and how they contribute to the business and use these boundaries to segregate pieces of software. This is crazy because it means the integration point of processes in different departments is the central part - this invariably ends up being the database.
+So CQRS: DDD is expensive (in the short term - i'd argue long term its far more effective), you would normally only employ it for core domain. Thats the bits that really add value to the customer - but thats what is under discussion here. If you have bounded contexts then you have domain events. You should use event sourcing at this point whether or not each bounded context is event sourced or not. The deathstar above didn't - it just spewed side effects across the single integration point of all the separate domains. The entire point (here) of separating these bounded contexts is that using the same database across them is not a default assumption. Instead the choice of datastore should depend on the types of read and query.
 
-What is really happening is that a customer driven value stream passes through many departments by necessity and so the software should model and segregate upon this instead.
+In regard to deathstar the second. Yes, absolutely, hence all the articles over the years about enterprise service bus being an anti pattern, or people getting upset with api gateways and orchestration gateways. They hide logic and gradually incorporate more and more logic inside themselves - they are the opposite of databases and so have all the same problems. RabbitMQ (and probably Kafka - again someone please correct me :D) have the same problem with complex topic and exchange setups.
 
-### But we did that!
-
-Yes, it starts like that.
-
-So we have a core
-
-To finish it off all we have to do is block communication between departments
-
-The database of a big name vendor costs so much everything ends up hanging off it. When you draw architecture diagrams of multiple areas of the system you will see that rather than them coming off in sections they are also interconnected. It is the interconnections that kill development because nobody in those teams will fully understand them.
-
-In DDD this is described as a big ball of mud but I dont think the reason it happens is ever really explained in terms of business decisions. It doesn't happen because of architectural choices it happens due to best choices within financial constraints.
-
+However, what was never suggested was only one event source being appropriate or desirable.
 
 Finally ...
 Whats the worst that could happen right?
