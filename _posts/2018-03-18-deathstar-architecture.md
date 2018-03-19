@@ -8,7 +8,7 @@ categories: architecture lean design patterns ddd
 
 ![Deathstar](/images/deathstar/deathstar.jpg)
 
-A death star has a core. Around the core there is stuff. A DDD crafted death star would fall apart like a higher dimensional chocolate orange. The Death Star on the other hand might have segments - but if it does they are all heavily cross linked to aid its structural integrity. A well designed estate at enterprise scale has no such cohesion baked into it. Its survival and adaptability depends upon this and is achieved through domain events. It has isolation, a well defined structure to each part and a well defined value delivered by each part. The Death Star doesn't - it does on the other hand blow up moons. Most death star architecture on the other hand just blows up.
+A death star has a core. Around the core there is stuff. A DDD crafted death star would fall apart like a higher dimensional chocolate orange. The Death Star on the other hand might have segments - but if it does they are all heavily cross linked to aid its structural integrity. A well designed estate at enterprise scale has no such cohesion baked into it. Its survival and adaptability depends upon this and is achieved through domain events. It has isolation, a well defined structure to each part and a well defined value delivered by each part. The Death Star doesn't - it does on the other hand blow up moons. The point being just because it blows shit up doesn't mean its efficient to work with. I mean an old guy with a stick strolled in and turned off the tractor beam without anyone noticing.
 
 ![Boom](/images/deathstar/boom.jpg)
 
@@ -16,19 +16,19 @@ A death star has a core. Around the core there is stuff. A DDD crafted death sta
 
 This enables large simple solutions to complex problems. However, feeling the pressure to know when to make decisions is hard.
 
-Unlike with refactoring code (connaissance and groups that practice together help build shared consensus) refactoring large scale architecturally is still very much touchy feely about the when. Or maybe thats just my ignorance (link me up!).
+Unlike with refactoring code ([connaissance](https://en.wikipedia.org/wiki/Connascence) and groups that practice together help build shared consensus) refactoring large scale architecturally is still very much touchy feely about the when. Or maybe thats just my ignorance (link me up!).
 
 Devops and 'measure the key things' are helping here. But still, it won't help with the deathstar - the death star happens earlier and gets you before you get the data to pressure change.
 
 ## How to build a Death Star
 
-Odds are you have an almost functional ones and have some rebels in your business frustrating you already.
+Odds are you have an almost functional one and have some rebels in your business frustrating you already. But generally taking the following simple steps will suffice.
 
 1. Take the cheaper faster option.
 1. Take the cheaper faster option.
 1. Goto 1.
 
-That is *reality*. If you don't do this you are probably dead or already an established corporate entity in which case I am merely recounting the first 5-10 years of your life
+That is *reality*. If you don't do this you are probably dead or already an established corporate entity in which case I am merely recounting the first 5-10 years of your life. Unfortunately there are many traps you will fall into on the way - namely taking on big dependencies. The most common are things like IDE's, build pipeline and the real topic here big add expensive database that encourages you to make bad decisions. None of these need to be taken.
 
 {% include youtubePlayer.html id="0oBx7Jg4m-o" %}
 
@@ -70,7 +70,7 @@ The problem comes when we start to talk about value streams. Take an operational
 
 The problem is that every business process will look something like this and will overlap. Experts in one value stream / domain will potentially have no idea about the existence of others. But they will know this and so will be paralyzed by fear.
 
-The Deathstar is fully operational. The Empire now has full control over its denizens.
+The Deathstar is fully operational. Its a huge frickin lazer beam, congrats. Problem is is Vader ever remember he asked for a ballpit to go with his [evil egg](https://www.youtube.com/watch?v=5blbv4WFriM) you are going to need help - you have no chance.
 
 Now the follow is true:
 
@@ -118,7 +118,7 @@ But what wait:
 
 So CQRS: DDD is expensive (in the short term - i'd argue long term its far more effective), you would normally only employ it for core domain. Thats the bits that really add value to the customer - but thats what is under discussion here. If you have bounded contexts then you have domain events. You should use event sourcing at this point whether or not each bounded context is event sourced or not. The deathstar above didn't - it just spewed side effects across the single integration point of all the separate domains. The entire point (here) of separating these bounded contexts is that using the same database across them is not a default assumption. Instead the choice of datastore should depend on the types of read and query.
 
-In regard to deathstar the second. Yes, absolutely, hence all the articles over the years about enterprise service bus being an anti pattern, or people getting upset with api gateways and orchestration gateways. They hide logic and gradually incorporate more and more logic inside themselves - they are the opposite of databases and so have all the same problems. RabbitMQ (and probably Kafka - again someone please correct me :D) have the same problem with complex topic and exchange setups.
+In regard to deathstar the second. Yes, absolutely, hence all the articles over the years about enterprise service bus being an anti pattern, or people getting upset with api gateways and orchestration gateways. They hide logic and gradually incorporate more and more logic inside themselves - they are the opposite of databases and so have all the same problems. RabbitMQ (and probably Kafka - again someone please correct me :D) have the same problem with complex topic and exchange setups. Its a question of where the logic resides and the ability to do CD over it in a way that enables high confidence and cadence of releases.
 
 However, what was never suggested was only one event source being appropriate or desirable.
 
