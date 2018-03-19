@@ -64,11 +64,11 @@ It looks a bit like this:
 
 However that doesn't look so bad. There are lots of separate stacks with not too many cross dependencies all talking with the database. If you squinted at a diagram involving bounded contexts you could argue this achieves that idea. And it does *look* similar - but then a cloud of sulfuric acid also looks a bit like fog.
 
-The problem comes when we start to talk about value streams. Take an operationally important process (say a core business process such as getting products and process into feeds) and map that value stream across these operations and you get something like this
+The problem comes when we start to talk about value streams. Take an operationally important process (say a core business process such as getting products and prices into feeds) and map that value stream across these operations and you get something like this
 
 ![DeathStoreIsStronk](/images/deathstar/sql-deathstar-value-stream.png)
 
-The problem is that every business process will look something like this qnd will overlap. Experts in one value stream / domain will potentially have no idea about the existence of others. But they will know this and so will be paralyzed by fear.
+The problem is that every business process will look something like this and will overlap. Experts in one value stream / domain will potentially have no idea about the existence of others. But they will know this and so will be paralyzed by fear.
 
 The Deathstar is fully operational. The Empire now has full control over its denizens.
 
@@ -79,10 +79,14 @@ Now the follow is true:
 1. To fix 'sloppy development' development slows down, some heavy handed 'agile' implementation focus on **[Process, Documentation and Planning](http://agilemanifesto.org/)**. (too subtle?)
 1. Lots of small problem solving per department ie **local optimizations rather then whole company** result in fragility.
 1. The estate is now a mess of **braided knots with value streams spread across multiple solutions**. This entire approach complects the whole system. This is the nature of a death star.
+1. Things like Branching become normal, doing CI on branches other than master (yet only having one db instance ...).
 1. **Just because dev stalled doesn't mean the business did!** it is literally impossible to meet the current businesses needs as development is now several months behind.
 1. Confidence in development drops, other **departments solve their own problems**. Nobody stops to think that this is crazy - its so normal. At this point there is no unified movement, its noise and conflict. Sure the road map is followed but rather than a crystal lattice you get an ants nest.
 
 {% include youtubePlayer.html id="rI8tNMsozo0" %}
+
+Getting rid of feature branches induces some serious cognitive dissonance. Maybe for another time ...
+{% include youtubePlayer.html id="h4DM-Wa0aDQ" %}
 
 # So Death Stars are bad .. Now what
 
