@@ -28,7 +28,7 @@ Odds are you have an almost functional one and have some rebels in your business
 1. Take the cheaper faster option.
 1. Goto 1.
 
-That is *reality*. If you don't do this you are probably dead or already an established corporate entity in which case I am merely recounting the first 5-10 years of your life. Unfortunately there are many traps you will fall into on the way - namely taking on big dependencies. The most common are things like IDE's, build pipeline and the real topic here big add expensive database that encourages you to make bad decisions. None of these need to be taken.
+That is *reality*. If you don't do this you are probably dead or already an established corporate entity in which case I am merely recounting the first 5-10 years of your life. Unfortunately there are many traps you will fall into on the way - namely taking on big dependencies. The most common are things like IDE's, build pipeline and - the real topic here - big and expensive database that encourages you to make bad decisions. None of these need to be taken - or at least have options.
 
 {% include youtubePlayer.html id="0oBx7Jg4m-o" %}
 
@@ -41,7 +41,7 @@ All these different processes hanging off it, dipping in and modifying state for
 ## The Cost
 
 - 1-2 emperors that know the system
-- Evil sith lord(s) that act as hippos
+- Evil sith lord(s) that act as [hippo](https://labs.openviewpartners.com/prioritization-methods-for-developers/#hippo-decisions)
 - lots of underlings that will shoot themselves in the foot - or get asphyxiated through use of the force - when they get frustrated and then try and fail to modify the system.
 
  Its a classic co-dependance on gatekeeper relationships that is caused by ever and probably non-linear increasing complexity of the single system.
@@ -50,9 +50,9 @@ All these different processes hanging off it, dipping in and modifying state for
 
 - **Pace of business development and value add drops off a cliff.** Rather than develop more stuff to add value to a proposition you start to look for clients to sell the existing stuff to. This is where the real death star gets built.
 
-- **Technical debt bought to ship gets duplicated** as more clients come on board. Finally the return on work to ship pays, but now the budgets are all about marketing and scaling out rather than consolidation. Also at this point things are small and so
+- **Technical debt bought to ship gets duplicated** as more clients come on board. Finally the return on work to ship pays, but now the budgets are all about marketing and scaling out rather than consolidation.
 
-- **Easier to integrate into database rather than model problems** because you can fix problems simply by updating a record here and there. It feels efficient and powerful - **This is the problem**
+- At this point things are small and so it is **easier to integrate into database rather than model problems** because  problems can be fixed simply by updating a record here and there. It feels efficient and powerful - **This is the problem**
 
 ![MarginalDecisions](/images/deathstar/marginal-decisions.jpg)
 
