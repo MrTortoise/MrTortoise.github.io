@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Death Star Architecture: Don't be the empire, be the guys that go around blowing shit up!?"
+title:  "Death Star Architecture"
 date:   2018-03-18 11:40:48 +0000
 categories: architecture lean design patterns ddd
 ---
