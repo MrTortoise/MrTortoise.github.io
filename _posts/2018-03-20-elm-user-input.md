@@ -35,7 +35,7 @@ var j = (param) =>{
 }
 {% endhighlight %}
 
-```bash
+{% highlight bash %}
 git init
 {% endhighlight %}
 
