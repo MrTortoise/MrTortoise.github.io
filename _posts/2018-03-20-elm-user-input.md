@@ -16,6 +16,16 @@ So Started to write a game (because a game is always a really smooth learning cu
 
 So this will be fun.
 
+{% highlight ruby %}
+def show
+  @widget = Widget(params[:id])
+  respond_to do |format|
+    format.html # show.html.erb
+    format.json { render json: @widget }
+  end
+end
+{% endhighlight %}
+
 ## Lets set up the project
 
 {% highlight js %}
