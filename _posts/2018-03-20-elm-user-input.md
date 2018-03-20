@@ -16,16 +16,6 @@ So Started to write a game (because a game is always a really smooth learning cu
 
 So this will be fun.
 
-{% highlight ruby %}
-def show
-  @widget = Widget(params[:id])
-  respond_to do |format|
-    format.html # show.html.erb
-    format.json { render json: @widget }
-  end
-end
-{% endhighlight %}
-
 ## Lets set up the project
 
 {% highlight bash %}
@@ -67,7 +57,27 @@ Below is a big blurt of code:
 
 The code for this is: (and no i dont have the foggiest how it works)
 
-{% highlight elm %}
+```elm
+{-| When you need to subscribe to multiple things, you can create a `batch` of
+subscriptions.
+**Note:** `Sub.none` and `Sub.batch [ Sub.none, Sub.none ]` and
+`Sub.batch []` all do the same thing.
+-}
+batch : List (Sub msg) -> Sub msg
+batch =
+Elm.Kernel.Platform.batch
+```
+```Elm
+{-| When you need to subscribe to multiple things, you can create a `batch` of
+subscriptions.
+**Note:** `Sub.none` and `Sub.batch [ Sub.none, Sub.none ]` and
+`Sub.batch []` all do the same thing.
+-}
+batch : List (Sub msg) -> Sub msg
+batch =
+Elm.Kernel.Platform.batch
+```
+{% highlight Elm %}
 {-| When you need to subscribe to multiple things, you can create a `batch` of
 subscriptions.
 **Note:** `Sub.none` and `Sub.batch [ Sub.none, Sub.none ]` and
