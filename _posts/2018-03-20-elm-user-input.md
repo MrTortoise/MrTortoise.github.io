@@ -18,12 +18,12 @@ So this will be fun.
 
 ## Lets set up the project
 
-'''js
+```js
 var j = (param) =>{
   const asdf = 'sdf';
   var j = param + asdf;
 }
-'''
+```
 
 ```bash
 git init
