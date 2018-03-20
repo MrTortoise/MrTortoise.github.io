@@ -67,26 +67,6 @@ batch : List (Sub msg) -> Sub msg
 batch =
 Elm.Kernel.Platform.batch
 ```
-```Elm
-{-| When you need to subscribe to multiple things, you can create a `batch` of
-subscriptions.
-**Note:** `Sub.none` and `Sub.batch [ Sub.none, Sub.none ]` and
-`Sub.batch []` all do the same thing.
--}
-batch : List (Sub msg) -> Sub msg
-batch =
-Elm.Kernel.Platform.batch
-```
-{% highlight Elm %}
-{-| When you need to subscribe to multiple things, you can create a `batch` of
-subscriptions.
-**Note:** `Sub.none` and `Sub.batch [ Sub.none, Sub.none ]` and
-`Sub.batch []` all do the same thing.
--}
-batch : List (Sub msg) -> Sub msg
-batch =
-Elm.Kernel.Platform.batch
-{% endhighlight %}
 
 The code for handling user input is below. Put it in `./src/` and `elm-reactor`
 
