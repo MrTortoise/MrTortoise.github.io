@@ -55,8 +55,8 @@ Below is a big blurt of code:
 - Subscription: This is what kicked my ass. A subscription is of type `Sub Msg` yet we need to sign up to both key up and key down events turns out you can create a batch.
 
 The code for this is: (and no i dont have the foggiest how it works)
-
-{% highlight Elm %}
+updated
+{% highlight elm %}
 {-| When you need to subscribe to multiple things, you can create a `batch` of
 subscriptions.
 **Note:** `Sub.none` and `Sub.batch [ Sub.none, Sub.none ]` and
