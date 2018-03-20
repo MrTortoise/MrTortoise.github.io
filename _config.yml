@@ -24,10 +24,10 @@ github_username:  MrTortoise
 
 # Build settings
 markdown: kramdown
-highlighter: rouge
 theme: minima
 gems:
   - jekyll-feed
 exclude:
   - Gemfile
   - Gemfile.lock
+

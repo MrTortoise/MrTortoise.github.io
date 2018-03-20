@@ -28,13 +28,6 @@ end
 
 ## Lets set up the project
 
-{% highlight js %}
-var j = (param) =>{
-  const asdf = 'sdf';
-  var j = param + asdf;
-}
-{% endhighlight %}
-
 {% highlight bash %}
 git init
 {% endhighlight %}
