@@ -24,6 +24,7 @@ github_username:  MrTortoise
 
 # Build settings
 markdown: kramdown
+highlighter: rougue
 theme: minima
 gems:
   - jekyll-feed
