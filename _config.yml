@@ -31,5 +31,3 @@ gems:
 exclude:
   - Gemfile
   - Gemfile.lock
-redcarpet:
-  extensions: [fenced_code_blocks]
