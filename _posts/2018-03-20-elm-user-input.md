@@ -56,7 +56,7 @@ Below is a big blurt of code:
 
 The code for this is: (and no i dont have the foggiest how it works)
 
-{% highlight elm %}
+{% highlight Elm %}
 {-| When you need to subscribe to multiple things, you can create a `batch` of
 subscriptions.
 **Note:** `Sub.none` and `Sub.batch [ Sub.none, Sub.none ]` and
@@ -70,7 +70,7 @@ Elm.Kernel.Platform.batch
 
 The code for handling user input is below. Put it in `./src/` and `elm-reactor`
 
-{% highlight elm %}
+{% highlight Elm %}
 import Html exposing (..)
 import Keyboard exposing (KeyCode)
 import Set exposing (..)
