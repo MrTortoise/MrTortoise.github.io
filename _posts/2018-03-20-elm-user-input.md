@@ -18,40 +18,40 @@ So this will be fun.
 
 ## Lets set up the project
 
-```js
+{% highlight js %}
 var j = (param) =>{
   const asdf = 'sdf';
   var j = param + asdf;
 }
-```
+{% endhighlight %}
 
 ```bash
 git init
-```
+{% endhighlight %}
 
 Then head over to github and grab an elm .gitignore file
 
 Next install the base elm package
 
-```bash
+{% highlight bash %}
 elm package install
-```
+{% endhighlight %}
 
 Then update the sources folder
 
-```json
+{% highlight bash %}
 {
   "source-directories": [
         "./src"
     ],
 }
-```
+{% endhighlight %}
 
 Now we are going to need a keyboard library. If you google 'elm language' you will end up at [this](http://package.elm-lang.org/packages/elm-lang/keyboard/latest) page. Install it like this:
 
-```bash
+{% highlight bash %}
 elm-package install elm-lang/keyboard
-```
+{% endhighlight %}
 
 ## The code
 
@@ -64,7 +64,7 @@ Below is a big blurt of code:
 
 The code for this is: (and no i dont have the foggiest how it works)
 
-```elm
+{% highlight elm %}
 {-| When you need to subscribe to multiple things, you can create a `batch` of
 subscriptions.
 **Note:** `Sub.none` and `Sub.batch [ Sub.none, Sub.none ]` and
@@ -73,11 +73,11 @@ subscriptions.
 batch : List (Sub msg) -> Sub msg
 batch =
 Elm.Kernel.Platform.batch
-```
+{% endhighlight %}
 
 The code for handling user input is below. Put it in `./src/` and `elm-reactor`
 
-```elm
+{% highlight elm %}
 import Html exposing (..)
 import Keyboard exposing (KeyCode)
 import Set exposing (..)
@@ -133,4 +133,4 @@ subscriptions model =
                ]
     in
     keys |> Sub.batch
-```
+{% endhighlight %}
