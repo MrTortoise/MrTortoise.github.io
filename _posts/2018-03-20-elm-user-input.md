@@ -32,7 +32,7 @@ elm package install
 
 Then update the sources folder
 
-```bash
+```json
 {
   "source-directories": [
         "./src"
