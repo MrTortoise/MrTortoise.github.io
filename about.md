@@ -3,13 +3,20 @@ layout: page
 title: About
 permalink: /about/
 ---
-# Hi
+# Who am I?
 
-I am a coding, guitaring, go playing parent with way too many interests to fit into the available time.
-Whilst not sitting in a cave rolling my face on a keyboard am probably found being a taxi driver / circus master for kids.
+Primarily, I'm a guy who loves meeting people and businesses, sitting down with them and understanding their problems, their customers and then helping them connect.
 
-I'm a .net guy who likes to play with anything but. Dabble with games engines, actor systems and generally anything that takes my fancy.
+Spent nearly 20 years helping businesses build themselves up. Have ran 2 companies, been CTO of 2 more and am currently involved with 3 companies. Have contracted and worked at companies of all sizes from 2 man bands up to large blue chip companies.
 
-## Why am I doing this?
+Love engaging the community and regularly attend and contribute to tech events.
 
-Not really sure. I think so that when i look at my repos in 6 months and wonder 'what the hell was I thinking' I can realise that I probably wasn't and really was off on some crazy tangent. But hey, if the journey is fun everyone’s a winner.
+Run training sessions in Lean, TDD, Mobbing and Event Storming. Big fan of XP approaches.
+
+Currently very interested in getting involved with companies who have got to a point where they want to scale but are finding enacting change harder and harder. A cultural and perspective shift is very likely to be required and I am fascinated about figuring out exactly what is slowing things down.
+
+All seriousness aside I'm a guy who loves to solve problems and build stuff. Constantly dabbling nad learning new technologies and languages.
+
+## Why am I doing this? (Writing blogish posts)
+
+Not really sure. I think so that when I look at my repos in 6 months and wonder 'what the hell was I thinking' I can realise that I probably wasn't and really was off on some crazy tangent. But hey, if the journey is fun everyone’s a winner.
