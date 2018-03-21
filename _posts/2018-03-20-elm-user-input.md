@@ -72,7 +72,7 @@ Elm.Kernel.Platform.batch
 
 The code for handling user input is below. Put it in `./src/` and `elm-reactor`
 
-```elm
+{% highlight elm %}
 import Html exposing (..)
 import Keyboard exposing (KeyCode)
 import Set exposing (..)
@@ -128,4 +128,4 @@ subscriptions model =
                ]
     in
     keys |> Sub.batch
-```
+{% endhighlight %}
