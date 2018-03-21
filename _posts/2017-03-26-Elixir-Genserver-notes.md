@@ -12,7 +12,7 @@ The [Full Gen ServerDocumentaiton is here](https://hexdocs.pm/elixir/GenServer.h
 
 The code these notes refer to:
 
-``` Elixir
+```elixir
   defmodule KV.Registry do
   use GenServer
 
@@ -74,7 +74,7 @@ Problem with code above is that if a  bucket process stops the name remains in t
 
 The server side code is modified to the following
 
-```Elixir
+```elixir
 ## Server callbacks
 
 def init(:ok) do

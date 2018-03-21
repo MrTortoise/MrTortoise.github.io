@@ -11,7 +11,7 @@ It is literally a result of me working through the docs, nothing original.
 
 ### Supervisor code
 
-``` Elixir
+```elixir
 defmodule KV.Supervisor do
   use Supervisor
 
@@ -33,8 +33,9 @@ Key points:
 1. `  worker(KV.Registry, [KV.Registry])` this calls `KV.Registry.start_link(KV.Registry)`
 2. This means that the `KV.Registry` needs to take a name as an argument
 
-We coulld now do this:
-``` Elixir
+We could now do this:
+
+```elixir
 iex> KV.Supervisor.start_link
 {:ok, #PID<0.66.0>}
 iex> KV.Registry.create(KV.Registry, "shopping")
