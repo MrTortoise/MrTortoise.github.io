@@ -2,7 +2,7 @@
 layout: post
 title:  "Elm: User Input Part 1"
 date:   2018-03-20 20:40:48 +0000
-categories: elm tutorial
+categories: elm tutorial keyboard
 ---
 # Lets spike some user input in Elm
 
