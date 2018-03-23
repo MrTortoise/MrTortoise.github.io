@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Elm: User Input Part 3 - some movement"
-date:   2018-03-20 20:40:48 +0000
+date:   2018-03-22 20:40:48 +0000
 categories: elm tutorial keyboard
 ---
 # Following on from part 1+2
