@@ -70,7 +70,7 @@ The problem comes when we start to talk about value streams. Take an operational
 
 The problem is that every business process will look something like this and will overlap. Experts in one value stream / domain will potentially have no idea about the existence of others. But they will know this and so will be paralyzed by fear.
 
-The Deathstar is fully operational. Its a huge frickin lazer beam, congrats. Problem is is Vader ever remember he asked for a ballpit to go with his [evil egg](https://www.youtube.com/watch?v=5blbv4WFriM) you are going to need help - you have no chance.
+The Deathstar is fully operational. Its a huge frickin lazer beam, congrats. The problem is that if Vader ever remembers he asked for a ballpit to go with his [evil egg](https://www.youtube.com/watch?v=5blbv4WFriM) you are going to need help - you have no chance.
 
 Now the follow is true:
 
