@@ -38,9 +38,11 @@ You don't need an app or a facebook page. You need a personal relationship with 
 
 If you cannot convince someone to give you money to solve their problem - why on earth do you think an app / facebook / twitter / tv campaign will work better? Your problem is that **you do not know how to find your customer because you do not understand what problem they have and so you do not understand how to fix it**.
 
-But we are complex creatures and we have all kinds of beliefs and accepted practices. Giving yourself permission to and then finding people who can interrogate your reasons with the goal of finding the assumptions and challenging them is hard.
+>When we found our first customer my reaction was 'What? Why on earth do they want that?' - it should of been a perspective altering experience akin to 30 days in a desert. I let that learning experience pass me by.
 
-Even if you do market research before and figure out the idea has potential you will probably find that there are a ton of good ideas that you cannot afford to do ...
+We are complex creatures and we have all kinds of beliefs and accepted practices. Giving yourself permission to and then finding people who can interrogate your reasons with the goal of finding the assumptions and challenging them is hard.
+
+Even if you do market research before and figure out the idea has potential you will probably find that there are a ton of good ideas that you cannot afford to do ...discover this quickly.
 
 ## This kind of business is frighteningly fast past
 
