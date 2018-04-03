@@ -15,7 +15,14 @@ This sounds like its really obvious. But people love reasoning that attempts to 
 
 Eg You think you can sell an app to people in order to help them do something
 
-You have already messed up. You are building an app to (presumably) enable you to then go out and find a customer to try and sell the app to them in order for them to use the app to solve a problem.
+You have already messed up. See how complex this is:
+
+1. You are building an app
+1. to (presumably) enable you to then go out
+1. and find a customer
+1. to try and sell the app to them
+1. in order for them to use the app
+1. to solve a problem.
 
 There are a ton of assumptions in there.
 
@@ -23,13 +30,15 @@ Once you have done this you might discover that you do not need an app at all. T
 
 The fun thing is that if you think the 'Eg' above is reasonable you will find something else that you need to do before you can approach a customer - maybe make a facebook page to run some advertising. The way most learn this lesson is the *hard* way - they go broke.
 
-### Just find a customer
+### Just find a customer and solve a problem
 
-The point is that it is sometimes really hard to see what is painfully obvious - in most cases it is go out and find someone who you think needs the service and convince them to give you money to do it for them. You don't need an app or a facebook page. You need a personal relationship with someone who has a problem that you can solve.
+The point is that it is sometimes really hard to see what is painfully obvious - in most cases it is simply go out and find someone who you think needs the service and convince them to give you money to do it for them.
+
+You don't need an app or a facebook page. You need a personal relationship with someone who has a problem that you can solve. Get out and talk to people - start to believe in their world and make it better.
 
 If you cannot convince someone to give you money to solve their problem - why on earth do you think an app / facebook / twitter / tv campaign will work better? Your problem is that **you do not know how to find your customer because you do not understand what problem they have and so you do not understand how to fix it**.
 
-But we are complex creatures and we have all kinds of beliefs and accepted practices. Giving yourself permission and then finding people who can interrogate your reasons with the goal of finding the assumptions and challenging them is hard.
+But we are complex creatures and we have all kinds of beliefs and accepted practices. Giving yourself permission to and then finding people who can interrogate your reasons with the goal of finding the assumptions and challenging them is hard.
 
 Even if you do market research before and figure out the idea has potential you will probably find that there are a ton of good ideas that you cannot afford to do ...
 
