@@ -92,6 +92,7 @@ However what you are building needs to take into account a myriad of different d
 1. Now make it shorter.
 1. Start with mockups - there are a number of free-ish ui mocking cloud based tools. Gone are the days of only having balsamiq and some guy on visio as your options. Some will even give you some html = but that is of very little value
 1. Use these mockups to remove all the crap, always remove screens, remove controls, remove text. This is very early on - the goal is to find out what the customer needs. Get rid of account management, a wallet, the admin screens. Its all ancillary stuff that adds value in rare situations.
+1. If you can have a basket that solves 60% of your customers problems in one go is it *really* worth adding more screens for the other 40%?
 1. Prove that the absolute bare minimum is not enough - it probably will be by the way. By doing this perhaps you solve a problem that is way more general than your current business model ...
 1. If anyone wants a fancy control to solve a problem you are dead - your basic idea is *way* too complex. It is a gimmick.
 1. Do not write any back end services or decide what language framework they are in until someone will pay you for the piece of crap you have built. To them it is not crap, it is amazing. Everything should be client side.
