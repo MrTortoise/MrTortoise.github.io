@@ -79,7 +79,7 @@ The biggest and best piece of advice is to make choices that enable you to defer
 
 So early on goal is not to build anything more than what is required to support a sale. The best contribution to make at this point is to try and strip everything out in order to identify the key value proposition. Test that idea. If you need to solve a to solve b to solve c are you *really* sure people want c at all or even b?
 
-Eg a vendor does not need a non cash based way to sell product. They may however need a way to speed up purchases, to enable them to capitalise on a part of the market they are locked out from. But failing to break these propositions apart means failure to understand value which means you cannot make decisions that align with value.
+Eg a vendor does not need a non cash based way to sell product. They may however need a way to speed up purchases or to enable them to capitalise on a part of the market they are locked out from. But failing to break these propositions apart means failure to understand value which means you cannot make decisions that align with value.
 
 This doesn't mean that your proposition isn't going to sell it means its selling for different reasons than you think and so your message is wrong. Worse it means you got lucky and so haven't learnt.
 
@@ -97,3 +97,6 @@ However what you are building needs to take into account a myriad of different d
 1. Do not write any back end services or decide what language framework they are in until someone will pay you for the piece of crap you have built. To them it is not crap, it is amazing. Everything should be client side.
 1. Do you even need a backend? What does it add (apart from a bucket load of complexity). I've developed for 15 years, I love backend. I can eventsource and CQRS fizz buzz. But guess what, what you know doesn't count for anything. Minimal effort and economy of motion is everything.
 1. Once you get a customer who has paid rejoice. If you do it right in some spaces it could be days, in others it can take months - the trick is to manage the runway.
+1. Managing runway means managing costs, work costs and salaries cost reducing your time.
+1. Work with no customer is inventory, inventory is waste - unless it enables you to learn but even then the question is 'how could this of been learnt without code?'
+1. Lean architecture follows from everything else lean.
