@@ -1,10 +1,10 @@
 ---
 layout: post
-title:  "Lean Architecture - Startup Learnings"
+title:  "Lean Architecture - aka don't build shit you don't need"
 date:   2018-04-03 20:40:48 +0000
 categories: architecture lean design patterns ddd
 ---
-# Running Tech in startups has taught me a few things
+# Running Tech in startups has taught me that we overcomplicate and build loats of unnecessary crap
 
 So you find yourself in a startup. You have done your homework [Eric Ries - The Lean Startup](https://www.amazon.co.uk/Lean-Startup-Innovation-Successful-Businesses/dp/0670921602/ref=sr_1_1?ie=UTF8&qid=1522609380&sr=8-1&keywords=lean+startup+eric+ries).
 So you are armed with ideas about how to have a really good running start.
