@@ -4,18 +4,20 @@ title:  "Lean Architecture - aka don't build shit you don't need"
 date:   2018-04-03 20:40:48 +0000
 categories: architecture lean design patterns ddd
 ---
-# Running Tech in startups has taught me that we overcomplicate and build loats of unnecessary crap
+# Running Tech in startups has taught me that we overcomplicate and build loads of unnecessary crap - STOP IT
+
+This post is about how the nature of finding a market / product / customer is about an approach and how the philosophy behind that approach applies at all levels. In this case I want to make a point about architecture and hopefully it falls out the the main thrust.
 
 So you find yourself in a startup. You have done your homework [Eric Ries - The Lean Startup](https://www.amazon.co.uk/Lean-Startup-Innovation-Successful-Businesses/dp/0670921602/ref=sr_1_1?ie=UTF8&qid=1522609380&sr=8-1&keywords=lean+startup+eric+ries).
 So you are armed with ideas about how to have a really good running start.
 
 ## The goal of a startup is to get a customer
 
-This sounds like its really obvious. But people love reasoning that attempts to achieve things indirectly. This is almost always a mistake and when it is not, it is usually right for reasons that are misunderstood.
+This sounds really obvious however it seems most peoples reasoning loves to achieve things indirectly. This is almost always a mistake and when it is not, it is usually right for reasons that are misunderstood.
 
-Eg You think you can sell an app to people in order to help them do something
+>For Example: You start to build an app because you think you can sell an app to people in order to help them do something
 
-You have already messed up. See how complex this is:
+You have already fallen victim of 'Introduce another problem to solve a problem'. See how complex this is:
 
 1. You are building an app
 1. to (presumably) enable you to then go out
@@ -28,11 +30,13 @@ There are a ton of assumptions in there.
 
 Once you have done this you might discover that you do not need an app at all. They might not need an app either.
 
-The fun thing is that if you think the 'Eg' above is reasonable you will find something else that you need to do before you can approach a customer - maybe make a facebook page to run some advertising. The way most learn this lesson is the *hard* way - they go broke.
+The fun thing is: If you think the example above is reasonable then you will probably find something else that you need to do before you can approach a customer - maybe make a facebook page to run some advertising. The way most learn this lesson is the *hard* way - they go broke.
 
-### Just find a customer and solve a problem
+It is taking a problem that one person may (or may not have) and solving it for a whole batch of people. This approach robs you of the detail and intimate connection of solving it really well for one person. Then doing it again for another and another until the pressure to automate it in a specific direction comes out.
 
-The point is that it is sometimes really hard to see what is painfully obvious - in most cases it is simply go out and find someone who you think needs the service and convince them to give you money to do it for them.
+## Just find a customer and solve a problem
+
+It is really hard to see this: In most cases the answer to developing a new product is simply go out and find someone who you think needs the service and convince them to give you money to do it for them.
 
 You don't need an app or a facebook page. You need a personal relationship with someone who has a problem that you can solve. Get out and talk to people - start to believe in their world and make it better.
 
@@ -51,6 +55,8 @@ When in a company that is this early stage 2 things are true
 1. Because you haven't found a customer you have no idea what your business is going to look like
 1. You need to be able to try lots of different shit with **very short** lead times
 
+These 2 things need to be your architectural goal.
+
 ## This leads to _Lean Architecture_
 
 ### Having literally no architecture is faster than all other options
@@ -63,7 +69,7 @@ When in a company that is this early stage 2 things are true
 
 - The point of cutting code is to facilitate specific answers in talking to someone directly.
 
-So the point of rapid iterations and connecting to value is that we can make decisions with a better understanding of what direction is more likely to be right (the one that adds most value for customer) and to also verify that the step we just took is in the right direction (rapid iterations)
+The purpose of rapid iterations and relentlessly connecting work to value for customers is that we can make decisions with a better understanding of what direction we expect to be right. This hopefully enables us to be more likely to be right (the one that adds most value for customer) and to also verify that the step we just took is in the right direction (rapid iterations), when this is not true we actively learn from being wrong. Knowing precisely why you were wrong is very very hard - maybe another post. Finding out quickly is over half the battle. After all, we still don't know why things fall - but we can still use it.
 
 But in this world we need to build something with very little understanding of what the end point will be. Eg one idea we seriously worked on had potential to be either a website, a mobile app or a chatbot. In fact most of the things I have worked on in the last year have been like that.
 
@@ -79,27 +85,45 @@ The biggest and best piece of advice is to make choices that enable you to defer
 
 - If you make good moves in the wrong order you end up with suboptimal results.
 
-So early on goal is not to build anything more than what is required to support a sale. The best contribution to make at this point is to try and strip everything out in order to identify the key value proposition. Test that idea. If you need to solve a to solve b to solve c are you *really* sure people want c at all or even b?
+If there is no pressure to do something now then take it into account and work in a way that enables making the decision later. Solve the problem that adds most value now.
 
-Eg a vendor does not need a non cash based way to sell product. They may however need a way to speed up purchases or to enable them to capitalise on a part of the market they are locked out from. But failing to break these propositions apart means failure to understand value which means you cannot make decisions that align with value.
+Early on don't build anything more than what is required to support a sale (or whatever the goal of business is). The best contribution to make at this point is to try and strip everything out in order to identify the key value proposition. Test that idea. If you need to solve a to solve b to solve c are you *really* sure people want c at all or even b? Why do they want a if they really want c?
+
+Understand what you are doing from a customers perspective. You might think you are building a cashless transaction system. But for your clients you might be optimizing their flow at a counter and for their customers you might be simply keeping up with the times.
 
 This doesn't mean that your proposition isn't going to sell it means its selling for different reasons than you think and so your message is wrong. Worse it means you got lucky and so haven't learnt.
 
-However what you are building needs to take into account a myriad of different directions.
+However what you are building needs to take into account a myriad of different directions - and those directions will change every week. As a result not over committing and playing a very soft game until the signal you need to make a decision takes place is strong. Building a framework to enable working with speed and flexibility is key.
 
-### Build from the customer
+## Techniques
 
-1. What does the customer want to do?
-1. What is the shortest path to that?
-1. Now make it shorter.
-1. Start with mockups - there are a number of free-ish ui mocking cloud based tools. Gone are the days of only having balsamiq and some guy on visio as your options. Some will even give you some html = but that is of very little value
-1. Use these mockups to remove all the crap, always remove screens, remove controls, remove text. This is very early on - the goal is to find out what the customer needs. Get rid of account management, a wallet, the admin screens. Its all ancillary stuff that adds value in rare situations.
-1. If you can have a basket that solves 60% of your customers problems in one go is it *really* worth adding more screens for the other 40%?
-1. Prove that the absolute bare minimum is not enough - it probably will be by the way. By doing this perhaps you solve a problem that is way more general than your current business model ...
-1. If anyone wants a fancy control to solve a problem you are dead - your basic idea is *way* too complex. It is a gimmick.
-1. Do not write any back end services or decide what language framework they are in until someone will pay you for the piece of crap you have built. To them it is not crap, it is amazing. Everything should be client side.
-1. Do you even need a backend? What does it add (apart from a bucket load of complexity). I've developed for 15 years, I love backend. I can eventsource and CQRS fizz buzz. But guess what, what you know doesn't count for anything. Minimal effort and economy of motion is everything.
-1. Once you get a customer who has paid rejoice. If you do it right in some spaces it could be days, in others it can take months - the trick is to manage the runway.
-1. Managing runway means managing costs, work costs and salaries cost reducing your time.
-1. Work with no customer is inventory, inventory is waste - unless it enables you to learn but even then the question is 'how could this of been learnt without code?'
-1. Lean architecture follows from everything else lean.
+### Model Your Domain from your customers perspective
+
+- You will be wrong about what and how customers want things. By modelling it explicitly you may find this faster and when you do it is far simpler to cut and modify because your code maps onto the businesses understanding of the process.
+- If internally you cannot talk to problem through you cannot solve it
+- If you cannot model it in a way that your customer understands and can shine radical insight into then its probably not interesting or valuable
+- It is far easier to have multiple solutions working in parrallel as tests when everything is based around the domain rather than say a schema
+
+### Event Storm
+
+- By bringing everything together at different levels it becomes simple to identify the value stream that matters.
+- You can start to hang UI off an event stream in a way that is very organic.
+- Given an event stream and an understanding of the information required to make the decision that led to the event UI design can really be innovative in that it models the real problem and not just 'yet another shopping cart'
+- Once you know what information is required to make a decision to produce an event you can start to ask really concrete questions about what information a user needs in order to provide the data to fuel the decision. Now you have your read models.
+
+Everything else architecturally just emerges organically. Once you know what read models you know what kind of data store (and can easily change your mind - see below), once you know what kind of data store you know how you can't to process the commands that produce events. Once you know this you can decide what (if any) areas you want to event source (all of them ...)
+
+### Encapsulate your dependancies
+
+- This is all ports and adapters / hexagonal architecture goodness.
+- Do not spend a long time integrating to sell something. Mock it out, fake it till you make it.
+- By deferring decisions about implementations of dependancies you buy time to find out more information about what and why you are about to make a decision. Eg do you *really* need to store customer info on anything but their device? Do you *really* need to store it? If you just have a 'storage' adapter you can decide the detail anytime you like - and change it.
+
+### Separate Commands from Queries
+
+- I have heard it argued time and time again that event sourcing is expensive. **I call complete bullshit**. It might seem like its slower than just whacking an ORM on top of a schema and using CRUD, but thats because the people doing that are not rewarded based on *speed of change* and decoupling everything.
+- If you employ event storming as above you can very rapidly build a prototype very quickly that uses dummy read models and internally processes commands to raise events that transition across screens.
+- once you have done this you can change and react to customer feedback with no backend system having been written at all - yet all the while you are implicitly designing it and building understanding and requirements for it.
+- When finally you do need to implement something the work to do so will be very clear and due to the abstractions in place be very very simple - even if the problem space is hard because this approach separates out concerns to is very resistant to attempts to complect it.
+
+## Instead of writing code go out and find a customer
