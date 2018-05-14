@@ -35,3 +35,9 @@ Add it as a dependency in you elixir project
     ]
   end
 ```
+
+### Now you can run stuff
+
+``` bash
+iex -S mix
+```
