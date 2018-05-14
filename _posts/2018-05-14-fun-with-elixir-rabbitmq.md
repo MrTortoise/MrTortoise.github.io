@@ -4,7 +4,7 @@ title:  "Fun With: RabbitMQ and Elixir"
 date:   2018-05-15 21:00:48 +0000
 categories: elixir rabbitmq erlang funwith
 ---
-#Elixir is Erlang, RabbitMQ is Erlang ZOMG this should be amazing
+## Elixir is Erlang, RabbitMQ is Erlang ZOMG this should be amazing
 
 So to cut a fairly dull story short. This is what to do
 
@@ -15,14 +15,14 @@ So to cut a fairly dull story short. This is what to do
 1. Follow instructions to setup the management ui plugin and start/enable the service.
 1. You can now start the tutorials (and have a hope of success)
 
-## HAHA I lied
+### HAHA I lied
 (The tutorials will fail with the following error)
 
 ```
 /deps/rabbit_common/.erlang.mk/hex/lager.tar: Cannot open: No such file or directory
 ```
 
-## WTF is lager?
+### WTF is lager?
 
 Lager is a logging framework for Erlang.
 Add it as a dependency in you elixir project
