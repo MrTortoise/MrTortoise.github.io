@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Fun With: RabbitMQ and Elixir"
-date:   2018-05-15 21:00:48 +0000
+date:   2018-05-14 21:00:48 +0000
 categories: elixir rabbitmq erlang funwith
 ---
 ## Elixir is Erlang, RabbitMQ is Erlang ZOMG this should be amazing
