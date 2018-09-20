@@ -44,7 +44,7 @@ If you cannot convince someone to give you money to solve their problem - why on
 
 >When we found our first customer my reaction was 'What? Why on earth do they want that?' - it should of been a perspective altering experience akin to 30 days in a desert. I let that learning experience pass me by.
 
-We are complex creatures and we have all kinds of beliefs and accepted practices. Giving yourself permission to and then finding people who can interrogate your reasons with the goal of finding the assumptions and challenging them is hard.
+We are complex creatures and we have all kinds of beliefs and accepted practices. Giving yourself permission to, and then finding people who can interrogate your reasons with the goal of finding the assumptions and challenging them is hard. (Hint: customers will do this)
 
 Even if you do market research before and figure out the idea has potential you will probably find that there are a ton of good ideas that you cannot afford to do ...discover this quickly.
 
