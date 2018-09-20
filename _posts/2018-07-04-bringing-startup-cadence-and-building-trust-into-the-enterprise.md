@@ -178,6 +178,8 @@ Moreover having no branches also pops out as a side effect. You simply have no n
 
 Absolutely - if you do not code in a way that enables continuous integration. IE your code should be behind feature flags. Combined with thin slicing, some feature flags and working from the outside in it is possible to write a load of code, deploy with tests and then push at a high cadence. It does however put a ton of pressure on getting the deploy fast and smooth - which as above is our entire job.
 
+It takes 5 minutes to deploy the project we worked on this appraoch with through every environment, run integrations tests on everything and promote.
+
 ### Now your jira boards looks really stupid
 
 You have something like these columns (this is taken from a mainline branching strategy - because you can string words together and they always make sense. But its a real example):
