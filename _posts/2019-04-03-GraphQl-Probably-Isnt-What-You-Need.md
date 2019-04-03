@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "GraphQl + Greenfield Probably isn't what you need"
-date:   2017-03-26 20:00:48 +0000
+date:   2019-04-03 20:00:48 +0000
 categories: graphql api
 ---
 
