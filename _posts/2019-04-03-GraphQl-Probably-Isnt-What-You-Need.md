@@ -57,6 +57,8 @@ Why not use some simple message passing protocol?
 
 ### I have never seen anyone use the promise of using a graph to select a subset of objects
 
+This is not a new promise, various ORM's and service models have enabled exactly this. But it turns out that most of the time people and up encapsulating that complexity into a single message object. Over the wire query formats have always been sketchy. Just go back 10-15 years and look at all the over the wire dsl's for paging, sorting and filtering. What does this give that is unique that you in a greenfield project cannot live without (and are probably going to use for everything because ... well I hope it sounds silly once its written down)
+
 - The exception is calling the facebook api's - it turns out they have a large amount of data you could select from.
 - I once saw a company use .net for its services, use dynamic objects to simply pass though the domain object of another company all the way through to the front end through several api layers. The front end then used GraphQL to select the tiny part out of this object that was relevant to them. Obviously though here it isn't GraphQL thats the thing to leverage. It is the terrible decisions to be tightly coupled to third parties throughout the Apis.
 - More commonly each query called represents a view in the UI. Quite often each query is only really used for one purpose and so the fields being requested dont actually change. When they do it is actually a different query that is called.
