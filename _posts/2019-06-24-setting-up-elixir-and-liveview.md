@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Writing a game in Elixir, Phoenix and LiveView: Part 1 Setting up elixir and live view"
-date: 2016-06-24 11:40:48 +0000
+date: 2019-06-24 11:40:48 +0000
 categories: elixir phoenix tutorial
 ---
 
@@ -34,6 +34,7 @@ Yes, come in underneath the javascript - this is hopefully what things like web 
 ## Install Elixir and Phoenix
 
 [Install Elixir](https://elixir-lang.org/install.html)
+
 [Install Phoenix](https://hexdocs.pm/phoenix/installation.html)
 
 ## Setup your solution and projects
