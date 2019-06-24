@@ -43,6 +43,13 @@ To create your project and solution do the following
 
 We are going to use mix to set things up - it is the elixir packgage manager. Type `mix help new` to find out about the commands.
 
+1. Create an umbrella app called `go`
+2. Create an application module called `game`
+3. Run the tests in it to validate it compiles and the tests pass
+4. Create a Phoenix project (web) without the ORM layer (we will talk to other applications) called `client`
+5. run its tests to validate it compiles and tests pass
+6. start a development server in the client app
+
 ```lang=elixir
 
 mix new go --umbrella
