@@ -65,3 +65,11 @@ you can now see the phoenix site at `localhost:4000`
 The `--no-ecto` creates the phoenix project without ecto which is the ORM that we may use in another project if we ever get to the point where we want a relational database. I suspect because of how live view works (IE a command model) we may end up event sourcing a lot of this as its a small step from CQS anyway.
 
 you should now be able to go into the root of the umbrella and run `mix test` the results should be tests pass.
+
+### Install Live View
+
+[install liveview](https://github.com/phoenixframework/phoenix_live_view)
+
+follow the instructions above.
+
+The thing to bear in mind is when you are altering the `package.json` then you need to refer to the `deps` folder that is in the root of the umbrella solution rather than just the phoenix project (the client project).
