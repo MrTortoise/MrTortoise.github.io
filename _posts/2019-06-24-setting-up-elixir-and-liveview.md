@@ -82,7 +82,7 @@ follow the instructions above.
 Some notes where I had to diverge:
 
 - When you are altering the `package.json` then you need to refer to the `deps` folder that is in the root of the umbrella solution rather than just the phoenix project (the client project).
-- The config that sets up the live reload and the file associations was already included in my version of phoenix (this makes me worry I have added a dependency that is already in)
+- The config that sets up the live reload and the file associations was already included in my version of phoenix (this makes me worry I have added a dependency that is already in) - see code snippet below for already existing example.
 
 ```elixir
 config :client, ClientWeb.Endpoint,
