@@ -50,7 +50,7 @@ We are going to use mix to set things up - it is the elixir packgage manager. Ty
 5. run its tests to validate it compiles and tests pass
 6. start a development server in the client app
 
-```lang=elixir
+```bash
 
 mix new go --umbrella
 cd go
@@ -79,4 +79,19 @@ you should now be able to go into the root of the umbrella and run `mix test` th
 
 follow the instructions above.
 
-The thing to bear in mind is when you are altering the `package.json` then you need to refer to the `deps` folder that is in the root of the umbrella solution rather than just the phoenix project (the client project).
+Some notes where I had to diverge:
+
+- When you are altering the `package.json` then you need to refer to the `deps` folder that is in the root of the umbrella solution rather than just the phoenix project (the client project).
+- The config that sets up the live reload and the file associations was already included in my version of phoenix (this makes me worry I have added a dependency that is already in)
+
+```elixir
+config :client, ClientWeb.Endpoint,
+ live_reload: [
+   patterns: [
+     ~r"priv/static/.*(js|css|png|jpeg|jpg|gif|svg)$",
+     ~r"priv/gettext/.*(po)$",
+     ~r"lib/client_web/{live,views}/.*(ex)$",
+     ~r"lib/client_web/templates/.*(eex)$"
+   ]
+ ]
+```
