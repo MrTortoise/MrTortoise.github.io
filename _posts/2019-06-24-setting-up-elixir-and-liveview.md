@@ -17,21 +17,23 @@ This is basically all the advantages of server side rendering with react on top.
 
 Right now the only reason to use React (aside from being a JS developer) is to get client side updates of the DOM in a way that is not incredibly hard to work with and scale over time.
 
-The entire ecosystem and deployment pipeline from writing and javascript, html and css has become very very complex. The rate at which it is changing is highly significant and as a result developers with more than 2 years of experience in any given front end framework are exceptional.
+The entire ecosystem and deployment pipeline from writing and javascript, html and css has become very very complex. The rate at which it is changing is highly significant and as a result developers with more than 2 years of experience in any given front end framework are exceptional. Eg compare day rates of 20 years of exp .net against a 2 year dev with only react exp and they are very close. Then look at how those hires influence the choices across the entire stack.
 
-This is a terrible state of affairs - it means that front end development has to follow a 'slash and burn' architectural pattern that assumes all code will be retired in a couple of years. These projects should not be designed to last more than 5 years because in 5 years time the landscape of front end development will be totally different. Being able to accommodate this change is key.
+The rate of change is a terrible state of affairs - it means that front end development has to follow a 'slash and burn' architectural pattern that assumes all code will be retired in a couple of years (This style of pattern is what leads to the [big ball of mud](https://en.wikipedia.org/wiki/Big_ball_of_mud)). These projects should not be designed to last more than 5 years because in 5 years time the landscape of front end development will be totally different. Being able to accommodate this rate of change is key - spending a year building a react app before going public for instance is completely wrong.
 
-### So how to progress?
+### Alternative 1: Encapsulate the area that is rapidly changing behind an ACL
 
 The generalised strategy of isolating a system from a part that changes is called an adapter or in the parlance of DDD an `anti-corruption layer`. If this is a viable strategy then using something that wraps up the entire JS ecosystem and abstracts away from it could be highly valuable.
 
 This is what phoenix and live view is offering.
 
-#### Is there another way?
+### Alternative 2: Find a way to intercept and get in before the rapidly changing ecosystem
 
-Yes, come in underneath the javascript - this is hopefully what things like web assembly and Blazor are going to offer. I will be writing something on an investigation on that shortly.
+This complexity comes from there being an ever changing standard of javascript being implemented in many different ways across browsers. Its a mess - so maybe we should [create a brand new competing standard](https://xkcd.com/927/)? This is hopefully what things like web assembly and Blazor are going to offer. I will be writing something on an investigation on that shortly.
 
-## Install Elixir and Phoenix
+The hope with these 2 options is - much like how html5 and the evolution away from jquery led to another generation of solutions that learnt from the insanity of jquery (mainly by abstracting away from global state) - WebAssembly can learn from everything before it and come up with something uniquely more consistent across browsers. Things like Edge moving to Chromium will also help.
+
+## In the meantime: Install Elixir and Phoenix
 
 [Install Elixir](https://elixir-lang.org/install.html) - I use Ubuntu because windows terminals are terrible in their support for full character sets. I am hoping that [WSL2](https://devblogs.microsoft.com/commandline/wsl-2-is-now-available-in-windows-insiders/) will fix this (but im not on the insider preview builds of windows)
 
