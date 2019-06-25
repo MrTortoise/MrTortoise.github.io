@@ -33,9 +33,13 @@ Yes, come in underneath the javascript - this is hopefully what things like web 
 
 ## Install Elixir and Phoenix
 
-[Install Elixir](https://elixir-lang.org/install.html)
+[Install Elixir](https://elixir-lang.org/install.html) - I use Ubuntu because windows terminals are terrible in their support for full character sets. I am hoping that [WSL2](https://devblogs.microsoft.com/commandline/wsl-2-is-now-available-in-windows-insiders/) will fix this (but im not on the insider preview builds of windows)
 
 [Install Phoenix](https://hexdocs.pm/phoenix/installation.html)
+
+## IDE choices
+
+I started using Atom, then VSCode but more recently I am using IntelliJ (because I ended up with buying licenses for rider and webstorm so got the lot). I stopped using Atom 2 years ago because VSCode had better extensions (Also developers in general were moving to VSCode so I used the most common tool) - but that may not be true anymore. VSCode was then a bit slow around the time of Elixir 1.6 and 1.8 in getting things like the formatters working so when I came back IntelliJ was easy and just worked. It is worth hopping about to find one that has what you like though - I haven't found any that have any refactorings like extract method or variable yet though.
 
 ## Setup your solution and projects
 
@@ -95,3 +99,17 @@ config :client, ClientWeb.Endpoint,
    ]
  ]
 ```
+
+## Getting yourself setup for TDD
+
+Mix is great, but I like my tests to run everytime I hit save.
+
+[mix test watch](https://github.com/lpil/mix-test.watch) this has your back. Simply add the following into your mix.exs at the root of the solution.
+
+```elixir
+def deps do
+  [{:mix_test_watch, "~> 0.8", only: :dev, runtime: false}]
+end
+```
+
+now rather than typing `mix test` to run your tests you can use `mix test.watch` and it will autorun tests whenever you save a file.
