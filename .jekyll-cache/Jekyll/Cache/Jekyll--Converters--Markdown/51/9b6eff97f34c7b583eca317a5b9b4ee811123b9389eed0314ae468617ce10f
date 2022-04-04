@@ -1,0 +1,46 @@
+I"K<h2 id="the-repo-backing-this-code-is-here">The repo backing this code is <a href="https://github.com/MrTortoise/elixir-app-minimal">here</a>.</h2>
+<p>It is literally a result of me working through the docs, nothing original.</p>
+
+<h2 id="supervisor-and-application"><a href="http://elixir-lang.org/getting-started/mix-otp/supervisor-and-application.html">Supervisor and Application</a></h2>
+
+<h3 id="supervisor-code">Supervisor code</h3>
+
+<div class="language-elixir highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">defmodule</span> <span class="no">KV</span><span class="o">.</span><span class="no">Supervisor</span> <span class="k">do</span>
+  <span class="kn">use</span> <span class="no">Supervisor</span>
+
+  <span class="k">def</span> <span class="n">start_link</span> <span class="k">do</span>
+    <span class="no">Supervisor</span><span class="o">.</span><span class="n">start_link</span><span class="p">(</span><span class="bp">__MODULE__</span><span class="p">,</span> <span class="ss">:ok</span><span class="p">)</span>
+  <span class="k">end</span>
+
+  <span class="k">def</span> <span class="n">init</span><span class="p">(</span><span class="ss">:ok</span><span class="p">)</span> <span class="k">do</span>
+    <span class="n">children</span> <span class="o">=</span> <span class="p">[</span>
+      <span class="n">worker</span><span class="p">(</span><span class="no">KV</span><span class="o">.</span><span class="no">Registry</span><span class="p">,</span> <span class="p">[</span><span class="no">KV</span><span class="o">.</span><span class="no">Registry</span><span class="p">])</span>
+    <span class="p">]</span>
+
+    <span class="n">supervise</span><span class="p">(</span><span class="n">children</span><span class="p">,</span> <span class="ss">strategy:</span> <span class="ss">:one_for_one</span><span class="p">)</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</code></pre></div></div>
+
+<p>Key points:</p>
+<ol>
+  <li>`  worker(KV.Registry, [KV.Registry])<code class="language-plaintext highlighter-rouge"> this calls </code>KV.Registry.start_link(KV.Registry)`</li>
+  <li>This means that the <code class="language-plaintext highlighter-rouge">KV.Registry</code> needs to take a name as an argument</li>
+</ol>
+
+<p>We could now do this:</p>
+
+<div class="language-elixir highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">iex</span><span class="o">&gt;</span> <span class="no">KV</span><span class="o">.</span><span class="no">Supervisor</span><span class="o">.</span><span class="n">start_link</span>
+<span class="p">{</span><span class="ss">:ok</span><span class="p">,</span> <span class="c1">#PID&lt;0.66.0&gt;}</span>
+<span class="n">iex</span><span class="o">&gt;</span> <span class="no">KV</span><span class="o">.</span><span class="no">Registry</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="no">KV</span><span class="o">.</span><span class="no">Registry</span><span class="p">,</span> <span class="s2">"shopping"</span><span class="p">)</span>
+<span class="ss">:ok</span>
+<span class="n">iex</span><span class="o">&gt;</span> <span class="no">KV</span><span class="o">.</span><span class="no">Registry</span><span class="o">.</span><span class="n">lookup</span><span class="p">(</span><span class="no">KV</span><span class="o">.</span><span class="no">Registry</span><span class="p">,</span> <span class="s2">"shopping"</span><span class="p">)</span>
+<span class="p">{</span><span class="ss">:ok</span><span class="p">,</span> <span class="c1">#PID&lt;0.70.0&gt;}</span>
+</code></pre></div></div>
+
+<p>But we don’t, we use an application</p>
+
+<h2 id="application">Application</h2>
+
+<p>To start iex and be able to use the observer gui you need this command line <code class="language-plaintext highlighter-rouge">iex --erl "-smp" -S mix</code></p>
+:ET

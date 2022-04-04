@@ -1,0 +1,41 @@
+I"�	<h2 id="docker-on-windows-when--you-run-virtual-machines-is-a-pain">Docker on windows when  you run virtual machines is a pain.</h2>
+
+<p>Various problems:</p>
+
+<ol>
+  <li>You need to install hypervisor</li>
+  <li>Hypervisor vm’s use a shit ui because they won’t allow dynamically resizing</li>
+  <li>Hypervisor messed with vt-x which for some reason seems to stop Virtual box working.</li>
+</ol>
+
+<h2 id="solution">Solution:</h2>
+
+<p>Just use it in an ubuntu vm …
+so <a href="https://docs.docker.com/engine/installation/linux/ubuntu/#os-requirements">as per here</a></p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>apt-get update <span class="o">&amp;&amp;</span> <span class="nb">sudo </span>apt-get <span class="nb">install
+sudo </span>apt-get remove docker docker-engine
+<span class="nb">sudo </span>apt-get <span class="nb">install</span> <span class="se">\</span>
+   apt-transport-https <span class="se">\</span>
+   ca-certificates <span class="se">\</span>
+   curl <span class="se">\</span>
+   software-properties-common
+curl <span class="nt">-fsSL</span> https://download.docker.com/linux/ubuntu/gpg | <span class="nb">sudo </span>apt-key add -
+<span class="nb">sudo </span>apt-key fingerprint 0EBFCD88 <span class="sb">`</span>should equal 9DC8 5822 9FC7 DD38 854A E2D8 8D81 803C 0EBF CD88<span class="sb">`</span>
+<span class="nb">sudo </span>add-apt-repository <span class="se">\</span>
+   <span class="s2">"deb [arch=amd64] https://download.docker.com/linux/ubuntu </span><span class="se">\</span><span class="s2">
+   </span><span class="si">$(</span>lsb_release <span class="nt">-cs</span><span class="si">)</span><span class="s2"> </span><span class="se">\</span><span class="s2">
+   stable"</span>
+<span class="nb">sudo </span>apt-get update
+<span class="nb">sudo </span>apt-get <span class="nb">install </span>docker-ce
+<span class="nb">sudo </span>usermod <span class="nt">-aG</span> docker <span class="o">{</span>userName<span class="o">}</span>  - enables running docker without <span class="nb">sudo</span>
+<span class="sb">`</span>now run the hello world example<span class="sb">`</span>
+<span class="nb">sudo </span>docker run hello-world
+
+</code></pre></div></div>
+
+<p>Don’t know why I didn’t just do that months ago - aside from the fact its clearly
+a terrible idea for anything but a playground.</p>
+
+<p>Wonder when I will get around to some <a href="https://kubernetes.io/">kubernetes</a></p>
+:ET

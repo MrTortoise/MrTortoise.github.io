@@ -1,0 +1,19 @@
+I"�<h1 id="fun-with-elixir-configuring-iex">Fun with Elixir: Configuring Iex</h1>
+
+<h2 id="pressing-up-does-not-show-previous-shell-commands">Pressing up does not show previous shell commands</h2>
+
+<p>This is basic bash shell functionality. Well it’s turned off by default … grr</p>
+
+<p>to enable use this environment variable</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">export </span><span class="nv">ERL_AFLAGS</span><span class="o">=</span><span class="s2">"-kernel shell_history enabled"</span>
+</code></pre></div></div>
+
+<p>you can find more info on iex configuration <a href="https://hexdocs.pm/iex/IEx.html">here</a></p>
+
+<p>There is a ton of useful stuff on that page that wasn’t in Elixir a year ago.</p>
+
+<p>Eg breakpoints.</p>
+
+<p>Other useful stuff is colours (especially if like me you cannot read red on black)</p>
+:ET

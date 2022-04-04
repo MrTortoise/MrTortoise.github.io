@@ -1,0 +1,52 @@
+I"	<h2 id="what-is-the-problem">What is the problem?</h2>
+
+<ol>
+  <li>Need Fast Deployment process</li>
+  <li>Need all environments to be as close to live as possible.</li>
+  <li>Goal is to be able to go live on a push and automate all dev-&gt;qa-&gt;live with a single button press</li>
+  <li>Need to be able continually evaluate and change live deployment configuration.</li>
+  <li>Needs to have a controlled monthly cost.</li>
+  <li>Need good logging for evidence based deployment decisions.</li>
+  <li>When all goes wrong need to be able to revert to earlier version ASAP.</li>
+</ol>
+
+<h2 id="pie-in-sky-goals">Pie In Sky Goals</h2>
+
+<ol>
+  <li>5 minutes to deploy (This is in addition to building / cooking assets etc.).
+    <ul>
+      <li>If whole process starts to take more than 10 minutes then it seriously effects iteration speed.</li>
+      <li>When something breaks the ideal is to have a pipeline that allows fixing it and deploying rather
+  rather than spend time scrambling to recover and then fixing it.</li>
+    </ul>
+  </li>
+  <li>Blue - Green deployments.</li>
+  <li>Cost is a real issue, building up in a way that greatly limits cost initially, expands organically.
+    <ul>
+      <li>This will mean being v clear about redundancy vs resiliency.</li>
+      <li>Focus on discovering requirements on one machine, diminishing returns with load.</li>
+    </ul>
+  </li>
+  <li>Dev and QA environments basically being the same as live.</li>
+  <li>Clarity surrounding resources available for redundancy and simply redundant resources.</li>
+</ol>
+
+<h2 id="initial-thoughts">Initial thoughts:</h2>
+
+<ol>
+  <li>Windows is both expensive and due to image sizes slow to deploy.
+    <ul>
+      <li>This makes .net a less than ideal choice (core and standard libraries
+  volatile - been burnt by mono in the past and about to be superseded by core)</li>
+    </ul>
+  </li>
+  <li>Using framework choices that are both efficient, license minimal seems v prudent.</li>
+  <li>This has led me straight into thinking about language choices and CI options -
+which is exactly what i wanted to avoid any decisions on.</li>
+</ol>
+
+<h3 id="kubernetes">kubernetes</h3>
+
+<p><a href="https://kubernetes.io/docs/concepts/services-networking/connect-applications-service/">services</a> seem to give me what I want.
+More to come</p>
+:ET

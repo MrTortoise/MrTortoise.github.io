@@ -1,0 +1,148 @@
+I"02<h1 id="running-tech-in-startups-has-taught-me-that-we-overcomplicate-and-build-loads-of-unnecessary-crap---stop-it">Running Tech in startups has taught me that we overcomplicate and build loads of unnecessary crap - STOP IT</h1>
+
+<p>This post is about how the nature of finding a market / product / customer is about an approach and how the philosophy behind that approach applies at all levels. In this case I want to make a point about architecture and hopefully it falls out the the main thrust.</p>
+
+<p>So you find yourself in a startup. You have done your homework <a href="https://www.amazon.co.uk/Lean-Startup-Innovation-Successful-Businesses/dp/0670921602/ref=sr_1_1?ie=UTF8&amp;qid=1522609380&amp;sr=8-1&amp;keywords=lean+startup+eric+ries">Eric Ries - The Lean Startup</a>.
+So you are armed with ideas about how to have a really good running start.</p>
+
+<h2 id="the-goal-of-a-startup-is-to-get-a-customer">The goal of a startup is to get a customer</h2>
+
+<p>This sounds really obvious however it seems most peoples reasoning loves to achieve things indirectly. This is almost always a mistake and when it is not, it is usually right for reasons that are misunderstood.</p>
+
+<blockquote>
+  <p>For Example: You start to build an app because you think you can sell an app to people in order to help them do something</p>
+</blockquote>
+
+<p>You have already fallen victim of ‘Introduce another problem to solve a problem’. See how complex this is:</p>
+
+<ol>
+  <li>You are building an app</li>
+  <li>to (presumably) enable you to then go out</li>
+  <li>and find a customer</li>
+  <li>to try and sell the app to them</li>
+  <li>in order for them to use the app</li>
+  <li>to solve a problem.</li>
+</ol>
+
+<p>There are a ton of assumptions in there.</p>
+
+<p>Once you have done this you might discover that you do not need an app at all. They might not need an app either.</p>
+
+<p>The fun thing is: If you think the example above is reasonable then you will probably find something else that you need to do before you can approach a customer - maybe make a facebook page to run some advertising. The way most learn this lesson is the <em>hard</em> way - they go broke.</p>
+
+<p>It is taking a problem that one person may (or may not have) and solving it for a whole batch of people. This approach robs you of the detail and intimate connection of solving it really well for one person. Then doing it again for another and another until the pressure to automate it in a specific direction comes out.</p>
+
+<h2 id="just-find-a-customer-and-solve-a-problem">Just find a customer and solve a problem</h2>
+
+<p>It is really hard to see this: In most cases the answer to developing a new product is simply go out and find someone who you think needs the service and convince them to give you money to do it for them.</p>
+
+<p>You don’t need an app or a facebook page. You need a personal relationship with someone who has a problem that you can solve. Get out and talk to people - start to believe in their world and make it better.</p>
+
+<p>If you cannot convince someone to give you money to solve their problem - why on earth do you think an app / facebook / twitter / tv campaign will work better? Your problem is that <strong>you do not know how to find your customer because you do not understand what problem they have and so you do not understand how to fix it</strong>.</p>
+
+<blockquote>
+  <p>When we found our first customer my reaction was ‘What? Why on earth do they want that?’ - it should of been a perspective altering experience akin to 30 days in a desert. I let that learning experience pass me by.</p>
+</blockquote>
+
+<p>We are complex creatures and we have all kinds of beliefs and accepted practices. Giving yourself permission to, and then finding people who can interrogate your reasons with the goal of finding the assumptions and challenging them is hard. (Hint: customers will do this)</p>
+
+<p>Even if you do market research before and figure out the idea has potential you will probably find that there are a ton of good ideas that you cannot afford to do …discover this quickly.</p>
+
+<h2 id="this-kind-of-business-is-frighteningly-fast-past">This kind of business is frighteningly fast past</h2>
+
+<p>When in a company that is this early stage 2 things are true</p>
+
+<ol>
+  <li>Because you haven’t found a customer you have no idea what your business is going to look like</li>
+  <li>You need to be able to try lots of different shit with <strong>very short</strong> lead times</li>
+</ol>
+
+<p>These 2 things need to be your architectural goal.</p>
+
+<h2 id="this-leads-to-lean-architecture">This leads to <em>Lean Architecture</em></h2>
+
+<h3 id="having-literally-no-architecture-is-faster-than-all-other-options">Having literally no architecture is faster than all other options</h3>
+
+<ol>
+  <li>If you can test a hypothesis with no code you should.</li>
+  <li>If you don’t feel like you can talk to a customer without a demo then you need to talk to more people.</li>
+  <li>The fastest feedback is to talk to someone directly.</li>
+</ol>
+
+<h3 id="enabling-fast---data-driven---customer-feedback">Enabling fast - data driven - customer feedback</h3>
+
+<ul>
+  <li>The point of cutting code is to facilitate specific answers in talking to someone directly.</li>
+</ul>
+
+<p>The purpose of rapid iterations and relentlessly connecting work to value for customers is that we can make decisions with a better understanding of what direction we expect to be right. This hopefully enables us to be more likely to be right (the one that adds most value for customer) and to also verify that the step we just took is in the right direction (rapid iterations), when this is not true we actively learn from being wrong. Knowing precisely why you were wrong is very very hard - maybe another post. Finding out quickly is over half the battle. After all, we still don’t know why things fall - but we can still use it.</p>
+
+<p>But in this world we need to build something with very little understanding of what the end point will be. Eg one idea we seriously worked on had potential to be either a website, a mobile app or a chatbot. In fact most of the things I have worked on in the last year have been like that.</p>
+
+<p>So how do you stay flexible and not make decisions that you later on wish you hadn’t?</p>
+
+<h2 id="making-architectural-decisions-with-no-regret">Making architectural decisions with no regret</h2>
+
+<p>The biggest and best piece of advice is to make choices that enable you to defer choices.</p>
+
+<h3 id="making-no-decision-is-still-a-decision">Making no decision is still a decision</h3>
+
+<blockquote>
+  <p>One of the biggest mistakes I made was to let someone build a sql schema - innocuous right? A schema for something we already had ui mockups for makes sense. They wanted to contribute and I wanted them to contribute, the work was great as it made us think but it locked us into a solution to a problem we hadn’t fully unpacked. It took 30 minutes but the reverberations of the impact was felt weeks after. The schema was good - it is not the problem. But it removed the possibility of not needing a sql database and in the process brought along a ton of other implied decisions. It was a decision that was made before the pressure to make it mounted up. Far better to leave it as a pocket strat for when the right situation comes up. Making it then has far more value.</p>
+</blockquote>
+
+<ul>
+  <li>If you make good moves in the wrong order you end up with suboptimal results.</li>
+</ul>
+
+<p>If there is no pressure to do something now then take it into account and work in a way that enables making the decision later. Solve the problem that adds most value now.</p>
+
+<p>Early on don’t build anything more than what is required to support a sale (or whatever the goal of business is). The best contribution to make at this point is to try and strip everything out in order to identify the key value proposition. Test that idea. If you need to solve a to solve b to solve c are you <em>really</em> sure people want c at all or even b? Why do they want a if they really want c?</p>
+
+<p>Understand what you are doing from a customers perspective. You might think you are building a cashless transaction system. But for your clients you might be optimizing their flow at a counter and for their customers you might be simply keeping up with the times.</p>
+
+<p>This doesn’t mean that your proposition isn’t going to sell it means its selling for different reasons than you think and so your message is wrong. Worse it means you got lucky and so haven’t learnt.</p>
+
+<p>However what you are building needs to take into account a myriad of different directions - and those directions will change every week. As a result not over committing and playing a very soft game until the signal you need to make a decision takes place is strong. Building a framework to enable working with speed and flexibility is key.</p>
+
+<h2 id="techniques">Techniques</h2>
+
+<h3 id="model-your-domain-from-your-customers-perspective">Model Your Domain from your customers perspective</h3>
+
+<ul>
+  <li>You will be wrong about what and how customers want things. By modelling it explicitly you may find this faster and when you do it is far simpler to cut and modify because your code maps onto the businesses understanding of the process.</li>
+  <li>If internally you cannot talk to problem through you cannot solve it</li>
+  <li>If you cannot model it in a way that your customer understands and can shine radical insight into then its probably not interesting or valuable</li>
+  <li>It is far easier to have multiple solutions working in parrallel as tests when everything is based around the domain rather than say a schema</li>
+</ul>
+
+<h3 id="event-storm">Event Storm</h3>
+
+<ul>
+  <li>By bringing everything together at different levels it becomes simple to identify the value stream that matters.</li>
+  <li>You can start to hang UI off an event stream in a way that is very organic.</li>
+  <li>Given an event stream and an understanding of the information required to make the decision that led to the event UI design can really be innovative in that it models the real problem and not just ‘yet another shopping cart’</li>
+  <li>Once you know what information is required to make a decision to produce an event you can start to ask really concrete questions about what information a user needs in order to provide the data to fuel the decision. Now you have your read models.</li>
+</ul>
+
+<p>Everything else architecturally just emerges organically. Once you know what read models you know what kind of data store (and can easily change your mind - see below), once you know what kind of data store you know how you can’t to process the commands that produce events. Once you know this you can decide what (if any) areas you want to event source (all of them …)</p>
+
+<h3 id="encapsulate-your-dependancies">Encapsulate your dependancies</h3>
+
+<ul>
+  <li>This is all ports and adapters / hexagonal architecture goodness.</li>
+  <li>Do not spend a long time integrating to sell something. Mock it out, fake it till you make it.</li>
+  <li>By deferring decisions about implementations of dependancies you buy time to find out more information about what and why you are about to make a decision. Eg do you <em>really</em> need to store customer info on anything but their device? Do you <em>really</em> need to store it? If you just have a ‘storage’ adapter you can decide the detail anytime you like - and change it.</li>
+</ul>
+
+<h3 id="separate-commands-from-queries">Separate Commands from Queries</h3>
+
+<ul>
+  <li>I have heard it argued time and time again that event sourcing is expensive. <strong>I call complete bullshit</strong>. It might seem like its slower than just whacking an ORM on top of a schema and using CRUD, but thats because the people doing that are not rewarded based on <em>speed of change</em> and decoupling everything.</li>
+  <li>If you employ event storming as above you can very rapidly build a prototype very quickly that uses dummy read models and internally processes commands to raise events that transition across screens.</li>
+  <li>once you have done this you can change and react to customer feedback with no backend system having been written at all - yet all the while you are implicitly designing it and building understanding and requirements for it.</li>
+  <li>When finally you do need to implement something the work to do so will be very clear and due to the abstractions in place be very very simple - even if the problem space is hard because this approach separates out concerns to is very resistant to attempts to complect it.</li>
+</ul>
+
+<h2 id="instead-of-writing-code-go-out-and-find-a-customer">Instead of writing code go out and find a customer</h2>
+:ET

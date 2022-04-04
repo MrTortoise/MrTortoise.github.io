@@ -1,0 +1,62 @@
+I"|<h1 id="following-on-from-part-1">Following on from part 1</h1>
+
+<p>So we can detect keyboard events.</p>
+<blockquote>
+  <p>Yay</p>
+</blockquote>
+
+<p>now we want to:</p>
+
+<ol>
+  <li>to hook into some specific keys.</li>
+  <li>represent those keys in a way that doesn’t involve horrible magic numbers</li>
+</ol>
+
+<p>So hit the googles and find:
+<a href="http://package.elm-lang.org/packages/elm-lang/core/latest/Char#fromCode">Elm Character</a></p>
+
+<p>So now if we write something that can get to the char codes we should be able to translate them? Right?</p>
+
+<p>So some elm …
+Lets update the view to show us some info.
+Check out the horrible signature on <code class="language-plaintext highlighter-rouge">Set.foldr</code>
+<code class="language-plaintext highlighter-rouge">(comparable -&gt; b -&gt; b) -&gt; b -&gt; Set.Set comparable -&gt; b</code></p>
+
+<p>It means a function that takes a comparable function that takes 2 things of the same type (I think it operates in an order - because its a set order is undefined so you have to give it one), a thing, a set of the comparable things and then returns a thing.</p>
+
+<div class="language-elm highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">view</span> <span class="p">:</span> <span class="kt">Model</span> <span class="o">-&gt;</span> <span class="kt">Html</span> <span class="kt">Msg</span>
+<span class="n">view</span> <span class="n">model</span> <span class="o">=</span>
+  <span class="k">let</span>
+      <span class="n">keyString</span> <span class="o">=</span>
+        <span class="kt">Set</span><span class="o">.</span><span class="n">map</span> <span class="n">toString</span> <span class="n">model</span><span class="o">.</span><span class="n">pressedKeys</span>
+        <span class="o">|&gt;</span> <span class="kt">Set</span><span class="o">.</span><span class="n">foldr</span> <span class="kt">String</span><span class="o">.</span><span class="n">append</span> <span class="s">"</span><span class="s2">"</span>
+  <span class="k">in</span>
+      <span class="n">div</span> <span class="p">[]</span>
+          <span class="p">[</span>
+            <span class="n">text</span> <span class="n">keyString</span>
+          <span class="p">]</span>
+</code></pre></div></div>
+
+<p>Now we can see the character codes.
+Lets convert them to something human readable.</p>
+
+<div class="language-elm highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="kt">Char</span> <span class="k">exposing</span><span class="p">(</span><span class="n">fromCode</span><span class="p">)</span>
+<span class="o">.</span>
+<span class="o">.</span>
+<span class="o">.</span>
+<span class="n">view</span> <span class="p">:</span> <span class="kt">Model</span> <span class="o">-&gt;</span> <span class="kt">Html</span> <span class="kt">Msg</span>
+<span class="n">view</span> <span class="n">model</span> <span class="o">=</span>
+  <span class="k">let</span>
+      <span class="n">keyString</span> <span class="o">=</span>
+        <span class="kt">Set</span><span class="o">.</span><span class="n">map</span> <span class="n">fromCode</span> <span class="n">model</span><span class="o">.</span><span class="n">pressedKeys</span>
+        <span class="o">|&gt;</span> <span class="kt">Set</span><span class="o">.</span><span class="n">map</span> <span class="n">toString</span>
+        <span class="o">|&gt;</span> <span class="kt">Set</span><span class="o">.</span><span class="n">foldr</span> <span class="kt">String</span><span class="o">.</span><span class="n">append</span> <span class="s">"</span><span class="s2">"</span>
+  <span class="k">in</span>
+      <span class="n">div</span> <span class="p">[]</span>
+          <span class="p">[</span>
+            <span class="n">text</span> <span class="n">keyString</span>
+          <span class="p">]</span>
+</code></pre></div></div>
+
+<p>so its a bit messed up, but its a start.</p>
+:ET

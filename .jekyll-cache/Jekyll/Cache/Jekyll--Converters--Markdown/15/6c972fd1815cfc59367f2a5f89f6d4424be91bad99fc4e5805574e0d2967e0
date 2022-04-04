@@ -1,0 +1,47 @@
+I"ù<p>Just playing around seeing what kind of diagramming I can get working without
+having to resort to something that will force me to have images rather than
+text editable documents.</p>
+
+<p>I was looking for something like graphviz but found this <a href="[https://g.gravizo.com/]">graphvizo</a>. Looks great
+if it works in github!</p>
+
+<p>The stuff below is copied directly from here: <a href="[https://github.com/TLmaK0/gravizo]">github-graphvizo</a>
+The example is also one of the ones that can be found at the previous link also.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>![Alt text](https://g.gravizo.com/g?
+  digraph G {
+    aize ="4,4";
+    main [shape=box];
+    main -&gt; parse [weight=8];
+    parse -&gt; execute;
+    main -&gt; init [style=dotted];
+    main -&gt; cleanup;
+    execute -&gt; { make_string; printf};
+    init -&gt; make_string;
+    edge [color=red];
+    main -&gt; printf [style=bold,label="100 times"];
+    make_string [label="make a string"];
+    node [shape=box,style=filled,color=".7 .3 1.0"];
+    execute -&gt; compare;
+  }
+)
+</code></pre></div></div>
+
+<p><img src="https://g.gravizo.com/g?
+  digraph G {
+    aize =&quot;4,4&quot;;
+    main [shape=box];
+    main -&gt; parse [weight=8];
+    parse -&gt; execute;
+    main -&gt; init [style=dotted];
+    main -&gt; cleanup;
+    execute -&gt; { make_string; printf};
+    init -&gt; make_string;
+    edge [color=red];
+    main -&gt; printf [style=bold,label=&quot;100 times&quot;];
+    make_string [label=&quot;make a string&quot;];
+    node [shape=box,style=filled,color=&quot;.7 .3 1.0&quot;];
+    execute -&gt; compare;
+  }" alt="Alt text" /></p>
+
+:ET

@@ -1,0 +1,112 @@
+I"�'<h2 id="someone-beat-me-to-writing-go-in-liveview">Someone beat me to writing Go in LiveView</h2>
+
+<p>I applaud them, great minds think alike. However I was far too lazy. So in response to that I decided that I was going to TDD a game of Go and why not do it in Live View. I am not going to look at the solution the other person came up with because then I can look at it later. There are some fun things in go … counting liberties to figure out if a group is captured, scoring the game is not trivial, managing interesting states such as KO. Then there is scaling it to multiple games being played concurrently.</p>
+
+<p>Basically I think this platform (Elixir, Phoenix and LiveView) are going to be almost idea for reproducing something like <a href="https://online-go.com/">OGS</a> which was another i thing I was going to write about 15 years ago (when KGS introduced paid subscriptions) but never got around to.</p>
+
+<h2 id="live-view-promises-server-side-updates-of-deltas-in-pages">Live view promises server side updates of deltas in pages</h2>
+
+<p>This is basically all the advantages of server side rendering with react on top.</p>
+
+<p>Right now the only reason to use React (aside from being a JS developer) is to get client side updates of the DOM in a way that is not incredibly hard to work with and scale over time.</p>
+
+<p>The entire ecosystem and deployment pipeline from writing and javascript, html and css has become very very complex. The rate at which it is changing is highly significant and as a result developers with more than 2 years of experience in any given front end framework are exceptional. Eg compare day rates of 20 years of exp .net against a 2 year dev with only react exp and they are very close. Then look at how those hires influence the choices across the entire stack.</p>
+
+<p>The rate of change is a terrible state of affairs - it means that front end development has to follow a ‘slash and burn’ architectural pattern that assumes all code will be retired in a couple of years (This style of pattern is what leads to the <a href="https://en.wikipedia.org/wiki/Big_ball_of_mud">big ball of mud</a>). These projects should not be designed to last more than 5 years because in 5 years time the landscape of front end development will be totally different. Being able to accommodate this rate of change is key - spending a year building a react app before going public for instance is completely wrong.</p>
+
+<h3 id="alternative-1-encapsulate-the-area-that-is-rapidly-changing-behind-an-acl">Alternative 1: Encapsulate the area that is rapidly changing behind an ACL</h3>
+
+<p>The generalised strategy of isolating a system from a part that changes is called an adapter or in the parlance of DDD an <code class="language-plaintext highlighter-rouge">anti-corruption layer</code>. If this is a viable strategy then using something that wraps up the entire JS ecosystem and abstracts away from it could be highly valuable.</p>
+
+<p>This is what phoenix and live view is offering.</p>
+
+<h3 id="alternative-2-find-a-way-to-intercept-and-get-in-before-the-rapidly-changing-ecosystem">Alternative 2: Find a way to intercept and get in before the rapidly changing ecosystem</h3>
+
+<p>This complexity comes from there being an ever changing standard of javascript being implemented in many different ways across browsers. Its a mess - so maybe we should <a href="https://xkcd.com/927/">create a brand new competing standard</a>? This is hopefully what things like web assembly and Blazor are going to offer. I will be writing something on an investigation on that shortly.</p>
+
+<p>The hope with these 2 options is - much like how html5 and the evolution away from jquery led to another generation of solutions that learnt from the insanity of jquery (mainly by abstracting away from global state) - WebAssembly can learn from everything before it and come up with something uniquely more consistent across browsers. Things like Edge moving to Chromium will also help.</p>
+
+<h2 id="in-the-meantime-install-elixir-and-phoenix">In the meantime: Install Elixir and Phoenix</h2>
+
+<p><a href="https://elixir-lang.org/install.html">Install Elixir</a> - I use Ubuntu because windows terminals are terrible in their support for full character sets. I am hoping that <a href="https://devblogs.microsoft.com/commandline/wsl-2-is-now-available-in-windows-insiders/">WSL2</a> will fix this (but im not on the insider preview builds of windows)</p>
+
+<p><a href="https://hexdocs.pm/phoenix/installation.html">Install Phoenix</a></p>
+
+<h2 id="ide-choices">IDE choices</h2>
+
+<p>I started using Atom, then VSCode but more recently I am using IntelliJ (because I ended up with buying licenses for rider and webstorm so got the lot). I stopped using Atom 2 years ago because VSCode had better extensions (Also developers in general were moving to VSCode so I used the most common tool) - but that may not be true anymore. VSCode was then a bit slow around the time of Elixir 1.6 and 1.8 in getting things like the formatters working so when I came back IntelliJ was easy and just worked. It is worth hopping about to find one that has what you like though - I haven’t found any that have any refactorings like extract method or variable yet though.</p>
+
+<h2 id="setup-your-solution-and-projects">Setup your solution and projects</h2>
+
+<p>To create your project and solution do the following</p>
+
+<p>We are going to use mix to set things up - it is the elixir packgage manager. Type <code class="language-plaintext highlighter-rouge">mix help new</code> to find out about the commands.</p>
+
+<ol>
+  <li>Create an umbrella app called <code class="language-plaintext highlighter-rouge">go</code></li>
+  <li>Create an application module called <code class="language-plaintext highlighter-rouge">game</code></li>
+  <li>Run the tests in it to validate it compiles and the tests pass</li>
+  <li>Create a Phoenix project (web) without the ORM layer (we will talk to other applications) called <code class="language-plaintext highlighter-rouge">client</code></li>
+  <li>run its tests to validate it compiles and tests pass</li>
+  <li>start a development server in the client app</li>
+</ol>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+mix new go <span class="nt">--umbrella</span>
+<span class="nb">cd </span>go
+<span class="nb">cd </span>apps
+mix new game
+<span class="nb">cd </span>game
+mix <span class="nb">test
+cd</span> ..
+mix phx.new client <span class="nt">--no-ecto</span>
+<span class="nb">cd </span>client
+mix <span class="nb">test
+</span>mix phx.server
+</code></pre></div></div>
+
+<p>When prompted install dependencies</p>
+
+<p>you can now see the phoenix site at <code class="language-plaintext highlighter-rouge">localhost:4000</code></p>
+
+<p>The <code class="language-plaintext highlighter-rouge">--no-ecto</code> creates the phoenix project without ecto which is the ORM that we may use in another project if we ever get to the point where we want a relational database. I suspect because of how live view works (IE a command model) we may end up event sourcing a lot of this as its a small step from CQS anyway.</p>
+
+<p>you should now be able to go into the root of the umbrella and run <code class="language-plaintext highlighter-rouge">mix test</code> the results should be tests pass.</p>
+
+<h3 id="install-live-view">Install Live View</h3>
+
+<p><a href="https://github.com/phoenixframework/phoenix_live_view">install liveview</a></p>
+
+<p>follow the instructions above.</p>
+
+<p>Some notes where I had to diverge:</p>
+
+<ul>
+  <li>When you are altering the <code class="language-plaintext highlighter-rouge">package.json</code> then you need to refer to the <code class="language-plaintext highlighter-rouge">deps</code> folder that is in the root of the umbrella solution rather than just the phoenix project (the client project).</li>
+  <li>The config that sets up the live reload and the file associations was already included in my version of phoenix (this makes me worry I have added a dependency that is already in) - see code snippet below for already existing example.</li>
+</ul>
+
+<div class="language-elixir highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">config</span> <span class="ss">:client</span><span class="p">,</span> <span class="no">ClientWeb</span><span class="o">.</span><span class="no">Endpoint</span><span class="p">,</span>
+ <span class="ss">live_reload:</span> <span class="p">[</span>
+   <span class="ss">patterns:</span> <span class="p">[</span>
+     <span class="sr">~r"priv/static/.*(js|css|png|jpeg|jpg|gif|svg)$"</span><span class="p">,</span>
+     <span class="sr">~r"priv/gettext/.*(po)$"</span><span class="p">,</span>
+     <span class="sr">~r"lib/client_web/{live,views}/.*(ex)$"</span><span class="p">,</span>
+     <span class="sr">~r"lib/client_web/templates/.*(eex)$"</span>
+   <span class="p">]</span>
+ <span class="p">]</span>
+</code></pre></div></div>
+
+<h2 id="getting-yourself-setup-for-tdd">Getting yourself setup for TDD</h2>
+
+<p>Mix is great, but I like my tests to run everytime I hit save.</p>
+
+<p><a href="https://github.com/lpil/mix-test.watch">mix test watch</a> this has your back. Simply add the following into your mix.exs at the root of the solution.</p>
+
+<div class="language-elixir highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="n">deps</span> <span class="k">do</span>
+  <span class="p">[{</span><span class="ss">:mix_test_watch</span><span class="p">,</span> <span class="s2">"~&gt; 0.8"</span><span class="p">,</span> <span class="ss">only:</span> <span class="ss">:dev</span><span class="p">,</span> <span class="ss">runtime:</span> <span class="no">false</span><span class="p">}]</span>
+<span class="k">end</span>
+</code></pre></div></div>
+
+<p>now rather than typing <code class="language-plaintext highlighter-rouge">mix test</code> to run your tests you can use <code class="language-plaintext highlighter-rouge">mix test.watch</code> and it will autorun tests whenever you save a file.</p>
+:ET

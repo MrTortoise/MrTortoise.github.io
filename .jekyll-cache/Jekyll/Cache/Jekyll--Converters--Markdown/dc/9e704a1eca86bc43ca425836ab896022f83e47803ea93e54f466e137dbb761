@@ -1,0 +1,37 @@
+I"a<h2 id="elixir-is-erlang-rabbitmq-is-erlang-zomg-this-should-be-amazing">Elixir is Erlang, RabbitMQ is Erlang ZOMG this should be amazing</h2>
+
+<p>So to cut a fairly dull story short. This is what to do</p>
+
+<ol>
+  <li>Do not upgrade your ubuntu distro to latest and expect all to be funky dory - you lose 3rd party repos etc.</li>
+  <li>Do not go onto rabbit page and install Erlang there. Instead <code class="language-plaintext highlighter-rouge">apt install esl-erlang</code></li>
+  <li>May as well finish installing Elixir from <a href="https://elixir-lang.org/install.html">here</a></li>
+  <li>Then install RabbitMQ-Server <code class="language-plaintext highlighter-rouge">apt install rabbitmq-server</code></li>
+  <li>Follow instructions to setup the management ui plugin and start/enable the service.</li>
+  <li>You can now start the tutorials (and have a hope of success)</li>
+</ol>
+
+<h3 id="haha-i-lied">HAHA I lied</h3>
+<p>(The tutorials will fail with the following error)</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/deps/rabbit_common/.erlang.mk/hex/lager.tar: Cannot open: No such file or directory
+</code></pre></div></div>
+
+<h3 id="wtf-is-lager">WTF is lager?</h3>
+
+<p>Lager is a logging framework for Erlang.
+Add it as a dependency in you elixir project</p>
+
+<div class="language-elixir highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="k">defp</span> <span class="n">deps</span> <span class="k">do</span>
+    <span class="p">[</span>
+      <span class="p">{</span><span class="ss">:amqp</span><span class="p">,</span> <span class="s2">"~&gt; 1.0"</span><span class="p">},</span>
+      <span class="p">{</span><span class="ss">:lager</span><span class="p">,</span> <span class="s2">"~&gt; 3.5"</span><span class="p">}</span>
+    <span class="p">]</span>
+  <span class="k">end</span>
+</code></pre></div></div>
+
+<h3 id="now-you-can-run-stuff">Now you can run stuff</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>iex <span class="nt">-S</span> mix
+</code></pre></div></div>
+:ET

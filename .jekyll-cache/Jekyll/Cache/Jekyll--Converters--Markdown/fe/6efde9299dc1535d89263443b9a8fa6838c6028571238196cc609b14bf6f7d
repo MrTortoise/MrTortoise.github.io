@@ -1,0 +1,44 @@
+I"´<h2 id="disclaimer">Disclaimer</h2>
+<p>I have no idea how to actually deploy anything yet. This is all taken from
+<a href="http://elixir-lang.org/getting-started">Getting Started</a>, read that to make sense of this.
+This is really just meant to be notes as a kind of a quick start.</p>
+
+<h2 id="the-point">The point:</h2>
+
+<p>So I have been dicking around with Elixir for a while. Really enjoying it. However
+I have never taken the time to actually attempt to build a service that is deployable.
+So have decided to build up a minimum app that demonstrates a service that has the
+basics that a deployable app would have.</p>
+
+<p>The goal is to have a service that</p>
+<ol>
+  <li>can restart a part if it fails (supervisor hierarchy)</li>
+  <li>has logging</li>
+  <li>is testable</li>
+  <li>can be deployed</li>
+  <li>can demonstrate distributed processing with location transparency.</li>
+  <li>Has a way to communicate with external world.</li>
+</ol>
+
+<h2 id="steps-to-build">Steps to build</h2>
+<ol>
+  <li><code class="language-plaintext highlighter-rouge">mix new kv_umbrella --umbrella</code> - creates the umbrella project</li>
+  <li>build the service and the client projects
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ cd kv_umbrella/apps
+$ mix new kv_server --module KVServer --sup
+$ mix new kv --module KV
+</code></pre></div>    </div>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">mix test</code> - all should compile tests should run.</li>
+  <li>â€¦</li>
+  <li>wip</li>
+  <li>profit</li>
+</ol>
+
+<h2 id="how-to-deploy">How to deploy?</h2>
+<ol>
+  <li>exrm - generates a package including erlang. It appears like you stick it somewhere and start / stop the service.</li>
+  <li>edeliver - based on deliver - a bash tool. Get it <a href="https://github.com/boldpoker/edeliver">here</a></li>
+  <li><a href="https://www.youtube.com/watch?v=H686MDn4Lo8">Good youtube talk</a></li>
+</ol>
+:ET

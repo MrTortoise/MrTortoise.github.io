@@ -1,0 +1,22 @@
+I"ê<p>Have installed various things through the tutorial. As of yet havenâ€™t seen any scaffolding projects to preassemble this stuff. So until that point, this should save some time.</p>
+
+<ol>
+  <li>Yarn - https://yarnpkg.com/en/</li>
+  <li><code class="language-plaintext highlighter-rouge">elm package install elm-lang/html</code></li>
+  <li><code class="language-plaintext highlighter-rouge">elm package install elm-lang/html</code></li>
+  <li><code class="language-plaintext highlighter-rouge">elm package install elm-lang/mouse</code></li>
+  <li><code class="language-plaintext highlighter-rouge">elm package install elm-lang/keyboard</code></li>
+  <li><code class="language-plaintext highlighter-rouge">yarn init</code></li>
+  <li><code class="language-plaintext highlighter-rouge">yarn add json-server@0.9.5</code></li>
+  <li><code class="language-plaintext highlighter-rouge">yarn add webpack webpack-dev-middleware webpack-dev-server elm-webpack-loader file-loader style-loader css-loader url-loader</code></li>
+  <li><code class="language-plaintext highlighter-rouge">yarn add ace-css@1.1 font-awesome@4</code></li>
+  <li>webpack config - https://www.elm-tutorial.org/en/04-starting/03-webpack-1.html</li>
+  <li><code class="language-plaintext highlighter-rouge">elm package install elm-lang/html</code></li>
+  <li><code class="language-plaintext highlighter-rouge">npm install -g foreman</code> - for hosting multiple node apps (server, client - nf start)</li>
+  <li><code class="language-plaintext highlighter-rouge">elm package install elm-lang/http</code></li>
+  <li><code class="language-plaintext highlighter-rouge">elm package install NoRedInk/elm-decode-pipeline</code></li>
+  <li><code class="language-plaintext highlighter-rouge">elm package install krisajenkins/remotedata</code></li>
+  <li><code class="language-plaintext highlighter-rouge">elm package install elm-lang/navigation</code></li>
+  <li><code class="language-plaintext highlighter-rouge">elm package install evancz/url-parser</code></li>
+</ol>
+:ET
