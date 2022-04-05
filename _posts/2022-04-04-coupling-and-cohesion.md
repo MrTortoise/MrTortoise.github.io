@@ -9,7 +9,7 @@ WIP
 
 # What is 'Coupling and Cohesion' and why you should care
 
-We spend most of our time changing existing systems and trying to figure out how systems work. 
+We spend most of our time changing existing systems and trying to [figure out how systems work](https://lepiter.io/feenk/developers-spend-most-of-their-time-figuri-9q25taswlbzjc5rsufndeu0py/). 
 As such our ambition should be to build systems in ways that makes them easy to change - change also implies that we do not know what the system will need to do in a short period of time. As such we also need to be working in ways to learn and get to this change.
 
 Anything we can do to make our lives simpler here will pay off monumentally because systems size often exceeds our capacity for mental models. We need to be able to forget parts of a system and use heuristics and assumptions to work effectivley. This requires predictability. Predictability with low cognitive effort requires simplicity.
