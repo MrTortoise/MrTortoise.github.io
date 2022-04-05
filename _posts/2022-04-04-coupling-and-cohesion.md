@@ -9,6 +9,14 @@ WIP
 
 # What is 'Coupling and Cohesion' and why you should care
 
+These are words that describe complexity in the semse of complect - to braid parts of a system together. Rich Hickey gave a great talk on simplicity.
+
+{% include youtubePlayer.html id="rI8tNMsozo0" %}
+
+> 'The Agility of simplicity dominates all other forms of agility'
+
+The more complected a system is the more of a hairball it is. But also the more parts effect other parts which makes it dramatically harder to reason about and be correct in our expectations.
+
 We want to really understand the predictability of systems because that allows us to know whether we have a system that we can test against reality and when we do test it what we expect to happen.  In businesses we call this making money, in product it is knowing your customer, in code it is getting the bloody thing to firstly compile and secondly do what we want. These are 2 fundemental concepts because everything is an information model and these concepts are descriptors of it.
 
 These are 2 concepts that work together in 2 very interesting and useful dimensions.
@@ -39,12 +47,12 @@ The goal here is to use some tools to get into what does bad look like? how do w
 ## Cohesion
 
 ### What is Cohesion?
-Cohesion doesn't seem to have a good example of a metric. Therefor I am going to have to get more figurative and illustrative.
+Cohesion doesn't seem to have a good example of a metric (entropy is possibly analogous - however that maybe more confusing!). Therefor I am going to have to get more figurative and illustrative.
 Systems that have low cohesion have uniformity. The cannonical example in my mind would be a perfect gas upon which PV = nRT would apply to. It is a system which may have an effectivley infinite number of parts because the parts are so homogenous, indecipherable and interchangable that they are effectivley one glob. As a result the glob of a system as a whole could be described as a cohesive lump if it had boundaries. As such a container around this could be said to have high cohesion. This then leads into the ancient question of 'if you have a vase with nothing in it and take away the vase - where is the nothing?' - anyway, I will leave you to ponder on that and its relation to the concept of self.
 
 Water molecues in a glass of water have low cohesion wheras the hexagonal cells in a honeycomb have high cohesion. Whilst both [plant cells](https://www.google.com/search?q=plant+cells&tbm=isch&ved=2ahUKEwj9kLDikfz2AhVRaPEDHR0gDZYQ2-cCegQIABAA&oq=plant+cells&gs_lcp=CgNpbWcQAzIHCAAQsQMQQzIECAAQQzIFCAAQgAQyBAgAEEMyBAgAEEMyBAgAEEMyBAgAEEMyBQgAEIAEMgUIABCABDIFCAAQgAQ6BwgjEO8DECc6CAgAEIAEELEDUM0IWNcRYP4SaABwAHgAgAE_iAGaBZIBAjEymAEAoAEBqgELZ3dzLXdpei1pbWfAAQE&sclient=img&ei=tMxLYv3mGdHQxc8PncC0sAk&bih=823&biw=1377&rlz=1C1CHBD_en-GBGB824GB824) and [animal cells](https://www.google.com/search?q=animal+cells&rlz=1C1CHBD_en-GBGB824GB824&sxsrf=APq-WBsrSfW7-JM25Zvhi_u3rlEseJsOsA:1649134765581&source=lnms&tbm=isch&sa=X&ved=2ahUKEwjnmI7fkfz2AhVOilwKHYqyDnYQ_AUoAXoECAEQAw&biw=1377&bih=823&dpr=2) are on their own cohesive I would say [collections of plant cells](https://www.pinterest.co.uk/pin/524880531566514173/) are more cohesive than [collection of animal cells](https://www.dreamstime.com/tissue-stomach-under-microscope-education-tissue-stomach-under-microscope-education-lab-image131991953). 
 
-I also think that contrast is a great example of how complexity can interract with coupling and cohesion. A collection of plan cell looks kess complex than the animal cells - it would seem reasonable to say behaviour of the different would be more uniform as they look the same. In the animal cell example (stomach lining) there is more variety of strucutre and purpose - combining these different functions into the same collection makes the collection less cohesive - and perhaps less predictable. 
+I also think that contrast is a great example of how complexity can interract with coupling and cohesion. A collection of plan cell looks kess complex than the animal cells - it would seem reasonable to say behaviour of the different would be more uniform as they look the same. In the animal cell example (stomach lining) there is more variety of strucutre and purpose - combining these different functions into the same collection makes the collection less cohesive - and perhaps less predictable as to its function per sample. 
 
 ### Cohesions curious relationship with complexity
 One of the definitions of complexity when you get into [Cynefin](https://en.wikipedia.org/wiki/Cynefin_framework) and playing tricks there is that a complex system is one where you do not know all the [constraints](https://cynefin.io/wiki/Constraints). The evidence for this is one where you make a change expecting one thing and a different thing happens. This is a property of a [dispositional system](https://thecynefin.co/inclinations-dispositions/) - and system involving people tend to be like this. A complex system where you cannot establish the constraints through analysis alone. When we see coupling below we will meet connascence, in that idea there are forms dynamic coupling that are only visible at run time. Therefor without the concept of connascence these systems would remain complex and unpredicable but by applying and using the langauge and games of connscence (such as mapping activities) it is possible for these to become complicated.
@@ -55,6 +63,19 @@ Things with more cohesion have very different properties to things with very low
 
 ## Coupling
 
+There is a lot of discussion between high and low levels of coupling. However this has always felt vague to me. This all changed when I foudn [Connascence](https://connascence.io/) as suddenly these vauge ideas that were mapping more onto encapsulation and numbers of connections now had soem meat.
+
+### Low Coupling != Good
+
+The problem with the common idea of low coupling as basically being high coupling but you put something in a box and point to the box is that it is overly simplistic. In reality there is a balance between going overboard and producing [Fizz Buzz enterprise architecture](https://github.com/EnterpriseQualityCoding/FizzBuzzEnterpriseEdition). 
+
+When you extract all these parts into something common accross systems you are coupling those systems together. This in turn means are all of a sudden it is possible to break another teams work - so some activities that lower levels of coupling can introduce incredibly hard to detect problems. This is not good! There is a need for something more subtle!
+
+### Simplicity == good
+
+
+
+### Something less simplistic (Connascence)
 When writing code there is a concept called [Connascence](https://connascence.io/). This is a powerful tool for analysing code and refactoring. The purpose of it is to enable conversations around understanding how things are coupled together. This then helps to facilitate conversations around deliberatley choosing what coupling should look like or identify situations where different forms are more or less desirable. I will write about connascence as it applies to code more in future posts, however here I want to draw attention to 2 particlar components.
 
 ### Components of Coupling
