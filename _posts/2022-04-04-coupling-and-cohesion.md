@@ -13,21 +13,28 @@ We want to really understand the predictability of systems because that allows u
 
 These are 2 concepts that work together in 2 very interesting and useful dimensions.
 
+## Information Model and Context
+
 I have been finding recently that I think in ways that frustrate a lot of people. When trying to explain something and understnad something (like the 2 concepts here) I understand them through their many different connections to other ideas. I will connect them with different ways of using them. By enumerating those different ways I think I am adding to either existing contexts or adding new contexts (or games).
 
 The act of doing this reduces the cohesion of the origional thing I was talking about because as you couple that idea to an increasing number of other ideas that seem to be coherent with one another it gets harder and harder for the victim to keep clean walls around the origional idea. But this is a thing we grapple with every day - the concept of the 'product' a business sells is completley different in each different department of an organisation. In ecom product for people managing client accounts is all about market, availability and margin wheras product for a site team is data to be shown on a site and getting it to edges quickly. Product for a warehouse is about uunpacking, shelving, completing orders, packing and distribution - and less about the indiviual items. Nobody is more correct than anybody else - its just different but additive to a full understanding. Provided we keep the different conceptualisations seperate (and cohesive) we can couple these different meanings together - and by exploiting this we have a functional cohesive company.
 
+## Exploiting Cynefin to build information and to deliberatley identify unpredictability
 The complaint I get is that my way of thinking and understanding has become too complicated. The ideas are too complex because they cannot be applied predictably because information overload.
 
 Coupling and Cohesion are 2 concepts that work together to give us tools to describe the connections, globbyness and uniformity of information models. This matters because doing this well has a large impact on the predictability of systems.
 
 When we are talking about predictablity of systems in my brain we are in the realm of Cynefin and its analysis of complexity.
 
-For instance, systems with extremley low cohesion (eg a perfect gas) are also chaotic systems that can be exploited as they are also statistical systems because their parts are independant. Therefor if we can manipulate coupling and cohesion then we can convert at least parts of systems into states upon which we can use statistical tools.  
+For instance, systems with extremley low cohesion and low coupling (eg a perfect gas) are also chaotic systems that can be exploited as they are also statistical systems because their parts are independant. Therefor if we can manipulate and reduce coupling and cohesion then we can convert at least parts of systems into states upon which we can use statistical tools.  
 
-System with very high cohesion and well understood and mapped coupling tend towards simple from being complicated. 
+Additionally systems with badly understood coupling are going to be systems that when poked do unexpected things - a system that is partially or temporarily predictable is a complex system.
 
+System with very high cohesion and well understood and mapped coupling tend towards simple from being complicated. By creating islands of cohesion it is possible to find islands of simplicity inside a complicated system.
 
+This leads me to think in this sort of metaphor that moving from complex to complicated is the exercise of identifying the nature and kinds of coupling in a system. In code systems which is what is the main focus of myself a lot of complexity comes from difficulty of inspecting at compile time. Wheras some systems are very dispositional and feedback into themselves - this is I suspect very closley related to Heisenberg uncertainty - but in a system with a person if you interact with it in the same way twice it is unlikley to behave in the same say twice. This is because last interaction in some - perhaps metaphorical - way changed its starting state. These dispositional systems truly are complex - wheras some code systems are complex only because we did it badly. 
+
+The goal here is to use some tools to get into what does bad look like? how do we detect and find it? what tools do we have to play with it once we find it?
 
 ## Cohesion
 
