@@ -9,7 +9,12 @@ WIP
 
 # What is 'Coupling and Cohesion' and why you should care
 
-These are words that describe complexity in the semse of complect - to braid parts of a system together. Rich Hickey gave a great talk on simplicity.
+We spend most of our time changing existing systems and trying to figure out how systems work. 
+As such our ambition should be to build systems in ways that makes them easy to change - change also implies that we do not know what the system will need to do in a short period of time. As such we also need to be working in ways to learn and get to this change.
+
+Anything we can do to make our lives simpler here will pay off monumentally because systems size often exceeds our capacity for mental models. We need to be able to forget parts of a system and use heuristics and assumptions to work effectivley. This requires predictability. Predictability with low cognitive effort requires simplicity.
+
+Coupling and Cohesion are words that describe complexity in the semse of complect - to braid parts of a system together. Rich Hickey gave a great talk on simplicity.
 
 {% include youtubePlayer.html id="rI8tNMsozo0" %}
 
@@ -17,9 +22,9 @@ These are words that describe complexity in the semse of complect - to braid par
 
 The more complected a system is the more of a hairball it is. But also the more parts effect other parts which makes it dramatically harder to reason about and be correct in our expectations.
 
-We want to really understand the predictability of systems because that allows us to know whether we have a system that we can test against reality and when we do test it what we expect to happen.  In businesses we call this making money, in product it is knowing your customer, in code it is getting the bloody thing to firstly compile and secondly do what we want. These are 2 fundemental concepts because everything is an information model and these concepts are descriptors of it.
+Simplicity requires that seperate parts of a system be as independant as possible. By not coupling these parts together we create firebreaks that limit the impact of change. However we also have to consider the cognitive cost of introducing abstractions. A lot of software developers practise [Dont Repeat Yourself](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself) and a wierd form of [Single Responsability Principle](https://en.wikipedia.org/wiki/Single-responsibility_principle) that cause a lot of harm. For instance the first 2 paragraphs in the SRP link contradict themselves. Is says Robert Martin made up the term and defined it in the second paragraph but only after proposing the common misunderstanding first. The danger is taking heuristics like these and blindly applying them.  It is very possible (and common) for 2 pieces of code to be almost identical but have different owners. When you apply do not repeat yourself and extract them then you have invented work to do this, you have complected 2 parts of the system together. As a result changing the common for one breaks the other because these 2 pieces have seperate owners and so change in both will happen at different times for different reasons. Applying do not repeat yourself here is not good - it is overzealous and increases complexity despite apparently increasing cohesion and lowering coupling. The common statement is insufficient as it is incoherent to the overly simplistic view people take.
 
-These are 2 concepts that work together in 2 very interesting and useful dimensions.
+We want to really understand the predictability of systems because that allows us to know whether we have a system that we can test against reality and when we do test it what we expect to happen.  In businesses we call this making money, in product it is knowing your customer, in code it is getting the bloody thing to firstly compile and secondly do what we want. These are 2 fundemental concepts because everything is an information model and these concepts are descriptors of it.
 
 ## Information Model and Context
 
@@ -36,7 +41,7 @@ When we are talking about predictablity of systems in my brain we are in the rea
 
 For instance, systems with extremley low cohesion and low coupling (eg a [perfect gas](https://www.khanacademy.org/science/ap-chemistry-beta/x2eef969c74e0d802:intermolecular-forces-and-properties/x2eef969c74e0d802:ideal-gas-law/v/ideal-gas-equation-pv-nrt)) are also chaotic systems that can be exploited as they are also [statistical systems because their parts are independant](https://en.wikipedia.org/wiki/Sampling_(statistics)). Therefor if we can manipulate and reduce coupling and cohesion then we can convert at least parts of systems into states upon which we can use statistical tools.  
 
-Additionally systems with badly understood coupling are going to be systems that when poked do unexpected things - a system that is partially or temporarily predictable is a complex system.
+Additionally, systems with badly understood coupling are going to be systems that when poked do unexpected things - a system that is partially or temporarily predictable is a complex system.
 
 System with very high cohesion and well understood and mapped coupling tend towards simple from being complicated. By creating islands of cohesion it is possible to find islands of simplicity inside a complicated system.
 
