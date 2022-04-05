@@ -5,6 +5,8 @@ date:   2022-04-04
 categories: architecture coupling cohesion
 ---
 
+WIP
+
 # What is 'Coupling and Cohesion' and why you should care
 
 These are 2 concepts that work together in 2 very interesting and useful dimensions.
