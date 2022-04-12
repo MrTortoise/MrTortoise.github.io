@@ -1,6 +1,6 @@
 transition
 digraph G {   
-  node [shape=record]
+  node [shape=record];
   subgraph cluster_crt {
     label = "Current Reality Tree: Get Onto Course";
     c_p1 [label= "Register"];
@@ -43,10 +43,10 @@ digraph G {
     f_p4 [label= "Accepted onto course"]; 
     f_p5 [label= "Course info available on site"]; 
 
-    f_p1 -> f_p2
-    f_p2 -> f_p3  
-    f_p3 -> f_p4
-    f_p4 -> f_p5
+    f_p1 -> f_p2;
+    f_p2 -> f_p3; 
+    f_p3 -> f_p4;
+    f_p4 -> f_p5;
   }
 }
 transition

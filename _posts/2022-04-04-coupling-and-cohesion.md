@@ -56,57 +56,6 @@ The goal of development is to change a system to meet certain objectives - EG to
 
 ![Me and U](https://g.gravizo.com/source/transition?https%3A%2F%2Fraw.githubusercontent.com%2FMrTortoise%2FMrTortoise.github.io%2Fmaster%2Fimages%2Fcoupling%2Ftransition.dot)
 
-
-ffs
-
-![the hell](https://g.gravizo.com/g?
-  digraph H {
-    node [shape=record]
-    subgraph cluster_crt {
-        label = "Current Reality Tree: Get Onto Course";
-        c_p1 [label= "Register"];
-        c_p2 [label= "Prove Identity"];
-        c_p3 [label= "Choose Course"];
-        c_p4 [label= "Course Info Emailed"];
-        c_p5 [label= "Accepted onto Course"];
-        c_p1 -> c_p2;
-        c_p1 -> c_p3;
-        c_p3 -> c_p4;
-        c_p2 -> c_p5;
-        c_p3 -> c_p5;
-    }
-  subgraph cluster_transition {
-    label = "Transition Actions";
-    t_a1 [label= "Enable multiple courses"];
-    t_a2 [label= "Automate manual steps"];
-    t_a3 [label= "Restyle everything into mobile"];
-    t_a4 [label= "Handle automation transition failures"];
-    t_a5 [label= "Build generic page templates"];
-    t_a6 [label= "Update + create courses based upon feed"];
-    t_a7 [label= "Built CMS management for courses"];
-    t_a1 -> t_a2;
-    t_a2 -> t_a3;
-    t_a2 -> t_a4;
-    t_a2 -> t_a5;
-    t_a4 -> t_a6;
-    t_a5 -> t_a7;
-    t_a6 -> t_a7;
-    }
-  subgraph cluster_frt {
-    label = "Future Reality Tree";
-    f_p1 [label= "Choose Course"];
-    f_p2 [label= "Register"];
-    f_p3 [label= "Prove Identity"];
-    f_p4 [label= "Accepted onto course"]; 
-    f_p5 [label= "Course info available on site"]; 
-    f_p1 -> f_p2
-    f_p2 -> f_p3  
-    f_p3 -> f_p4
-    f_p4 -> f_p5
-    }
-  }
-)
-
 In some industries and problems this is far more obvious than others. When you are in manufacturing and are looking at how to run a plant that are a lot of very measurable and predictable things to look at and then model around. This is where ideas like [lean manufacturing](https://en.wikipedia.org/wiki/Toyota_Production_System) and [theory of constraints](https://en.wikipedia.org/wiki/Theory_of_constraints) (for manufacturing) came about. Here it comes down to accountancy, elimination of waste by understanding what inventory is. 
 
 #### Not all systems behave the same way - kinds
