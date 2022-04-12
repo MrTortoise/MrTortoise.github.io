@@ -58,7 +58,7 @@ The goal of development is to change a system to meet certain objectives - EG to
   digraph I {  
     node [shape=record]  
     subgraph cluster_crt {
-        label = "dave";
+      label = "dave";
     }
   }
 )
