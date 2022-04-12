@@ -23,7 +23,7 @@ Every time you model anything you have a graph with nodes and edges.
   }
 )
 
- Right now there is me at a keyboard typing this - a node - and that is connected - by an edge - to you the reader debating about whether it is worth continuing reading this. But we can zoom in an discover that the edge is just an approximation and can be expanded into many more nodes and edges - eg computers, internet etc. So abstraction in this sense is a form of compression - a heuristic convenience to help us not have to think of everything. It also helps indicate to the consumer that all that detail is not considered relevant for the expressed meaning.
+Right now there is me at a keyboard typing this - a node - and that is connected - by an edge - to you the reader debating about whether it is worth continuing reading this. But we can zoom in an discover that the edge is just an approximation and can be expanded into many more nodes and edges - eg computers, internet etc. So abstraction in this sense is a form of compression - a heuristic convenience to help us not have to think of everything. It also helps indicate to the consumer that all that detail is not considered relevant for the expressed meaning.
 
  ![Me and You and more](https://g.gravizo.com/g?
    digraph G {
@@ -54,8 +54,8 @@ Then from here I want to keep zooming out to team structures and organizational 
 
 The goal of development is to change a system to meet certain objectives - EG to change inside some constraints to maximize or more towards (or away) from some measurable thing. More of this, Less of that. When we take this view then we will have a model of current state and a model of future state. The job of development is to build and execute the decision graph that gets from one state to the next future state.
 
- ![Current, transition and future trees](https://g.gravizo.com/g?
-   digraph Transition {   
+![Current, transition and future trees](https://g.gravizo.com/g?
+  digraph Transition {   
     node [shape=record];
     
     c_p1 [label= "Current p1"]
@@ -101,14 +101,8 @@ The goal of development is to change a system to meet certain objectives - EG to
     subgraph frt{
         label = "Future Reality Tree"
     }
-
-    Me -> Computer
-    Computer -> Github
-    Github -> Build 
-    Build -> Deploy
-    Deploy -> You 
   }
- )
+)
 
 In some industries and problems this is far more obvious than others. When you are in manufacturing and are looking at how to run a plant that are a lot of very measurable and predictable things to look at and then model around. This is where ideas like [lean manufacturing](https://en.wikipedia.org/wiki/Toyota_Production_System) and [theory of constraints](https://en.wikipedia.org/wiki/Theory_of_constraints) (for manufacturing) came about. Here it comes down to accountancy, elimination of waste by understanding what inventory is. 
 
