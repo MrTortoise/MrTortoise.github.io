@@ -71,13 +71,15 @@ Systems involving people or physical systems with more than 2 bodies (this can b
 Examples of systems like this are anything involving a human in a feedback loop (ie a customer). In some systems (Eg a consultancy) inventory is not obvious (I have modelled it in the past as people who can be deployed as fee earners) - and the implications of inventory being human are enormous (not least because in consulting inventory (people) can be resold (deployed onto new clients)).
 
 ##### Sympathetic
-It is interesting to also point out the opposite effect caused by perhaps unexpected coupling. A great example of this is wobbly bridges being caused by the bridge vibrations pushing people to all have their footsteps in sync that in turn feed backs into the bridge until a critical point where fialure or injury could occur. This phenomena is due to coupling of apparently independent actors via the bridge. What you can see in the video is heads moving side to side in phase with one another.
+It is interesting to also point out the opposite effect caused by perhaps unexpected coupling. A great example of this is wobbly bridges being caused by the bridge vibrations pushing people to all have their footsteps in sync that in turn feed backs into the bridge until a critical point where fialure or injury could occur. This phenomena is due to coupling of apparently independent actors via the bridge. What you can see in the video is heads moving side to side in phase with one another. The fascinating part of this is that 150 people don't cause that much of an effect but 164 have a dramatic effect.
 
 {% include youtubePlayer.html id="eAXVa__XWZ8" %}
 
  There is another great Veritasium video on this phenomena for anyone who wants a bit of depth from someone far better at explaining depth and contextualising. However a lot of ideas in this video have been borrowed in areas that we are discussing here as these phenomena are very important because they describe phase transitions - this concepts analogies can be applied to how to induce change in organisations. 
 
 {% include youtubePlayer.html id="t-_VPRCtiUg" %}
+
+##### So what?
 
 What this means is that applying concepts and ideas from one context without being aware of the kind of system is simply going to lead to unpredictability and not work as expected. We can see this all over development. If your company applies the same [methodology](https://www.google.com/search?q=scrum+certification) to every project you are witnessing it - moreover you are probably aware of some places where it works better than others.
 
