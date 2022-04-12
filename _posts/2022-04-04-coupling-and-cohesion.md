@@ -11,7 +11,7 @@ WIP
 
 ## The job of development
 
-This is change. We change things. We sometimes build new things - but those new things facilitate change in the organization they are built in. But generally development should be viewed as a practice of recrafting how information flows through organizations. This could be another vague reference to conway's law - but I feel also something more fundamental. 
+This is change. We change things. We sometimes build new things - but those new things facilitate change in the organization they are built in. But generally development should be viewed as a practice of recrafting how information flows through organizations. This could be another vague reference to [conway's law](https://en.wikipedia.org/wiki/Conway%27s_law) - but I feel also something more fundamental. 
 
 ### We model and define how information flows through graphs
 Every time you model anything you have a graph with nodes and edges.
@@ -25,15 +25,8 @@ Every time you model anything you have a graph with nodes and edges.
 
  Right now there is me at a keyboard typing this - a node - and that is connected - by an edge - to you the reader debating about whether it is worth continuing reading this. But we can zoom in an discover that the edge is just an approximation and can be expanded into many more nodes and edges - eg computers, internet etc. So abstraction in this sense is a form of compression - a heuristic convenience to help us not have to think of everything. It also helps indicate to the consumer that all that detail is not considered relevant for the expressed meaning.
 
- ![Me and You and more](https://g.gravizo.com/source/me_and_you_and_more?https%3A%2F%2Fraw.githubusercontent.com%2FMrTortoise%2FMrTortoise.github.io%2Fmaster%2F_posts%2F2022-04-04-coupling-and-cohesion.md)
-<details> 
-<summary>simple diagram of you and me</summary>
-me_and_you
-  
-me_and_you
-
-me_and_you_and_more
-  digraph G {
+ ![Me and You and more](https://g.gravizo.com/g?
+   digraph G {
     rankdir="LR"
     Me -> Computer
     Computer -> Github
@@ -41,8 +34,7 @@ me_and_you_and_more
     Build -> Deploy
     Deploy -> You 
   }
-me_and_you_and_more
-</details>
+ )
 
 It is the job of development to change these networks. I think of this activity as information engineering (except that term is taken - much like when i wanted to invent a study of the logic (ology) of science and chose a very unfortunate name) - and it puts me at odds with many people as often the role of development is increasingly viewed as data entry experts in a language like javascript. Whilst data entry is partially true it is not sufficient to cover development.
 
@@ -52,26 +44,36 @@ I think the concepts of coupling and cohesion apply incredibly well to this netw
 
 What I want to do here is get into this in some detail. By taking a target audience (developers) I want to show how a concept based upon coupling can be applied to increase cohesion and improve the health of a system in a systematic, repeatable and predictable way. I also want to show how hard this is to do in many different systems.
 
-Then based upon this explore the idea of DeathStars again - from another thing I wrote about - and look for examples of these by zooming out and looking at larger structures in the information model. Here we can discuss software architecture and various strategies to eliminate deathstars - or as will end up being more correct choosing the deathstar that works best for you.
+![YourVeryOwnDeathStar](/images/deathstar/sql-deathstar-1.png)
 
-Then from here I want to keep zooming out
+Then based upon this explore the idea of DeathStars again - [from another thing I wrote about](https://mrtortoise.github.io/architecture/lean/design/patterns/ddd/2018/03/18/deathstar-architecture.html) - and look for examples of these by zooming out and looking at larger structures in the information model. Here we can discuss software architecture and various strategies to eliminate death stars or - as will likely end up being more correct - choosing the deathstar that works best for you.
+
+Then from here I want to keep zooming out to team structures and organizational patterns and how these relate to coupling, cohesion - and yes, death stars.
 
 ### How to restate development in terms of information models?
 
-The goal of development is to change a system to meet certain objectives - EG to change inside some constraints to maximise or more towards (or away) from some measurable thing. More of this, Less of that. When we take this view then we will have a model of current state and a model of future state. The job of development is to build and execute the decision graph that gets from one state to the next future state.
+The goal of development is to change a system to meet certain objectives - EG to change inside some constraints to maximize or more towards (or away) from some measurable thing. More of this, Less of that. When we take this view then we will have a model of current state and a model of future state. The job of development is to build and execute the decision graph that gets from one state to the next future state.
 
-In some industries and problems this is far more obvious than others. When you are in manufacturing and are looking at how to run a plant that are a lot of very measurable and predictable things to look at and then model around. This is where ideas like lean manufacturing and theory of constraints (for manufacturing) came about. Here it comes down to accountancy and understanding what inventory is. However not all systems share the same properties as some have highly dispositional states and so exhibit complex behavior. In some systems (Eg a consultancy) inventory is not obvious (I model it as people who can be deployed as fee earners) - and the implications of inventory being human are enormous. When you perform the same activity twice we have learnt that we do not expect the same output in many systems. Systems involving people or physical systems with more than 2 bodies (this can be viewed as constraints constraints - eg [double pendulum](https://www.youtube.com/watch?v=AwT0k09w-jw) connecting bars (edges) to rotating joints (nodes) and creating a chain of more than 2 nodes - a fixed point of attachment, a node hinge connecting one bar, and then a node that is free to rotate around the hinge at a length given by another bar) are highly sensitive to starting conditions and have feedback loops that lead to chaotic behaviors. 
+In some industries and problems this is far more obvious than others. When you are in manufacturing and are looking at how to run a plant that are a lot of very measurable and predictable things to look at and then model around. This is where ideas like [lean manufacturing](https://en.wikipedia.org/wiki/Toyota_Production_System) and [theory of constraints](https://en.wikipedia.org/wiki/Theory_of_constraints) (for manufacturing) came about. Here it comes down to accountancy, elimination of waste by understanding what inventory is. 
 
-What this means is that applying concepts and ideas from one context without being aware of the kind of system is simply going to lead to unpredictability and not work as expected. We can see this all over development. If your company applies the same methodology to every project you are witnessing it - moreover you are probably aware of some places where it works better than others.
+#### Not all systems behave the same way - kinds
 
-However this is what makes coupling and cohesion very intersting to apply in these spaces.
+However not all systems share the same properties as some are unpredictable. They have highly dispositional states and so exhibit complex behavior. When you perform the same activity twice we have learnt that we do not expect the same output in many systems. Systems involving people or physical systems with more than 2 bodies (this can be viewed as constraints constraints - eg [double pendulum](https://www.youtube.com/watch?v=AwT0k09w-jw) connecting bars (edges) to rotating joints (nodes) and creating a chain of more than 2 nodes - a fixed point of attachment, a node hinge connecting one bar, and then a node that is free to rotate around the hinge at a length given by another bar) are highly sensitive to starting conditions and have feedback loops that lead to chaotic behaviors. 
+
+Examples of systems like this are anything involving a human in a feedback loop (ie a customer). In some systems (Eg a consultancy) inventory is not obvious (I have modelled it in the past as people who can be deployed as fee earners) - and the implications of inventory being human are enormous (not least because in consulting inventory (people) can be resold (deployed onto new clients)).
+
+What this means is that applying concepts and ideas from one context without being aware of the kind of system is simply going to lead to unpredictability and not work as expected. We can see this all over development. If your company applies the same [methodology](https://www.google.com/search?q=scrum+certification) to every project you are witnessing it - moreover you are probably aware of some places where it works better than others.
+
+However this is why taking ideas from one area and looking for analogues in another is interesting and hopefully insightful as to how a system might be refactored. This is what happens in books like [The Phoenix Project](https://www.amazon.co.uk/s?k=the+phoenix+projec) or [Theory of Constraints](https://www.amazon.co.uk/Theory-Constraints-Eliyahu-M-Goldratt/dp/0884271668). However the assumptions and conditions behind ideas need to be uncovered in order to test their validity.
+
 ## The phenomena
-
-Sometimes we have 'happy little accidents' but most often we have stuff that suddenly breaks unexpectedly because
 
 We spend most of our time changing existing systems and trying to [figure out how systems work](https://lepiter.io/feenk/developers-spend-most-of-their-time-figuri-9q25taswlbzjc5rsufndeu0py/). 
 As such our ambition should be to build systems in ways that makes them easy to change - change also implies that we do not know what the system will need to do in a short period of time. As such we also need to be working in ways to learn and get to this change.
 
+Sometimes we have 'happy little accidents' but most often we have stuff that suddenly breaks unexpectedly. This is because when we change something and expect an effect there was something we didn't know about in the system that we than say caused something else to happen. Our system is more complex than we thought. This complexity makes it exceptionally difficult to change systems - which is our entire job! so what can we do?
+
+### Simple vs complex
 Anything we can do to make our lives simpler here will pay off monumentally because systems size often exceeds our capacity for mental models. We need to be able to forget parts of a system and use heuristics and assumptions to work effectively. This requires predictability. Predictability with low cognitive effort requires simplicity.
 
 Coupling and Cohesion are words that describe complexity in the sense of complect - to braid parts of a system together. Rich Hickey gave a great talk on simplicity.
@@ -80,24 +82,26 @@ Coupling and Cohesion are words that describe complexity in the sense of complec
 
 > 'The Agility of simplicity dominates all other forms of agility'
 
-The more complected a system is the more of a hairball it is. But also the more parts effect other parts which makes it dramatically harder to reason about and be correct in our expectations.
+The more complected a system is then the more of a hairball it is. But also, the more parts effect other parts which makes it dramatically harder to reason about and be correct in our expectations.
 
-Simplicity requires that separate parts of a system be as independent as possible. By not coupling these parts together we create firebreaks that limit the impact of change. 
+Simplicity requires that separate parts of a system be as independent as possible. By not coupling these parts together we create firebreaks that limit the impact of change. This then allows us to compartmentalize and start to build heuristics - rules of thumb - that enable reasoning of larger parts of the system.
 
 
 ### There is a lot of cargo-culting and kool-aid
 
-However we also have to consider the cognitive cost of introducing abstractions. A lot of software developers practice [Don't Repeat Yourself](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself) and a weird form of [Single Responsibility Principle](https://en.wikipedia.org/wiki/Single-responsibility_principle) that cause a lot of harm. For instance the first 2 paragraphs in the SRP link contradict themselves. Is says Robert Martin made up the term and defined it in the second paragraph but only after proposing the common misunderstanding first. The danger is taking heuristics like these and blindly applying them.  
+However we also have to consider the cognitive cost of introducing these abstractions. A lot of software developers practice [Don't Repeat Yourself](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself) and a weird form of [Single Responsibility Principle](https://en.wikipedia.org/wiki/Single-responsibility_principle) that cause a lot of harm. For instance the first 2 paragraphs in the SRP link contradict themselves. Is says Robert Martin made up the term and defined it in the second paragraph but only after proposing the common misunderstanding first (its a misunderstanding because it is insufficient on its own). The danger is taking heuristics like these and blindly applying them.  
 
-It is very possible (and common) for 2 pieces of code to be almost identical but have different owners. When you apply do not repeat yourself and extract them then you have invented work to do this, you have complected 2 parts of the system together. As a result changing the common for one breaks the other because these 2 pieces have separate owners and so change in both will happen at different times for different reasons. What is more, if this is extracted out into a package then the package maintainer has no real idea what the consumers are using it for. Changes for one system will not be timed correctly for the other even if desired. Now there is a package with 2 versions in one place and 2 pieces of code running different versions because one has not yet (or doesn't want to) update. Has this made things simpler? Was the intent to get into all this? Applying do not repeat yourself here is not good - it is overzealous and increases complexity despite apparently increasing cohesion and lowering coupling. When the 2 pieces of code have different owners refactors like this introduce a new form of contract of change between both the teams and also between the teams and the shared code. 
+It is very possible (and common) for 2 pieces of code to be almost identical but have different owners. When you apply 'do not repeat yourself' and extract them then not only have you invented work to do this (rather than do something that directly adds value to the customer), but you have also complected 2 parts of the system together by introducing the third shared piece of code. As a result, changing the common code for one will break the other because these 2 pieces have separate owners and so change in both will happen at different times for different reasons. Obviously getting the 2 parts to change concurrently and synchronously is vastly more complex than the parts doing so independently and therefor eventually sequentially. What is more, if this is extracted out into an independent package (to avoid this problem) then the package maintainer - as a result - has no real idea what the consumers are using it for. The goal for a package is to decouple from the consumers to allow them freedom - now changes to the package require a lot of communication and synchronization between consumers. Changes for one system will not be timed correctly for the other even if desired because different teams have different priorities - and if they do not then why split in the first place? Now there is a package with 2 versions in one place and 2 pieces of code running different versions because one has not yet (or doesn't want to or cannot) update. Has this made things simpler? Was the intent to get into all this? Applying do not repeat yourself here automatically is not good - it is overzealous and increases complexity despite apparently increasing cohesion and lowering coupling. When the 2 pieces of code have different owners refactors like this introduce a new form of contract of change between both the teams and also between the teams and the shared code. This example is the most common and damaging misunderstanding I see applied again and again at all levels of development. It is disastrous yet completely prevalent. It took 14 years for someone to question me doing this and then another 2 for me to finally get why they were telling me this.
 
-The cost of making the code 'simpler' is more complex deployment and the introduction of cross team concerns - usually to save 2-3 lines of 'repeated' code. The fix to the deployment here is to not take the external dependency, inline the code and get right back to the anti-pattern that was originally there. This happens but it should be said the heuristic is pretty good most of the time - however remember the goal of encapsulation is to enable the movement of code into different services or places. Being self contained and not having external dependencies greatly aids this. 
+The cost of making the code 'simpler' is more complex deployment and the introduction of cross team concerns - usually to save 2-3 lines of 'repeated' code. The fix to the deployment here is to not take the external dependency, inline the code and get right back to the anti-pattern that was originally there. This happens but it should be said the heuristic is pretty good most of the time (provided the code has the same owner) - however remember the goal of encapsulation is to enable the movement of code into different services or places. Being self contained and not having external dependencies greatly aids this. This is where we get into the direction of coupling as well - but more on this later. The example above ends up badly because the direction is the wrong way around.
 
 The common statement (low coupling, high cohesion) is insufficient as it is incoherent to the overly simplistic view people take of larger systems. We can do better!
 
 ### What really matters? Predictability
 
-We want to really understand the predictability of systems because that allows us to know whether we have a system that we can test against reality and when we do test it what we expect to happen.  In businesses we call this making money, in product it is knowing your customer, in code it is getting the bloody thing to firstly compile and secondly do what we want. These are 2 fundamental concepts because everything is an information model and these concepts are descriptors of it.
+Simply put, we cannot change a system if we do not know what will happen! To do so would be negligent.
+
+We want to really understand the predictability of systems. This allows us to know whether we have a system that we can test against reality. Moreover it allows us to say that when we do test it we also know what we expect to happen.  In businesses we call this making money, in product it is knowing your customer, in code it is getting the bloody thing to firstly compile and secondly do what we want. 
 
 ## Information Model and Context
 
