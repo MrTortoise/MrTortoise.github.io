@@ -55,14 +55,54 @@ Then from here I want to keep zooming out to team structures and organizational 
 The goal of development is to change a system to meet certain objectives - EG to change inside some constraints to maximize or more towards (or away) from some measurable thing. More of this, Less of that. When we take this view then we will have a model of current state and a model of future state. The job of development is to build and execute the decision graph that gets from one state to the next future state.
 
 ![trees](https://g.gravizo.com/g?
-  digraph Transition {
-    subgraph crt {
-        label = "Current Reality Tree"
-        c_p1 -> c_p2
-        c_p1 -> c_p3
-        c_p3 -> c_p4
-        c_p2 -> c_p5
-        c_p3 -> c_p5
+digraph G {   
+    
+    subgraph cluster_crt {
+        label = "Current Reality Tree: Get Onto Course";
+        c_p1 [label= "Register"];
+        c_p2 [label= "Prove Identity"];
+        c_p3 [label= "Choose Course"];
+        c_p4 [label= "Course Info Emailed"];
+        c_p5 [label= "Accepted onto Course"];
+        c_p1 -> c_p2;
+        c_p1 -> c_p3;
+        c_p3 -> c_p4;
+        c_p2 -> c_p5;
+        c_p3 -> c_p5;
+    }
+
+    subgraph cluster_transition{
+        label = "Transition Actions";
+        t_a1 [label= "Enable multiple courses"];
+        t_a2 [label= "Automate manual steps"];
+        t_a3 [label= "Restyle everything into mobile"];
+        t_a4 [label= "Handle automation transition failures"];
+        t_a5 [label= "Build generic page templates"];
+        t_a6 [label= "Update + create courses based upon feed"];
+        t_a7 [label= "Built CMS management for courses"];
+
+        t_a1 -> t_a2;
+        t_a2 -> t_a3;
+        t_a2 -> t_a4;
+        t_a2 -> t_a5;
+        t_a4 -> t_a6;
+        t_a5 -> t_a7;
+        t_a6 -> t_a7;
+    }
+
+    subgraph cluster_frt {
+        label = "Future Reality Tree";
+
+        f_p1 [label= "Choose Course"];
+        f_p2 [label= "Register"];
+        f_p3 [label= "Prove Identity"];
+        f_p4 [label= "Accepted onto course"]; 
+        f_p5 [label= "Course info available on site"]; 
+
+        f_p1 -> f_p2
+        f_p2 -> f_p3  
+        f_p3 -> f_p4
+        f_p4 -> f_p5
     }
   }
 )
