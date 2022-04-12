@@ -54,13 +54,13 @@ Then from here I want to keep zooming out to team structures and organizational 
 
 The goal of development is to change a system to meet certain objectives - EG to change inside some constraints to maximize or more towards (or away) from some measurable thing. More of this, Less of that. When we take this view then we will have a model of current state and a model of future state. The job of development is to build and execute the decision graph that gets from one state to the next future state.
 
-![Me and U](https://g.gravizo.com/source/transition?https%3A%2F%2Fraw.githubusercontent.com%2FMrTortoise%2FMrTortoise.github.io%2Fmaster%2F_posts%2F2022-04-04-coupling-and-cohesion.md
-transition
+![Me and U](https://g.gravizo.com/source/transitiondiagram?https%3A%2F%2Fraw.githubusercontent.com%2FMrTortoise%2FMrTortoise.github.io%2Fmaster%2F_posts%2F2022-04-04-coupling-and-cohesion.md
+transitiondiagram
 digraph Z {   
   node [shape=record];
   a -> b;
 }
-transition
+transitiondiagram
 )
 
 ffs
