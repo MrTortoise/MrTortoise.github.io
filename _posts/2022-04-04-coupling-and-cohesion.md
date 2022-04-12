@@ -69,7 +69,6 @@ The goal of development is to change a system to meet certain objectives - EG to
         c_p2 -> c_p5;
         c_p3 -> c_p5;
     }
-
     subgraph cluster_transition {
         label = "Transition Actions";
         t_a1 [label= "Enable multiple courses"];
@@ -79,7 +78,6 @@ The goal of development is to change a system to meet certain objectives - EG to
         t_a5 [label= "Build generic page templates"];
         t_a6 [label= "Update + create courses based upon feed"];
         t_a7 [label= "Built CMS management for courses"];
-
         t_a1 -> t_a2;
         t_a2 -> t_a3;
         t_a2 -> t_a4;
@@ -88,16 +86,13 @@ The goal of development is to change a system to meet certain objectives - EG to
         t_a5 -> t_a7;
         t_a6 -> t_a7;
     }
-
     subgraph cluster_frt {
         label = "Future Reality Tree";
-
         f_p1 [label= "Choose Course"];
         f_p2 [label= "Register"];
         f_p3 [label= "Prove Identity"];
         f_p4 [label= "Accepted onto course"]; 
         f_p5 [label= "Course info available on site"]; 
-
         f_p1 -> f_p2
         f_p2 -> f_p3  
         f_p3 -> f_p4
