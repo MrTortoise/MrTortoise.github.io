@@ -54,6 +54,62 @@ Then from here I want to keep zooming out to team structures and organizational 
 
 The goal of development is to change a system to meet certain objectives - EG to change inside some constraints to maximize or more towards (or away) from some measurable thing. More of this, Less of that. When we take this view then we will have a model of current state and a model of future state. The job of development is to build and execute the decision graph that gets from one state to the next future state.
 
+ ![Me and You and more](https://g.gravizo.com/g?
+   digraph Transition {   
+    node [shape=record];
+    
+    c_p1 [label= "Current p1"]
+    c_p2 [label= "Current p2"]
+    c_p3 [label= "Current p3"]
+    c_p4 [label= "Current p4"]
+    c_p5 [label= "Current p5"]
+
+    t_a1 [label= "activity 1"]
+    t_a2 [label= "activity 2"]
+    t_a3 [label= "activity 3"]
+    t_a4 [label= "activity 4"]
+    t_a5 [label= "activity 5"]
+    t_a6 [label= "activity 6"]
+    t_a7 [label= "activity 7"]
+
+    f_p1 [label= "Future p1"]
+    f_p2 [label= "Future p2"]
+    f_p3 [label= "Future p3"]
+    f_p4 [label= "Future p4"]    
+
+    subgraph crt{
+        label = "Current Reality Tree"
+        c_p1 -> c_p2
+        c_p1 -> c_p3
+        c_p3 -> c_p4
+        c_p2 -> c_p5
+        c_p3 -> c_p5
+    }
+
+    subgraph transition{
+        label = "Transition Actions"
+
+        t_a1 -> t_a2
+        t_a2 -> t_a3
+        t_a2 -> t_a4
+        t_a2 -> t_a5
+        t_a4 -> t_a6
+        t_a5 -> t_a7
+        t_a6 -> t_a7
+    }
+
+    subgraph frt{
+        label = "Future Reality Tree"
+    }
+
+    Me -> Computer
+    Computer -> Github
+    Github -> Build 
+    Build -> Deploy
+    Deploy -> You 
+  }
+ )
+
 In some industries and problems this is far more obvious than others. When you are in manufacturing and are looking at how to run a plant that are a lot of very measurable and predictable things to look at and then model around. This is where ideas like [lean manufacturing](https://en.wikipedia.org/wiki/Toyota_Production_System) and [theory of constraints](https://en.wikipedia.org/wiki/Theory_of_constraints) (for manufacturing) came about. Here it comes down to accountancy, elimination of waste by understanding what inventory is. 
 
 #### Not all systems behave the same way - kinds
