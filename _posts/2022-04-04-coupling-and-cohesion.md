@@ -21,6 +21,7 @@ Every time you model anything you have a graph with nodes and edges.
 <summary>simple diagram of you and me</summary>
 me_and_you
   digraph G {
+    rankdir="LR"
     Me -> You 
   }
 me_and_you
@@ -32,6 +33,7 @@ me_and_you
 <summary>simple diagram of you and me</summary>
 me_and_you_and_more
   digraph G {
+    rankdir="LR"
     Me -> Computer
     Computer -> Github
     Github -> Build 
