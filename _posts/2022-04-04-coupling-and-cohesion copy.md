@@ -89,10 +89,17 @@ However this is why taking ideas from one area and looking for analogues in anot
 
 ## The phenomena
 
+- aka we fix one thing and something else breaks
+
+[Image poached from the blog post linked next - showing maintenance is largest cost](https://lepiter.io/feenk/developers-spend-most-of-their-time-figuri-9q25taswlbzjc5rsufndeu0py/attachments/bkt2kwalbppajpqkeyvx46pie/1979-graph-picture.png)
 We spend most of our time changing existing systems and trying to [figure out how systems work](https://lepiter.io/feenk/developers-spend-most-of-their-time-figuri-9q25taswlbzjc5rsufndeu0py/). 
 As such our ambition should be to build systems in ways that makes them easy to change - change also implies that we do not know what the system will need to do in a short period of time. As such we also need to be working in ways to learn and get to this change.
 
 Sometimes we have 'happy little accidents' but most often we have stuff that suddenly breaks unexpectedly. This is because when we change something and expect an effect there was something we didn't know about in the system that we than say caused something else to happen. Our system is more complex than we thought. This complexity makes it exceptionally difficult to change systems - which is our entire job! so what can we do?
+
+- we can draw pretty boxes around things and lines between them to stave off the eldritch terrors.
+
+![Eldritch Terror](http://www.blogcdn.com/wow.joystiq.com/media/2009/05/425_ff_cthulu_.jpg)
 
 ### Simple vs complex
 Anything we can do to make our lives simpler here will pay off monumentally because systems size often exceeds our capacity for mental models. We need to be able to forget parts of a system and use heuristics and assumptions to work effectively. This requires predictability. Predictability with low cognitive effort requires simplicity.
