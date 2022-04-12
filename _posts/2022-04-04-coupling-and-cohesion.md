@@ -21,7 +21,6 @@ Every time you model anything you have a graph with nodes and edges.
 <summary>simple diagram of you and me</summary>
 me_and_you
   digraph G {
-    size ="4,4"
     Me -> You 
   }
 me_and_you
@@ -33,10 +32,9 @@ me_and_you
 <summary>simple diagram of you and me</summary>
 me_and_you_and_more
   digraph G {
-    size ="4,4"
     Me -> Computer
     Computer -> Github
-    GitHub -> Build 
+    Github -> Build 
     Build -> Deploy
     Deploy -> You 
   }
