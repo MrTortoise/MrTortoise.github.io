@@ -28,6 +28,21 @@ me_and_you
 </details>
  Right now there is me at a keyboard typing this - a node - and that is connected - by an edge - to you the reader debating about whether it is worth continuing reading this. But we can zoom in an discover that the edge is just an approximation and can be expanded into many more nodes and edges - eg computers, internet etc. So abstraction in this sense is a form of compression - a heuristic convenience to help us not have to think of everything. It also helps indicate to the consumer that all that detail is not considered relevant for the expressed meaning.
 
+ ![Me and You](https://g.gravizo.com/source/me_and_you_and_more?https%3A%2F%2Fraw.githubusercontent.com%2FMrTortoise%2FMrTortoise.github.io%2Fmaster%2F_posts%2F2022-04-04-coupling-and-cohesion.md)
+<details> 
+<summary>simple diagram of you and me</summary>
+me_and_you_and_more
+  digraph G {
+    size ="4,4"
+    Me -> Computer
+    Computer -> Github
+    GitHub -> Build 
+    Build -> Deploy
+    Deploy -> You 
+  }
+me_and_you_and_more
+</details>
+
 It is the job of development to change these networks. I think of this activity as information engineering (except that term is taken - much like when i wanted to invent a study of the logic (ology) of science and chose a very unfortunate name) - and it puts me at odds with many people as often the role of development is increasingly viewed as data entry experts in a language like javascript. Whilst data entry is partially true it is not sufficient to cover development.
 
 ### The plan for this wall of text
