@@ -75,7 +75,7 @@ It is interesting to also point out the opposite effect caused by perhaps unexpe
 
 {% include youtubePlayer.html id="eAXVa__XWZ8" %}
 
- There is another great Veritasium video on this phenomena for anyone who wants a bit of depth from someone far better at explaining depth and contextualising. However a lot of ideas in this video have been borrowed in areas that we are discussing here as these phenomena are very important because they describe phase transitions - this concepts analogies can be applied to how to induce change in organisations. 
+ There is another great [Veritasium](https://www.youtube.com/channel/UCHnyfMqiRRG1u-2MsSQLbXA) video on this phenomena for anyone who wants a bit of depth from someone far better at explaining depth and contextualising. However a lot of ideas in this video have been borrowed in areas that we are discussing here as these phenomena are very important because they describe phase transitions - this concepts analogies can be applied to how to induce change in organisations when we look at the work of [David Snowden](https://en.wikipedia.org/wiki/Dave_Snowden). 
 
 {% include youtubePlayer.html id="t-_VPRCtiUg" %}
 
