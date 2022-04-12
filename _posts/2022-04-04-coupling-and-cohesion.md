@@ -17,20 +17,19 @@ This is change. We change things. We sometimes build new things - but those new 
 Every time you model anything you have a graph with nodes and edges.
 
 ![Me and You](https://g.gravizo.com/source/me_and_you?https%3A%2F%2Fraw.githubusercontent.com%2FMrTortoise%2FMrTortoise.github.io%2Fmaster%2F_posts%2F2022-04-04-coupling-and-cohesion.md)
-<details> 
-<summary>simple diagram of you and me</summary>
-me_and_you
-  digraph G {
-    rankdir="LR"
-    Me -> You 
-  }
-me_and_you
-</details>
+
  Right now there is me at a keyboard typing this - a node - and that is connected - by an edge - to you the reader debating about whether it is worth continuing reading this. But we can zoom in an discover that the edge is just an approximation and can be expanded into many more nodes and edges - eg computers, internet etc. So abstraction in this sense is a form of compression - a heuristic convenience to help us not have to think of everything. It also helps indicate to the consumer that all that detail is not considered relevant for the expressed meaning.
 
  ![Me and You and more](https://g.gravizo.com/source/me_and_you_and_more?https%3A%2F%2Fraw.githubusercontent.com%2FMrTortoise%2FMrTortoise.github.io%2Fmaster%2F_posts%2F2022-04-04-coupling-and-cohesion.md)
 <details> 
 <summary>simple diagram of you and me</summary>
+me_and_you
+  digraph G {
+    rankdir="LR"
+    Me -> You
+  }
+me_and_you
+
 me_and_you_and_more
   digraph G {
     rankdir="LR"
