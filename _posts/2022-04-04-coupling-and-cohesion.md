@@ -59,6 +59,19 @@ transitiondiagram
 digraph Z {   
   node [shape=record];
   a -> b;
+  subgraph cluster_crt {
+        label = "Current Reality Tree: Get Onto Course";
+        c_p1 [label= "Register"];
+        c_p2 [label= "Prove Identity"];
+        c_p3 [label= "Choose Course"];
+        c_p4 [label= "Course Info Emailed"];
+        c_p5 [label= "Accepted onto Course"];
+        c_p1 -> c_p2;
+        c_p1 -> c_p3;
+        c_p3 -> c_p4;
+        c_p2 -> c_p5;
+        c_p3 -> c_p5;
+    }
 }
 transitiondiagram
 )
