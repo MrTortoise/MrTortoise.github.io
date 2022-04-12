@@ -54,7 +54,7 @@ Then from here I want to keep zooming out to team structures and organizational 
 
 The goal of development is to change a system to meet certain objectives - EG to change inside some constraints to maximize or more towards (or away) from some measurable thing. More of this, Less of that. When we take this view then we will have a model of current state and a model of future state. The job of development is to build and execute the decision graph that gets from one state to the next future state.
 
-![Me and U](https://g.gravizo.com/source/transition?https%3A%2F%2Fraw.githubusercontent.com%2FMrTortoise%2FMrTortoise.github.io%2Fmaster%2Fimages%2Fcoupling%2Ftransition.dot)
+![Me and U](https://g.gravizo.com/source?https%3A%2F%2Fraw.githubusercontent.com%2FMrTortoise%2FMrTortoise.github.io%2Fmaster%2Fimages%2Fcoupling%2Ftransition.dot)
 
 In some industries and problems this is far more obvious than others. When you are in manufacturing and are looking at how to run a plant that are a lot of very measurable and predictable things to look at and then model around. This is where ideas like [lean manufacturing](https://en.wikipedia.org/wiki/Toyota_Production_System) and [theory of constraints](https://en.wikipedia.org/wiki/Theory_of_constraints) (for manufacturing) came about. Here it comes down to accountancy, elimination of waste by understanding what inventory is. 
 
