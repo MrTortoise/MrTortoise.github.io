@@ -129,6 +129,8 @@ The common statement (low coupling, high cohesion) is insufficient as it is inco
 
 Simply put, we cannot change a system if we do not know what will happen! To do so would be negligent.
 
+![This is Fine](https://cdn.vox-cdn.com/thumbor/e3OnFtsqdpmUGRUsGpHQcMsgvSQ=/0x0:900x500/1520x1013/filters:focal(378x178:522x322):format(webp)/cdn.vox-cdn.com/uploads/chorus_image/image/49493993/this-is-fine.0.jpg)
+
 We want to really understand the predictability of systems. This allows us to know whether we have a system that we can test against reality. Moreover it allows us to say that when we do test it we also know what we expect to happen.  In businesses we call this making money, in product it is knowing your customer, in code it is getting the bloody thing to firstly compile and secondly do what we want. 
 
 ## Information Model and Context
