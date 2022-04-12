@@ -9,6 +9,61 @@ WIP
 
 # What is 'Coupling and Cohesion' and why you should care
 
+## The job of development
+
+This is change. We change things. We sometimes build new things - but those new things facilitate change in the organization they are built in. But generally development should be viewed as a practice of recrafting how information flows through organizations. This could be another vague reference to conway's law - but I feel also something more fundamental. 
+
+### We model and define how information flows through graphs
+Every time you model anything you have a graph with nodes and edges.
+
+![Me and You](https://g.gravizo.com/source/custom_mark10?https%3A%2F%2Fraw.githubusercontent.com%2FMrTortoise%2FMrTortoise.github.io%2Fmaster%2F_posts%2F2022-04-04-coupling-and-cohesion.md)
+<details> 
+<summary></summary>
+custom_mark10
+  digraph G {
+    size ="4,4"
+    main [shape=box]
+    main -> parse [weight=8]
+    parse -> execute
+    main -> init [style=dotted]
+    main -> cleanup
+    execute -> { make_string; printf}
+    init -> make_string
+    edge [color=red]
+    main -> printf [style=bold,label="100 times"]
+    make_string [label="make a string"]
+    node [shape=box,style=filled,color=".7 .3 1.0"]
+    execute -> compare
+  }
+custom_mark10
+</details>
+ Right now there is me at a keyboard typing this - a node - and that is connected - by an edge - to you the reader debating about whether it is worth continuing reading this. But we can zoom in an discover that the edge is just an approximation and can be expanded into many more nodes and edges - eg computers, internet etc. So abstraction in this sense is a form of compression - a heuristic convenience to help us not have to think of everything. It also helps indicate to the consumer that all that detail is not considered relevant for the expressed meaning.
+
+It is the job of development to change these networks. I think of this activity as information engineering (except that term is taken - much like when i wanted to invent a study of the logic (ology) of science and chose a very unfortunate name) - and it puts me at odds with many people as often the role of development is increasingly viewed as data entry experts in a language like javascript. Whilst data entry is partially true it is not sufficient to cover development.
+
+### The plan for this wall of text
+
+I think the concepts of coupling and cohesion apply incredibly well to this network diagram - which means I also think they apply to information models and so everything we can model. If we can draw then it we can talk about coupling and cohesion. As a result these 2 concepts are versatile and powerful - because knowledge of games in one context will have analogues in others. 
+
+What I want to do here is get into this in some detail. By taking a target audience (developers) I want to show how a concept based upon coupling can be applied to increase cohesion and improve the health of a system in a systematic, repeatable and predictable way. I also want to show how hard this is to do in many different systems.
+
+Then based upon this explore the idea of DeathStars again - from another thing I wrote about - and look for examples of these by zooming out and looking at larger structures in the information model. Here we can discuss software architecture and various strategies to eliminate deathstars - or as will end up being more correct choosing the deathstar that works best for you.
+
+Then from here I want to keep zooming out
+
+### How to restate development in terms of information models?
+
+The goal of development is to change a system to meet certain objectives - EG to change inside some constraints to maximise or more towards (or away) from some measurable thing. More of this, Less of that. When we take this view then we will have a model of current state and a model of future state. The job of development is to build and execute the decision graph that gets from one state to the next future state.
+
+In some industries and problems this is far more obvious than others. When you are in manufacturing and are looking at how to run a plant that are a lot of very measurable and predictable things to look at and then model around. This is where ideas like lean manufacturing and theory of constraints (for manufacturing) came about. Here it comes down to accountancy and understanding what inventory is. However not all systems share the same properties as some have highly dispositional states and so exhibit complex behavior. In some systems (Eg a consultancy) inventory is not obvious (I model it as people who can be deployed as fee earners) - and the implications of inventory being human are enormous. When you perform the same activity twice we have learnt that we do not expect the same output in many systems. Systems involving people or physical systems with more than 2 bodies (this can be viewed as constraints constraints - eg [double pendulum](https://www.youtube.com/watch?v=AwT0k09w-jw) connecting bars (edges) to rotating joints (nodes) and creating a chain of more than 2 nodes - a fixed point of attachment, a node hinge connecting one bar, and then a node that is free to rotate around the hinge at a length given by another bar) are highly sensitive to starting conditions and have feedback loops that lead to chaotic behaviors. 
+
+What this means is that applying concepts and ideas from one context without being aware of the kind of system is simply going to lead to unpredictability and not work as expected. We can see this all over development. If your company applies the same methodology to every project you are witnessing it - moreover you are probably aware of some places where it works better than others.
+
+However this is what makes coupling and cohesion very intersting to apply in these spaces.
+## The phenomena
+
+Sometimes we have 'happy little accidents' but most often we have stuff that suddenly breaks unexpectedly because
+
 We spend most of our time changing existing systems and trying to [figure out how systems work](https://lepiter.io/feenk/developers-spend-most-of-their-time-figuri-9q25taswlbzjc5rsufndeu0py/). 
 As such our ambition should be to build systems in ways that makes them easy to change - change also implies that we do not know what the system will need to do in a short period of time. As such we also need to be working in ways to learn and get to this change.
 
