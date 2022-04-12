@@ -62,7 +62,7 @@ In some industries and problems this is far more obvious than others. When you a
 
 However not all systems share the same properties as some are unpredictable. They have highly dispositional states and so exhibit complex behavior. When you perform the same activity twice we have learnt that we do not expect the same output in many systems. 
 
-##### Chaotic
+#### Chaotic
 
 {% include youtubePlayer.html id="fDek6cYijxI" %}
 
@@ -70,7 +70,7 @@ Systems involving people or physical systems with more than 2 bodies (this can b
 
 Examples of systems like this are anything involving a human in a feedback loop (ie a customer). In some systems (Eg a consultancy) inventory is not obvious (I have modelled it in the past as people who can be deployed as fee earners) - and the implications of inventory being human are enormous (not least because in consulting inventory (people) can be resold (deployed onto new clients)).
 
-##### Sympathetic
+#### Sympathetic
 It is interesting to also point out the opposite effect caused by perhaps unexpected coupling. A great example of this is wobbly bridges being caused by the bridge vibrations pushing people to all have their footsteps in sync that in turn feed backs into the bridge until a critical point where fialure or injury could occur. This phenomena is due to coupling of apparently independent actors via the bridge. What you can see in the video is heads moving side to side in phase with one another. The fascinating part of this is that 150 people don't cause that much of an effect but 164 have a dramatic effect.
 
 {% include youtubePlayer.html id="eAXVa__XWZ8" %}
@@ -79,7 +79,7 @@ It is interesting to also point out the opposite effect caused by perhaps unexpe
 
 {% include youtubePlayer.html id="t-_VPRCtiUg" %}
 
-##### So what?
+#### So what?
 
 It is worth noting that this video ends with exactly the problem that is being discussed here. How do we, when armed with an analysis of the parts, understand properties of the whole. What this piece of work is is a discussion of how we can start to break systems down into parts and understand properties of those parts based on the type of system they are.  It is how cohesive these systems are and how the parts of them are coupled that is going to be of interest. Moreover it is how we are going to move parts around in a network to manipulate the ways in which we can talk about them
 
