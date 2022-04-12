@@ -56,23 +56,6 @@ The goal of development is to change a system to meet certain objectives - EG to
 
 ![trees](https://g.gravizo.com/g?
 digraph Transition {
-    node [shape=record];
-    c_p1 [label= "Current p1"]
-    c_p2 [label= "Current p2"]
-    c_p3 [label= "Current p3"]
-    c_p4 [label= "Current p4"]
-    c_p5 [label= "Current p5"]
-    t_a1 [label= "activity 1"]
-    t_a2 [label= "activity 2"]
-    t_a3 [label= "activity 3"]
-    t_a4 [label= "activity 4"]
-    t_a5 [label= "activity 5"]
-    t_a6 [label= "activity 6"]
-    t_a7 [label= "activity 7"]
-    f_p1 [label= "Future p1"]
-    f_p2 [label= "Future p2"]
-    f_p3 [label= "Future p3"]
-    f_p4 [label= "Future p4"]
     subgraph crt{
         label = "Current Reality Tree"
         c_p1 -> c_p2
@@ -80,10 +63,6 @@ digraph Transition {
         c_p3 -> c_p4
         c_p2 -> c_p5
         c_p3 -> c_p5
-    }
-    subgraph transition{
-        label = "Transition Actions"
-        t_a1 -> t_a2
     }
 }
 )
