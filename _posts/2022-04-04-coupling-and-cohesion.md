@@ -18,22 +18,11 @@ Every time you model anything you have a graph with nodes and edges.
 
 ![Me and You](https://g.gravizo.com/source/custom_mark10?https%3A%2F%2Fraw.githubusercontent.com%2FMrTortoise%2FMrTortoise.github.io%2Fmaster%2F_posts%2F2022-04-04-coupling-and-cohesion.md)
 <details> 
-<summary></summary>
+<summary>simple digram of you and me</summary>
 custom_mark10
   digraph G {
     size ="4,4"
-    main [shape=box]
-    main -> parse [weight=8]
-    parse -> execute
-    main -> init [style=dotted]
-    main -> cleanup
-    execute -> { make_string; printf}
-    init -> make_string
-    edge [color=red]
-    main -> printf [style=bold,label="100 times"]
-    make_string [label="make a string"]
-    node [shape=box,style=filled,color=".7 .3 1.0"]
-    execute -> compare
+    Me -> You 
   }
 custom_mark10
 </details>
