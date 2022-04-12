@@ -81,6 +81,8 @@ It is interesting to also point out the opposite effect caused by perhaps unexpe
 
 ##### So what?
 
+It is worth noting that this video ends with exactly the problem that is being discussed here. How do we, when armed with an analysis of the parts, understand properties of the whole. What this piece of work is is a discussion of how we can start to break systems down into parts and understand properties of those parts based on the type of system they are.  It is how cohesive these systems are and how the parts of them are coupled that is going to be of interest. Moreover it is how we are going to move parts around in a network to manipulate the ways in which we can talk about them
+
 What this means is that applying concepts and ideas from one context without being aware of the kind of system is simply going to lead to unpredictability and not work as expected. We can see this all over development. If your company applies the same [methodology](https://www.google.com/search?q=scrum+certification) to every project you are witnessing it - moreover you are probably aware of some places where it works better than others.
 
 However this is why taking ideas from one area and looking for analogues in another is interesting and hopefully insightful as to how a system might be refactored. This is what happens in books like [The Phoenix Project](https://www.amazon.co.uk/s?k=the+phoenix+projec) or [Theory of Constraints](https://www.amazon.co.uk/Theory-Constraints-Eliyahu-M-Goldratt/dp/0884271668). However the assumptions and conditions behind ideas need to be uncovered in order to test their validity.
