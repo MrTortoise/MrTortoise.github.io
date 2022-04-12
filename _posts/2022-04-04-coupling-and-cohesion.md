@@ -56,7 +56,7 @@ The goal of development is to change a system to meet certain objectives - EG to
 
 ![trees](https://g.gravizo.com/g?
   digraph Transition {
-    subgraph crt{
+    subgraph crt {
         label = "Current Reality Tree"
         c_p1 -> c_p2
         c_p1 -> c_p3
