@@ -58,6 +58,9 @@ The goal of development is to change a system to meet certain objectives - EG to
   digraph Z {   
     node [shape=record];
     a -> b;
+    subgraph cluster_crt {
+        label = "Current Reality Tree: Get Onto Course";
+    }
   }
 )
 
