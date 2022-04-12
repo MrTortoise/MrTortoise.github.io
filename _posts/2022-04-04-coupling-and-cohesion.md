@@ -72,7 +72,7 @@ digraph Transition {
     f_p1 [label= "Future p1"]
     f_p2 [label= "Future p2"]
     f_p3 [label= "Future p3"]
-    f_p4 [label= "Future p4"]    
+    f_p4 [label= "Future p4"]
     subgraph crt{
         label = "Current Reality Tree"
         c_p1 -> c_p2
@@ -84,7 +84,8 @@ digraph Transition {
     subgraph transition{
         label = "Transition Actions"
         t_a1 -> t_a2
-  }
+    }
+}
 )
 
 In some industries and problems this is far more obvious than others. When you are in manufacturing and are looking at how to run a plant that are a lot of very measurable and predictable things to look at and then model around. This is where ideas like [lean manufacturing](https://en.wikipedia.org/wiki/Toyota_Production_System) and [theory of constraints](https://en.wikipedia.org/wiki/Theory_of_constraints) (for manufacturing) came about. Here it comes down to accountancy, elimination of waste by understanding what inventory is. 
