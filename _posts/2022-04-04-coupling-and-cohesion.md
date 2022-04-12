@@ -54,9 +54,8 @@ Then from here I want to keep zooming out to team structures and organizational 
 
 The goal of development is to change a system to meet certain objectives - EG to change inside some constraints to maximize or more towards (or away) from some measurable thing. More of this, Less of that. When we take this view then we will have a model of current state and a model of future state. The job of development is to build and execute the decision graph that gets from one state to the next future state.
 
-![trees](https://g.gravizo.com/g?
-digraph G {   
-    
+![trees](https://g.gravizo.com/g?digraph G {   
+    node [shape=record]
     subgraph cluster_crt {
         label = "Current Reality Tree: Get Onto Course";
         c_p1 [label= "Register"];
@@ -71,7 +70,7 @@ digraph G {
         c_p3 -> c_p5;
     }
 
-    subgraph cluster_transition{
+    subgraph cluster_transition {
         label = "Transition Actions";
         t_a1 [label= "Enable multiple courses"];
         t_a2 [label= "Automate manual steps"];
