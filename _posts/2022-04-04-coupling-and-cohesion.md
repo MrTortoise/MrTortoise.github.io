@@ -91,7 +91,7 @@ However this is why taking ideas from one area and looking for analogues in anot
 
 - aka we fix one thing and something else breaks
 
-![Image poached from the blog post linked next - showing maintenance is largest cost](https://lepiter.io/feenk/developers-spend-most-of-their-time-figuri-9q25taswlbzjc5rsufndeu0py/attachments/bkt2kwalbppajpqkeyvx46pie/1979-graph-picture.png)
+![Image poached from the blog post linked next - showing maintenance is largest cost](https://lepiter.io/feenk/developers-spend-most-of-their-time-figuri-9q25taswlbzjc5rsufndeu0py/attachments/bkt2kwalbppajpqkeyvx46pie/1979-graph-picture.png "Image from the research article linked to in the blog post linked to below")
 We spend most of our time changing existing systems and trying to [figure out how systems work](https://lepiter.io/feenk/developers-spend-most-of-their-time-figuri-9q25taswlbzjc5rsufndeu0py/). 
 As such our ambition should be to build systems in ways that makes them easy to change - change also implies that we do not know what the system will need to do in a short period of time. As such we also need to be working in ways to learn and get to this change.
 
