@@ -20,7 +20,7 @@ Every time you model anything you have a graph with nodes and edges.
   digraph G {
     rankdir="LR"
     Me -> You
-  }
+  } "Its your connection to me"
 )
 
 Right now there is me at a keyboard typing this - a node - and that is connected - by an edge - to you the reader debating about whether it is worth continuing reading this. But we can zoom in an discover that the edge is just an approximation and can be expanded into many more nodes and edges - eg computers, internet etc. So abstraction in this sense is a form of compression - a heuristic convenience to help us not have to think of everything. It also helps indicate to the consumer that all that detail is not considered relevant for the expressed meaning.
@@ -34,7 +34,7 @@ Right now there is me at a keyboard typing this - a node - and that is connected
     Build -> Deploy
     Deploy -> You 
   }
- )
+  "The same graph zoomed in")
 
 It is the job of development to change these networks. I think of this activity as information engineering (except that term is taken - much like when i wanted to invent a study of the logic (ology) of science and chose a very unfortunate name) - and it puts me at odds with many people as often the role of development is increasingly viewed as data entry experts in a language like javascript. Whilst data entry is partially true it is not sufficient to cover development.
 
