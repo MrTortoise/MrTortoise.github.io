@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Coupling and Cohesion: Fundamental Information Model"
-date:   2022-04-04
+date:   2022-04-17
 categories: architecture coupling cohesion
 ---
 
