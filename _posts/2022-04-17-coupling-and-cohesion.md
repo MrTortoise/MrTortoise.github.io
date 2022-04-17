@@ -44,7 +44,7 @@ I think the concepts of coupling and cohesion apply incredibly well to this netw
 
 What I want to do here is get into this in some detail. By taking a target audience (developers) I want to show how a concept based upon coupling can be applied to increase cohesion and improve the health of a system in a systematic, repeatable and predictable way. I also want to show how hard this is to do in many different systems.
 
-![YourVeryOwnDeathStar](/images/deathstar/sql-deathstar-1.png "Deathstars look structurally sound but use cases traverse around)
+![YourVeryOwnDeathStar](/images/deathstar/sql-deathstar-1.png "Deathstars look structurally sound but use cases traverse around")
 
 Then based upon this explore the idea of DeathStars again - [from another thing I wrote about](https://mrtortoise.github.io/architecture/lean/design/patterns/ddd/2018/03/18/deathstar-architecture.html) - and look for examples of these by zooming out and looking at larger structures in the information model. Here we can discuss software architecture and various strategies to eliminate death stars or - as will likely end up being more correct - choosing the deathstar that works best for you.
 
@@ -57,6 +57,10 @@ The goal of development is to change a system to meet certain objectives - EG to
 ![Me and U](https://g.gravizo.com/source/svg?https%3A%2F%2Fraw.githubusercontent.com%2FMrTortoise%2FMrTortoise.github.io%2Fmaster%2Fimages%2Fcoupling%2Ftransition.dot)
 
 In some industries and problems this is far more obvious than others. When you are in manufacturing and are looking at how to run a plant that are a lot of very measurable and predictable things to look at and then model around. This is where ideas like [lean manufacturing](https://en.wikipedia.org/wiki/Toyota_Production_System) and [theory of constraints](https://en.wikipedia.org/wiki/Theory_of_constraints) (for manufacturing) came about. Here it comes down to accountancy, elimination of waste by understanding what inventory is. 
+
+### TOC Crash Course
+
+![Waste](/images/coupling/TOCCcrossProducers.drawio.png)
 
 #### Not all systems behave the same way - kinds
 
