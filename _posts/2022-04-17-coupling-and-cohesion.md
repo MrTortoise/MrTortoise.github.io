@@ -60,8 +60,23 @@ In some industries and problems this is far more obvious than others. When you a
 
 ### TOC Crash Course
 
+Theory of constraints contains many ideas, techniques and systems but in the end it all comes back to a simple observation.
+
+ - Any system that produces something consists of a set of sequential actions that converge upon the product. These sequences form converging chains.
+- In a chain if it is put under tension there will be a weakest link. 
+- If we decide to strengthen the chain then doing work to do so on  any point other than this will not add strength. This with will be waste.
+- In organisations when we increase efficiency accross an org this is equivalent to doing so accros every link. Instead we should be investing all that effort into something focussed and better directed towards something of value.
+- The key is identifying this weak link, this constraint and then designing the system around it. Then repeating this process.
+
+#### Rope drum and buffer
+
+On a walk different people walk at different paces. The front speeds off, the back lags. However the walk is only finished when the slowest finishes. if the slowest is at the back people wait - but then do not allow it to rest sufficiently whilst they get rest. The back rushes to catch up causing more need for rest. Its motion is not laminar, smooth and efficient. This kind of arrangement actually contributes to the slow being slower. What would actually help is taking load off the slowest, putting the slowest in the front and everyone taking rests with the slowest. Now the slowest can move at its maximum sustained pace and the walk operates vastly differently with the other fast parts taking as much work off and supporting the slowest. This is how a system that takes TOC into account feels. Everything working towards getting the slowest part to have an easier time.
+
 ![Waste](/images/coupling/TOCCcrossProducers.drawio.png)
 
+This image is a very typical situation for many organisations. They try to shove more work through the system than is possible. This is why organisations probalby waste 80% of their effort.
+
+This kind of analysis is possible by understanding the coupling and then rearranging the parts of a system so that they work towards a coherent whole. When the system works in parts that optomise themselves at expense of the whole there are lots of seperate blobs coupled together. AFter TOC is applied it is a single cohesive system of parts coupled together and working together.
 #### Not all systems behave the same way - kinds
 
 However not all systems share the same properties as some are unpredictable. They have highly dispositional states and so exhibit complex behavior. When you perform the same activity twice we have learnt that we do not expect the same output in many systems. 
