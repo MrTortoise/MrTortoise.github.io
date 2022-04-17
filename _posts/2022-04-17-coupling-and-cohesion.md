@@ -70,7 +70,7 @@ Theory of constraints contains many ideas, techniques and systems but in the end
 
 #### Rope drum and buffer
 
-![Rope Drum Buffer](/images/coupling/ropedrumbuffer.drawio.png)
+![Rope Drum Buffer](/images/coupling/ropedrumbuffer.png)
 
 On a walk different people walk at different paces. The front speeds off, the back lags. However the walk is only finished when the slowest finishes. if the slowest is at the back people wait - but then do not allow it to rest sufficiently whilst they get rest. The back rushes to catch up causing more need for rest. Its motion is not laminar, smooth and efficient. This kind of arrangement actually contributes to the slow being slower. What would actually help is taking load off the slowest, putting the slowest in the front and everyone taking rests with the slowest. Now the slowest can move at its maximum sustained pace and the walk operates vastly differently with the other fast parts taking as much work off and supporting the slowest. This is how a system that takes TOC into account feels. Everything working towards getting the slowest part to have an easier time.
 
